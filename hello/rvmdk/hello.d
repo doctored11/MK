@@ -1,0 +1,11 @@
+.\rvmdk\hello.o: hello.c
+.\rvmdk\hello.o: D:\Programs\keil\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdint.h
+.\rvmdk\hello.o: D:\Programs\keil\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdbool.h
+.\rvmdk\hello.o: D:\Programs\keil\ARM\ARM_Compiler_5.06u7\Bin\..\include\stddef.h
+.\rvmdk\hello.o: D:\Programs\keil\ARM\ARM_Compiler_5.06u7\Bin\..\include\string.h
+.\rvmdk\hello.o: ..\..\..\..\inc/hw_memmap.h
+.\rvmdk\hello.o: ..\..\..\..\inc/hw_gpio.h
+.\rvmdk\hello.o: ..\..\..\..\driverlib/gpio.h
+.\rvmdk\hello.o: ..\..\..\..\driverlib/sysctl.h
+.\rvmdk\hello.o: ..\drivers/buttons.h
+.\rvmdk\hello.o: ..\drivers/rgb.h

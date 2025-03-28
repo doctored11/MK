@@ -1,0 +1,58 @@
+Dependencies for Project 'hello', Target 'hello': (DO NOT MODIFY !)
+CompilerVersion: 5060960::V5.06 update 7 (build 960)::D:\Programs\keil\ARM\ARM_Compiler_5.06u7
+F (.\hello.c)(0x67E71566)(-c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .. -I ..\..\..\.. -I C:\ti\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\drivers --c99-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Luminary-D__UVISION_VERSION="538" -Drvmdk -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1-o .\rvmdk\hello.o --omf_browse .\rvmdk\hello.crf --depend .\rvmdk\hello.d)
+I (D:\Programs\keil\ARM\ARM_Compiler_5.06u7\include\stdint.h)(0x5E8E8312)
+I (D:\Programs\keil\ARM\ARM_Compiler_5.06u7\include\stdbool.h)(0x5E8E8312)
+I (D:\Programs\keil\ARM\ARM_Compiler_5.06u7\include\stddef.h)(0x5E8E8312)
+I (D:\Programs\keil\ARM\ARM_Compiler_5.06u7\include\string.h)(0x5E8E8312)
+I (..\..\..\..\inc/hw_memmap.h)(0x67DBF8EB)
+I (..\..\..\..\inc/hw_gpio.h)(0x67DBF8EB)
+I (..\..\..\..\driverlib/gpio.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/sysctl.h)(0x67DBF8E4)
+I (..\drivers/buttons.h)(0x67E714E3)
+I (..\drivers/rgb.h)(0x67DBF8E6)
+F (.\startup_rvmdk.S)(0x67E7113C)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1"-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Luminary--pd "__UVISION_VERSION SETA 538"-o .\rvmdk\startup_rvmdk.o --depend .\rvmdk\startup_rvmdk.d)
+F (..\..\..\..\utils\uartstdio.c)(0x67DBF8ED)(-c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .. -I ..\..\..\.. -I C:\ti\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\drivers --c99-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Luminary-D__UVISION_VERSION="538" -Drvmdk -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1-o .\rvmdk\uartstdio.o --omf_browse .\rvmdk\uartstdio.crf --depend .\rvmdk\uartstdio.d)
+I (D:\Programs\keil\ARM\ARM_Compiler_5.06u7\include\stdbool.h)(0x5E8E8312)
+I (D:\Programs\keil\ARM\ARM_Compiler_5.06u7\include\stdint.h)(0x5E8E8312)
+I (D:\Programs\keil\ARM\ARM_Compiler_5.06u7\include\stdarg.h)(0x5E8E8312)
+I (..\..\..\..\inc/hw_ints.h)(0x67DBF8EB)
+I (..\..\..\..\inc/hw_memmap.h)(0x67DBF8EB)
+I (..\..\..\..\inc/hw_types.h)(0x67DBF8EB)
+I (..\..\..\..\inc/hw_uart.h)(0x67DBF8EB)
+I (..\..\..\..\driverlib/debug.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/interrupt.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/rom.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/rom_map.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/sysctl.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/uart.h)(0x67DBF8E4)
+I (..\..\..\..\utils/uartstdio.h)(0x67DBF8ED)
+F (..\drivers\buttons.c)(0x67DD6980)(-c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .. -I ..\..\..\.. -I C:\ti\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\drivers --c99-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Luminary-D__UVISION_VERSION="538" -Drvmdk -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1-o .\rvmdk\buttons.o --omf_browse .\rvmdk\buttons.crf --depend .\rvmdk\buttons.d)
+I (D:\Programs\keil\ARM\ARM_Compiler_5.06u7\include\stdbool.h)(0x5E8E8312)
+I (D:\Programs\keil\ARM\ARM_Compiler_5.06u7\include\stdint.h)(0x5E8E8312)
+I (..\..\..\..\inc/hw_gpio.h)(0x67DBF8EB)
+I (..\..\..\..\inc/hw_types.h)(0x67DBF8EB)
+I (..\..\..\..\inc/hw_memmap.h)(0x67DBF8EB)
+I (..\..\..\..\driverlib/gpio.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/pin_map.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/rom.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/rom_map.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/sysctl.h)(0x67DBF8E4)
+I (..\drivers/buttons.h)(0x67E714E3)
+F (..\drivers\rgb.c)(0x67E6FC88)(-c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .. -I ..\..\..\.. -I C:\ti\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\drivers --c99-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Luminary-D__UVISION_VERSION="538" -Drvmdk -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1-o .\rvmdk\rgb.o --omf_browse .\rvmdk\rgb.crf --depend .\rvmdk\rgb.d)
+I (D:\Programs\keil\ARM\ARM_Compiler_5.06u7\include\stdint.h)(0x5E8E8312)
+I (D:\Programs\keil\ARM\ARM_Compiler_5.06u7\include\stdbool.h)(0x5E8E8312)
+I (..\..\..\..\inc/hw_ints.h)(0x67DBF8EB)
+I (..\..\..\..\inc/hw_memmap.h)(0x67DBF8EB)
+I (..\..\..\..\inc/hw_timer.h)(0x67DBF8EB)
+I (..\..\..\..\inc/hw_types.h)(0x67DBF8EB)
+I (..\..\..\..\driverlib/gpio.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/interrupt.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/pin_map.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/rom.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/rom_map.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/sysctl.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/timer.h)(0x67DBF8E4)
+I (..\drivers\rgb.h)(0x67DBF8E6)
+F (..\..\..\..\driverlib\rvmdk\driverlib.lib)(0x67DBF8E4)()
+F (.\readme.txt)(0x67DBF8E6)()
