@@ -1,0 +1,24 @@
+Dependencies for Project 'project0', Target 'project0': (DO NOT MODIFY !)
+CompilerVersion: 5060960::V5.06 update 7 (build 960)::D:\Programs\keil\ARM\ARM_Compiler_5.06u7
+F (.\project0.c)(0x67EFFBFC)(-c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .. -I ..\..\..\.. --c99-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Luminary-D__UVISION_VERSION="538" -Drvmdk -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1-o .\rvmdk\project0.o --omf_browse .\rvmdk\project0.crf --depend .\rvmdk\project0.d)
+I (D:\Programs\keil\ARM\ARM_Compiler_5.06u7\include\stdint.h)(0x5E8E8312)
+I (D:\Programs\keil\ARM\ARM_Compiler_5.06u7\include\stdbool.h)(0x5E8E8312)
+I (..\..\..\..\inc/tm4c123gh6pm.h)(0x67DBF8EB)
+I (..\..\..\..\inc/hw_memmap.h)(0x67DBF8EB)
+I (..\..\..\..\inc/hw_types.h)(0x67DBF8EB)
+I (..\..\..\..\driverlib/sysctl.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/interrupt.h)(0x67EFD6B6)
+I (..\..\..\..\driverlib/gpio.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/timer.h)(0x67DBF8E4)
+F (.\startup_rvmdk.S)(0x67DBF8E6)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1"-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Luminary--pd "__UVISION_VERSION SETA 538"-o .\rvmdk\startup_rvmdk.o --depend .\rvmdk\startup_rvmdk.d)
+F (..\..\..\..\driverlib\interrupt.c)(0x67DBF8E4)(-c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .. -I ..\..\..\.. --c99-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Luminary-D__UVISION_VERSION="538" -Drvmdk -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1-o .\rvmdk\interrupt.o --omf_browse .\rvmdk\interrupt.crf --depend .\rvmdk\interrupt.d)
+I (D:\Programs\keil\ARM\ARM_Compiler_5.06u7\include\stdbool.h)(0x5E8E8312)
+I (D:\Programs\keil\ARM\ARM_Compiler_5.06u7\include\stdint.h)(0x5E8E8312)
+I (..\..\..\..\inc/hw_ints.h)(0x67DBF8EB)
+I (..\..\..\..\inc/hw_nvic.h)(0x67DBF8EB)
+I (..\..\..\..\inc/hw_types.h)(0x67DBF8EB)
+I (..\..\..\..\driverlib/cpu.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/debug.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/interrupt.h)(0x67EFD6B6)
+F (..\..\..\..\driverlib\rvmdk\driverlib.lib)(0x67DBF8E4)()
+F (.\readme.txt)(0x67DBF8E6)()

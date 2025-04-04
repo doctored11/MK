@@ -1,0 +1,10 @@
+.\rvmdk\project0.o: project0.c
+.\rvmdk\project0.o: D:\Programs\keil\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdint.h
+.\rvmdk\project0.o: D:\Programs\keil\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdbool.h
+.\rvmdk\project0.o: ..\..\..\..\inc/tm4c123gh6pm.h
+.\rvmdk\project0.o: ..\..\..\..\inc/hw_memmap.h
+.\rvmdk\project0.o: ..\..\..\..\inc/hw_types.h
+.\rvmdk\project0.o: ..\..\..\..\driverlib/sysctl.h
+.\rvmdk\project0.o: ..\..\..\..\driverlib/interrupt.h
+.\rvmdk\project0.o: ..\..\..\..\driverlib/gpio.h
+.\rvmdk\project0.o: ..\..\..\..\driverlib/timer.h
