@@ -1,0 +1,439 @@
+Component: ARM Compiler 5.06 update 7 (build 960) Tool: armlink [4d3601]
+
+==============================================================================
+
+Section Cross References
+
+    hibernate.o(i.ConfigureUART) refers to uart.o(i.UARTClockSourceSet) for UARTClockSourceSet
+    hibernate.o(i.ConfigureUART) refers to uartstdio.o(i.UARTStdioConfig) for UARTStdioConfig
+    hibernate.o(i.HibernateISRHandler) refers to uartstdio.o(i.UARTprintf) for UARTprintf
+    hibernate.o(i.HibernateISRHandler) refers to hibernate.o(i.HibernateRTCMatchSet) for HibernateRTCMatchSet
+    hibernate.o(i.main) refers to hibernate.o(i.ConfigureUART) for ConfigureUART
+    hibernate.o(i.main) refers to uartstdio.o(i.UARTprintf) for UARTprintf
+    hibernate.o(i.main) refers to hibernate.o(i.HibernateRTCMatchSet) for HibernateRTCMatchSet
+    startup_rvmdk.o(RESET) refers to startup_rvmdk.o(STACK) for StackMem
+    startup_rvmdk.o(RESET) refers to hibernate.o(i.HibernateISRHandler) for HibernateISRHandler
+    startup_rvmdk.o(RESET) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    uartstdio.o(i.UARTStdioConfig) refers to uartstdio.o(.constdata) for .constdata
+    uartstdio.o(i.UARTStdioConfig) refers to uartstdio.o(.data) for .data
+    uartstdio.o(i.UARTgetc) refers to uartstdio.o(.data) for .data
+    uartstdio.o(i.UARTgets) refers to uartstdio.o(i.UARTwrite) for UARTwrite
+    uartstdio.o(i.UARTgets) refers to uartstdio.o(.data) for .data
+    uartstdio.o(i.UARTprintf) refers to uartstdio.o(i.UARTvprintf) for UARTvprintf
+    uartstdio.o(i.UARTvprintf) refers to uartstdio.o(i.UARTwrite) for UARTwrite
+    uartstdio.o(i.UARTvprintf) refers to uartstdio.o(.constdata) for .constdata
+    uartstdio.o(i.UARTwrite) refers to uartstdio.o(.data) for .data
+    uartstdio.o(.constdata) refers to uartstdio.o(.conststring) for .conststring
+    hibernate.o(i.HibernateCalendarMatchSet) refers to hibernate.o(i._HibernateCalendarSet) for _HibernateCalendarSet
+    hibernate.o(i.HibernateCalendarSet) refers to hibernate.o(i._HibernateCalendarSet) for _HibernateCalendarSet
+    hibernate.o(i.HibernateIntRegister) refers to interrupt.o(i.IntRegister) for IntRegister
+    hibernate.o(i.HibernateIntRegister) refers to interrupt.o(i.IntEnable) for IntEnable
+    hibernate.o(i.HibernateIntUnregister) refers to interrupt.o(i.IntDisable) for IntDisable
+    hibernate.o(i.HibernateIntUnregister) refers to interrupt.o(i.IntUnregister) for IntUnregister
+    uart.o(i.UARTIntRegister) refers to interrupt.o(i.IntRegister) for IntRegister
+    uart.o(i.UARTIntRegister) refers to interrupt.o(i.IntEnable) for IntEnable
+    uart.o(i.UARTIntRegister) refers to uart.o(.constdata) for .constdata
+    uart.o(i.UARTIntUnregister) refers to interrupt.o(i.IntDisable) for IntDisable
+    uart.o(i.UARTIntUnregister) refers to interrupt.o(i.IntUnregister) for IntUnregister
+    uart.o(i.UARTIntUnregister) refers to uart.o(.constdata) for .constdata
+    interrupt.o(i.IntDisable) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntEnable) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntIsEnabled) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntMasterDisable) refers to cpu.o(.emb_text) for CPUcpsid
+    interrupt.o(i.IntMasterEnable) refers to cpu.o(.emb_text) for CPUcpsie
+    interrupt.o(i.IntPendClear) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntPendSet) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntPriorityGet) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntPriorityGroupingGet) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntPriorityGroupingSet) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntPriorityMaskGet) refers to cpu.o(.emb_text) for CPUbasepriGet
+    interrupt.o(i.IntPriorityMaskSet) refers to cpu.o(.emb_text) for CPUbasepriSet
+    interrupt.o(i.IntPrioritySet) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntRegister) refers to interrupt.o(vtable) for vtable
+    interrupt.o(i.IntUnregister) refers to interrupt.o(i._IntDefaultHandler) for _IntDefaultHandler
+    interrupt.o(i.IntUnregister) refers to interrupt.o(vtable) for vtable
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000F) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$00000011) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry12b.o(.ARM.Collect$$$$0000000E) for __rt_lib_shutdown_fini
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_rvmdk.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_rvmdk.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to hibernate.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to hibernate.o(i.main) for main
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing startup_rvmdk.o(HEAP), (0 bytes).
+    Removing startup_rvmdk.o(.text), (0 bytes).
+    Removing uartstdio.o(i.UARTgetc), (24 bytes).
+    Removing uartstdio.o(i.UARTgets), (132 bytes).
+    Removing hibernate.o(i.HibernateBatCheckDone), (16 bytes).
+    Removing hibernate.o(i.HibernateBatCheckStart), (24 bytes).
+    Removing hibernate.o(i.HibernateCalendarGet), (120 bytes).
+    Removing hibernate.o(i.HibernateCalendarMatchGet), (120 bytes).
+    Removing hibernate.o(i.HibernateCalendarMatchSet), (12 bytes).
+    Removing hibernate.o(i.HibernateCalendarSet), (12 bytes).
+    Removing hibernate.o(i.HibernateClockConfig), (80 bytes).
+    Removing hibernate.o(i.HibernateCounterMode), (20 bytes).
+    Removing hibernate.o(i.HibernateDataGet), (32 bytes).
+    Removing hibernate.o(i.HibernateDataSet), (56 bytes).
+    Removing hibernate.o(i.HibernateDisable), (24 bytes).
+    Removing hibernate.o(i.HibernateEnableExpClk), (24 bytes).
+    Removing hibernate.o(i.HibernateGPIORetentionDisable), (28 bytes).
+    Removing hibernate.o(i.HibernateGPIORetentionEnable), (28 bytes).
+    Removing hibernate.o(i.HibernateGPIORetentionGet), (28 bytes).
+    Removing hibernate.o(i.HibernateIntClear), (24 bytes).
+    Removing hibernate.o(i.HibernateIntDisable), (24 bytes).
+    Removing hibernate.o(i.HibernateIntEnable), (24 bytes).
+    Removing hibernate.o(i.HibernateIntRegister), (52 bytes).
+    Removing hibernate.o(i.HibernateIntStatus), (16 bytes).
+    Removing hibernate.o(i.HibernateIntUnregister), (48 bytes).
+    Removing hibernate.o(i.HibernateIsActive), (16 bytes).
+    Removing hibernate.o(i.HibernateLowBatGet), (16 bytes).
+    Removing hibernate.o(i.HibernateLowBatSet), (32 bytes).
+    Removing hibernate.o(i.HibernateRTCDisable), (24 bytes).
+    Removing hibernate.o(i.HibernateRTCEnable), (24 bytes).
+    Removing hibernate.o(i.HibernateRTCGet), (12 bytes).
+    Removing hibernate.o(i.HibernateRTCMatchGet), (12 bytes).
+    Removing hibernate.o(i.HibernateRTCSSGet), (16 bytes).
+    Removing hibernate.o(i.HibernateRTCSSMatchGet), (12 bytes).
+    Removing hibernate.o(i.HibernateRTCSSMatchSet), (20 bytes).
+    Removing hibernate.o(i.HibernateRTCSet), (52 bytes).
+    Removing hibernate.o(i.HibernateRTCTrimGet), (12 bytes).
+    Removing hibernate.o(i.HibernateRTCTrimSet), (20 bytes).
+    Removing hibernate.o(i.HibernateRequest), (24 bytes).
+    Removing hibernate.o(i.HibernateTamperDisable), (64 bytes).
+    Removing hibernate.o(i.HibernateTamperEnable), (64 bytes).
+    Removing hibernate.o(i.HibernateTamperEventsClear), (64 bytes).
+    Removing hibernate.o(i.HibernateTamperEventsClearNoLock), (32 bytes).
+    Removing hibernate.o(i.HibernateTamperEventsConfig), (72 bytes).
+    Removing hibernate.o(i.HibernateTamperEventsGet), (84 bytes).
+    Removing hibernate.o(i.HibernateTamperExtOscRecover), (64 bytes).
+    Removing hibernate.o(i.HibernateTamperExtOscValid), (60 bytes).
+    Removing hibernate.o(i.HibernateTamperIODisable), (72 bytes).
+    Removing hibernate.o(i.HibernateTamperIOEnable), (84 bytes).
+    Removing hibernate.o(i.HibernateTamperLock), (32 bytes).
+    Removing hibernate.o(i.HibernateTamperStatusGet), (52 bytes).
+    Removing hibernate.o(i.HibernateTamperUnLock), (28 bytes).
+    Removing hibernate.o(i.HibernateWakeGet), (56 bytes).
+    Removing hibernate.o(i.HibernateWakeSet), (108 bytes).
+    Removing hibernate.o(i._HibernateCalendarSet), (268 bytes).
+    Removing uart.o(i.UART9BitAddrSend), (38 bytes).
+    Removing uart.o(i.UART9BitAddrSet), (10 bytes).
+    Removing uart.o(i.UART9BitDisable), (14 bytes).
+    Removing uart.o(i.UART9BitEnable), (14 bytes).
+    Removing uart.o(i.UARTBreakCtl), (18 bytes).
+    Removing uart.o(i.UARTBusy), (8 bytes).
+    Removing uart.o(i.UARTCharGet), (12 bytes).
+    Removing uart.o(i.UARTCharGetNonBlocking), (16 bytes).
+    Removing uart.o(i.UARTCharPut), (12 bytes).
+    Removing uart.o(i.UARTCharPutNonBlocking), (16 bytes).
+    Removing uart.o(i.UARTCharsAvail), (10 bytes).
+    Removing uart.o(i.UARTClockSourceGet), (6 bytes).
+    Removing uart.o(i.UARTConfigGetExpClk), (46 bytes).
+    Removing uart.o(i.UARTConfigSetExpClk), (110 bytes).
+    Removing uart.o(i.UARTDMADisable), (10 bytes).
+    Removing uart.o(i.UARTDMAEnable), (8 bytes).
+    Removing uart.o(i.UARTDisable), (30 bytes).
+    Removing uart.o(i.UARTDisableSIR), (10 bytes).
+    Removing uart.o(i.UARTEnable), (20 bytes).
+    Removing uart.o(i.UARTEnableSIR), (18 bytes).
+    Removing uart.o(i.UARTFIFODisable), (10 bytes).
+    Removing uart.o(i.UARTFIFOEnable), (10 bytes).
+    Removing uart.o(i.UARTFIFOLevelGet), (16 bytes).
+    Removing uart.o(i.UARTFIFOLevelSet), (6 bytes).
+    Removing uart.o(i.UARTFlowControlGet), (8 bytes).
+    Removing uart.o(i.UARTFlowControlSet), (12 bytes).
+    Removing uart.o(i.UARTIntClear), (4 bytes).
+    Removing uart.o(i.UARTIntDisable), (10 bytes).
+    Removing uart.o(i.UARTIntEnable), (8 bytes).
+    Removing uart.o(i.UARTIntRegister), (88 bytes).
+    Removing uart.o(i.UARTIntStatus), (10 bytes).
+    Removing uart.o(i.UARTIntUnregister), (88 bytes).
+    Removing uart.o(i.UARTLoopbackEnable), (10 bytes).
+    Removing uart.o(i.UARTModemControlClear), (14 bytes).
+    Removing uart.o(i.UARTModemControlGet), (8 bytes).
+    Removing uart.o(i.UARTModemControlSet), (12 bytes).
+    Removing uart.o(i.UARTModemStatusGet), (10 bytes).
+    Removing uart.o(i.UARTParityModeGet), (8 bytes).
+    Removing uart.o(i.UARTParityModeSet), (12 bytes).
+    Removing uart.o(i.UARTRxErrorClear), (6 bytes).
+    Removing uart.o(i.UARTRxErrorGet), (8 bytes).
+    Removing uart.o(i.UARTSmartCardDisable), (10 bytes).
+    Removing uart.o(i.UARTSmartCardEnable), (22 bytes).
+    Removing uart.o(i.UARTSpaceAvail), (10 bytes).
+    Removing uart.o(i.UARTTxIntModeGet), (8 bytes).
+    Removing uart.o(i.UARTTxIntModeSet), (12 bytes).
+    Removing uart.o(.constdata), (128 bytes).
+    Removing interrupt.o(i.IntDisable), (100 bytes).
+    Removing interrupt.o(i.IntEnable), (100 bytes).
+    Removing interrupt.o(i.IntIsEnabled), (96 bytes).
+    Removing interrupt.o(i.IntMasterDisable), (14 bytes).
+    Removing interrupt.o(i.IntMasterEnable), (14 bytes).
+    Removing interrupt.o(i.IntPendClear), (68 bytes).
+    Removing interrupt.o(i.IntPendSet), (84 bytes).
+    Removing interrupt.o(i.IntPriorityGet), (28 bytes).
+    Removing interrupt.o(i.IntPriorityGroupingGet), (36 bytes).
+    Removing interrupt.o(i.IntPriorityGroupingSet), (28 bytes).
+    Removing interrupt.o(i.IntPriorityMaskGet), (4 bytes).
+    Removing interrupt.o(i.IntPriorityMaskSet), (4 bytes).
+    Removing interrupt.o(i.IntPrioritySet), (40 bytes).
+    Removing interrupt.o(i.IntRegister), (52 bytes).
+    Removing interrupt.o(i.IntTrigger), (12 bytes).
+    Removing interrupt.o(i.IntUnregister), (20 bytes).
+    Removing interrupt.o(i._IntDefaultHandler), (2 bytes).
+    Removing interrupt.o(.constdata), (268 bytes).
+    Removing interrupt.o(vtable), (620 bytes).
+    Removing cpu.o(.emb_text), (38 bytes).
+
+122 unused section(s) (total 5066 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      648  startup_rvmdk.o(RESET)
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ..\..\..\..\utils\uartstdio.c            0x00000000   Number         0  uartstdio.o ABSOLUTE
+    cpu.c                                    0x00000000   Number         0  cpu.o ABSOLUTE
+    cpu.c                                    0x00000000   Number         0  cpu.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    hibernate.c                              0x00000000   Number         0  hibernate.o ABSOLUTE
+    hibernate.c                              0x00000000   Number         0  hibernate.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    interrupt.c                              0x00000000   Number         0  interrupt.o ABSOLUTE
+    startup_rvmdk.S                          0x00000000   Number         0  startup_rvmdk.o ABSOLUTE
+    uart.c                                   0x00000000   Number         0  uart.o ABSOLUTE
+    $v0                                      0x0000026c   Number         0  startup_rvmdk.o(RESET)
+    NmiSR                                    0x00000281   Thumb Code     0  startup_rvmdk.o(RESET)
+    FaultISR                                 0x00000283   Thumb Code     0  startup_rvmdk.o(RESET)
+    IntDefaultHandler                        0x00000285   Thumb Code     0  startup_rvmdk.o(RESET)
+    .ARM.Collect$$$$00000000                 0x00000288   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x00000288   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x0000028c   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x00000290   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x00000290   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x00000290   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000E                 0x00000298   Section        4  entry12b.o(.ARM.Collect$$$$0000000E)
+    .ARM.Collect$$$$0000000F                 0x0000029c   Section        0  entry10a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00000011                 0x0000029c   Section        0  entry11a.o(.ARM.Collect$$$$00000011)
+    .ARM.Collect$$$$00002712                 0x0000029c   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x0000029c   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x000002a0   Section       36  init.o(.text)
+    i.ConfigureUART                          0x000002c4   Section        0  hibernate.o(i.ConfigureUART)
+    i.HibernateISRHandler                    0x00000320   Section        0  hibernate.o(i.HibernateISRHandler)
+    i.HibernateRTCMatchSet                   0x000003ec   Section        0  hibernate.o(i.HibernateRTCMatchSet)
+    i.UARTClockSourceSet                     0x00000400   Section        0  uart.o(i.UARTClockSourceSet)
+    i.UARTStdioConfig                        0x00000408   Section        0  uartstdio.o(i.UARTStdioConfig)
+    i.UARTprintf                             0x00000464   Section        0  uartstdio.o(i.UARTprintf)
+    i.UARTvprintf                            0x00000478   Section        0  uartstdio.o(i.UARTvprintf)
+    i.UARTwrite                              0x0000062c   Section        0  uartstdio.o(i.UARTwrite)
+    i.__scatterload_copy                     0x0000066c   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x0000067a   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x0000067c   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.main                                   0x0000068c   Section        0  hibernate.o(i.main)
+    .constdata                               0x000007a0   Section       28  uartstdio.o(.constdata)
+    g_pcHex                                  0x000007a0   Data           4  uartstdio.o(.constdata)
+    g_ui32UARTBase                           0x000007a4   Data          12  uartstdio.o(.constdata)
+    g_ui32UARTPeriph                         0x000007b0   Data          12  uartstdio.o(.constdata)
+    .conststring                             0x000007bc   Section       17  uartstdio.o(.conststring)
+    .data                                    0x20000000   Section        8  uartstdio.o(.data)
+    bLastWasCR                               0x20000000   Data           1  uartstdio.o(.data)
+    g_ui32Base                               0x20000004   Data           4  uartstdio.o(.data)
+    STACK                                    0x20000008   Section      512  startup_rvmdk.o(STACK)
+    StackMem                                 0x20000008   Data           0  startup_rvmdk.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  hibernate.o ABSOLUTE
+    __Vectors                                0x00000000   Data           0  startup_rvmdk.o(RESET)
+    __arm_fini_                               - Undefined Weak Reference
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    Reset_Handler                            0x0000026d   Thumb Code     0  startup_rvmdk.o(RESET)
+    __main                                   0x00000289   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x00000289   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x0000028d   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x00000291   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x00000291   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x00000291   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x00000291   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_lib_shutdown_fini                   0x00000299   Thumb Code     0  entry12b.o(.ARM.Collect$$$$0000000E)
+    __rt_final_cpp                           0x0000029d   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000F)
+    __rt_final_exit                          0x0000029d   Thumb Code     0  entry11a.o(.ARM.Collect$$$$00000011)
+    __scatterload                            0x000002a1   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x000002a1   Thumb Code     0  init.o(.text)
+    ConfigureUART                            0x000002c5   Thumb Code    76  hibernate.o(i.ConfigureUART)
+    HibernateISRHandler                      0x00000321   Thumb Code   116  hibernate.o(i.HibernateISRHandler)
+    HibernateRTCMatchSet                     0x000003ed   Thumb Code    14  hibernate.o(i.HibernateRTCMatchSet)
+    UARTClockSourceSet                       0x00000401   Thumb Code     6  uart.o(i.UARTClockSourceSet)
+    UARTStdioConfig                          0x00000409   Thumb Code    82  uartstdio.o(i.UARTStdioConfig)
+    UARTprintf                               0x00000465   Thumb Code    18  uartstdio.o(i.UARTprintf)
+    UARTvprintf                              0x00000479   Thumb Code   420  uartstdio.o(i.UARTvprintf)
+    UARTwrite                                0x0000062d   Thumb Code    60  uartstdio.o(i.UARTwrite)
+    __scatterload_copy                       0x0000066d   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x0000067b   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x0000067d   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    main                                     0x0000068d   Thumb Code   176  hibernate.o(i.main)
+    Region$$Table$$Base                      0x000007d0   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x000007f0   Number         0  anon$$obj.o(Region$$Table)
+    __initial_sp                             0x20000208   Data           0  startup_rvmdk.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x0000026d
+
+  Load Region LR_IROM (Base: 0x00000000, Size: 0x000007f8, Max: 0x00040000, ABSOLUTE)
+
+    Execution Region ER_IROM (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x000007f0, Max: 0x00040000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000000   0x00000288   Code   RO           83  * RESET               startup_rvmdk.o
+    0x00000288   0x00000288   0x00000000   Code   RO          911  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x00000288   0x00000288   0x00000004   Code   RO          914    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x0000028c   0x0000028c   0x00000004   Code   RO          917    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x00000290   0x00000290   0x00000000   Code   RO          919    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x00000290   0x00000290   0x00000000   Code   RO          921    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x00000290   0x00000290   0x00000008   Code   RO          922    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x00000298   0x00000298   0x00000004   Code   RO          929    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
+    0x0000029c   0x0000029c   0x00000000   Code   RO          924    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
+    0x0000029c   0x0000029c   0x00000000   Code   RO          926    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
+    0x0000029c   0x0000029c   0x00000004   Code   RO          915    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x000002a0   0x000002a0   0x00000024   Code   RO          930    .text               mc_w.l(init.o)
+    0x000002c4   0x000002c4   0x0000005c   Code   RO            1    i.ConfigureUART     hibernate.o
+    0x00000320   0x00000320   0x000000cc   Code   RO            2    i.HibernateISRHandler  hibernate.o
+    0x000003ec   0x000003ec   0x00000014   Code   RO          165    i.HibernateRTCMatchSet  driverlib.lib(hibernate.o)
+    0x00000400   0x00000400   0x00000006   Code   RO          499    i.UARTClockSourceSet  driverlib.lib(uart.o)
+    0x00000406   0x00000406   0x00000002   PAD
+    0x00000408   0x00000408   0x0000005c   Code   RO           88    i.UARTStdioConfig   uartstdio.o
+    0x00000464   0x00000464   0x00000012   Code   RO           91    i.UARTprintf        uartstdio.o
+    0x00000476   0x00000476   0x00000002   PAD
+    0x00000478   0x00000478   0x000001b4   Code   RO           92    i.UARTvprintf       uartstdio.o
+    0x0000062c   0x0000062c   0x00000040   Code   RO           93    i.UARTwrite         uartstdio.o
+    0x0000066c   0x0000066c   0x0000000e   Code   RO          934    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0000067a   0x0000067a   0x00000002   Code   RO          935    i.__scatterload_null  mc_w.l(handlers.o)
+    0x0000067c   0x0000067c   0x0000000e   Code   RO          936    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x0000068a   0x0000068a   0x00000002   PAD
+    0x0000068c   0x0000068c   0x00000114   Code   RO            3    i.main              hibernate.o
+    0x000007a0   0x000007a0   0x0000001c   Data   RO           94    .constdata          uartstdio.o
+    0x000007bc   0x000007bc   0x00000011   Data   RO           95    .conststring        uartstdio.o
+    0x000007cd   0x000007cd   0x00000003   PAD
+    0x000007d0   0x000007d0   0x00000020   Data   RO          932    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM (Exec base: 0x20000000, Load base: 0x000007f0, Size: 0x00000208, Max: 0x00008000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x000007f0   0x00000008   Data   RW           96    .data               uartstdio.o
+    0x20000008        -       0x00000200   Zero   RW           81    STACK               startup_rvmdk.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       572        204          0          0          0       6961   hibernate.o
+       648        622          0          0        512        300   startup_rvmdk.o
+       610         30         45          8          0       5484   uartstdio.o
+
+    ----------------------------------------------------------------------
+      1832        856         80          8        512      12745   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         2          0          3          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+        20          6          0          0          0       5394   hibernate.o
+         6          0          0          0          0        497   uart.o
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         4          0          0          0          0          0   entry12b.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+
+    ----------------------------------------------------------------------
+       120         22          0          0          0       5959   Library Totals
+         4          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+        26          6          0          0          0       5891   driverlib.lib
+        90         16          0          0          0         68   mc_w.l
+
+    ----------------------------------------------------------------------
+       120         22          0          0          0       5959   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      1952        878         80          8        512      18208   Grand Totals
+      1952        878         80          8        512      18208   ELF Image Totals
+      1952        878         80          8          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 2032 (   1.98kB)
+    Total RW  Size (RW Data + ZI Data)               520 (   0.51kB)
+    Total ROM Size (Code + RO Data + RW Data)       2040 (   1.99kB)
+
+==============================================================================
+
