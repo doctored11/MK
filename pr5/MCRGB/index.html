@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Laser RGB Control</title>
+</head>
+<body>
+  <h1>lr11 RBG</h1>
+  <label>R <input type="range" id="r" min="1" max="255" value="255"></label><br>
+  <label>B <input type="range" id="b" min="1" max="255" value="255"></label><br>
+  <label>G <input type="range" id="g" min="1" max="255" value="255"></label><br>
+
+  <script>
+    const sliders = ['r', 'g', 'b'];
+    function sendValues() {
+      const r = document.getElementById('r').value;
+      const g = document.getElementById('g').value;
+      const b = document.getElementById('b').value;
+      fetch(`/set?r=${r}&g=${g}&b=${b}`);
+    }
+    sliders.forEach(id => {
+      document.getElementById(id).addEventListener('input', sendValues);
+    });
+  </script>
+</body>
+</html>

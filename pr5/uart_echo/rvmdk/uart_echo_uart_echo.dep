@@ -1,0 +1,39 @@
+Dependencies for Project 'uart_echo', Target 'uart_echo': (DO NOT MODIFY !)
+CompilerVersion: 5060960::V5.06 update 7 (build 960)::D:\Programs\keil\ARM\ARM_Compiler_5.06u7
+F (.\startup_rvmdk.S)(0x67DBF8E7)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1"-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Luminary--pd "__UVISION_VERSION SETA 538"-o .\rvmdk\startup_rvmdk.o --depend .\rvmdk\startup_rvmdk.d)
+F (.\uart_echo.c)(0x68014137)(-c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\..\..\.. --c99-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Luminary-D__UVISION_VERSION="538" -Drvmdk -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1-o .\rvmdk\uart_echo.o --omf_browse .\rvmdk\uart_echo.crf --depend .\rvmdk\uart_echo.d)
+I (D:\Programs\keil\ARM\ARM_Compiler_5.06u7\include\stdint.h)(0x5E8E8312)
+I (D:\Programs\keil\ARM\ARM_Compiler_5.06u7\include\stdbool.h)(0x5E8E8312)
+I (D:\Programs\keil\ARM\ARM_Compiler_5.06u7\include\string.h)(0x5E8E8312)
+I (D:\Programs\keil\ARM\ARM_Compiler_5.06u7\include\stdio.h)(0x5E8E8312)
+I (..\..\..\..\inc/hw_ints.h)(0x67DBF8EB)
+I (..\..\..\..\inc/hw_memmap.h)(0x67DBF8EB)
+I (..\..\..\..\driverlib/debug.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/fpu.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/gpio.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/interrupt.h)(0x67EFD6B6)
+I (..\..\..\..\driverlib/pin_map.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/rom.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/rom_map.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/sysctl.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/uart.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/pwm.h)(0x67DBF8E4)
+I (..\..\..\..\utils/uartstdio.h)(0x67DBF8ED)
+I (D:\Programs\keil\ARM\ARM_Compiler_5.06u7\include\stdarg.h)(0x5E8E8312)
+F (..\..\..\..\utils\uartstdio.c)(0x67DBF8ED)(-c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\..\..\.. --c99-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Luminary-D__UVISION_VERSION="538" -Drvmdk -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1-o .\rvmdk\uartstdio.o --omf_browse .\rvmdk\uartstdio.crf --depend .\rvmdk\uartstdio.d)
+I (D:\Programs\keil\ARM\ARM_Compiler_5.06u7\include\stdbool.h)(0x5E8E8312)
+I (D:\Programs\keil\ARM\ARM_Compiler_5.06u7\include\stdint.h)(0x5E8E8312)
+I (D:\Programs\keil\ARM\ARM_Compiler_5.06u7\include\stdarg.h)(0x5E8E8312)
+I (..\..\..\..\inc/hw_ints.h)(0x67DBF8EB)
+I (..\..\..\..\inc/hw_memmap.h)(0x67DBF8EB)
+I (..\..\..\..\inc/hw_types.h)(0x67DBF8EB)
+I (..\..\..\..\inc/hw_uart.h)(0x67DBF8EB)
+I (..\..\..\..\driverlib/debug.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/interrupt.h)(0x67EFD6B6)
+I (..\..\..\..\driverlib/rom.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/rom_map.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/sysctl.h)(0x67DBF8E4)
+I (..\..\..\..\driverlib/uart.h)(0x67DBF8E4)
+I (..\..\..\..\utils/uartstdio.h)(0x67DBF8ED)
+F (..\..\..\..\driverlib\rvmdk\driverlib.lib)(0x67DBF8E4)()
+F (.\readme.txt)(0x67DBF8E7)()
