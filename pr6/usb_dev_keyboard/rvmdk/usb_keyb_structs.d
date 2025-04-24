@@ -1,0 +1,13 @@
+.\rvmdk\usb_keyb_structs.o: usb_keyb_structs.c
+.\rvmdk\usb_keyb_structs.o: D:\Programs\keil\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdint.h
+.\rvmdk\usb_keyb_structs.o: D:\Programs\keil\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdbool.h
+.\rvmdk\usb_keyb_structs.o: ..\..\..\..\inc/hw_types.h
+.\rvmdk\usb_keyb_structs.o: ..\..\..\..\driverlib/usb.h
+.\rvmdk\usb_keyb_structs.o: ..\..\..\..\usblib/usblib.h
+.\rvmdk\usb_keyb_structs.o: ..\..\..\..\usblib/usbhid.h
+.\rvmdk\usb_keyb_structs.o: ..\..\..\..\usblib/usb-ids.h
+.\rvmdk\usb_keyb_structs.o: ..\..\..\..\usblib/device/usbdevice.h
+.\rvmdk\usb_keyb_structs.o: ..\..\..\..\usblib/device/usbdevicepriv.h
+.\rvmdk\usb_keyb_structs.o: ..\..\..\..\usblib/device/usbdhid.h
+.\rvmdk\usb_keyb_structs.o: ..\..\..\..\usblib/device/usbdhidkeyb.h
+.\rvmdk\usb_keyb_structs.o: usb_keyb_structs.h

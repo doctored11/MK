@@ -1,0 +1,45 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: - turboEd, -, LIC=7YKYW-Q9USR-C2EL6-D7S02-5MI3Q-3H90Y
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.38.0.0
+Toolchain Path:  D:\Programs\keil\ARM\ARM_Compiler_5.06u7\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      lmidk-agdi.dll V???
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\ti\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\usb_dev_keyboard\usb_dev_keyboard.uvproj
+Project File Date:  04/18/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Programs\keil\ARM\ARM_Compiler_5.06u7\Bin'
+Rebuild Project 'usb_dev_keyboard' - Target 'usb_dev_keyboard'
+assembling startup_rvmdk.S...
+compiling usb_keyb_structs.c...
+compiling buttons.c...
+compiling uartstdio.c...
+compiling usb_dev_keyboard.c...
+C:\ti\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\usb_dev_keyboard\usb_dev_keyboard.c(695): warning:  #550-D: variable "ui8Buttons"  was set but never used
+          uint8_t ui8Buttons;
+usb_dev_keyboard.c: 1 warning, 0 errors
+linking...
+Program Size: Code=14800 RO-data=808 RW-data=324 ZI-data=2644  
+After Build - User command #1: fromelf --bin --output .\rvmdk\usb_dev_keyboard.bin .\rvmdk\usb_dev_keyboard.axf
+".\rvmdk\usb_dev_keyboard.axf" - 0 Error(s), 1 Warning(s).
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
