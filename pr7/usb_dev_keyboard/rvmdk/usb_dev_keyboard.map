@@ -1,0 +1,1943 @@
+Component: ARM Compiler 5.06 update 7 (build 960) Tool: armlink [4d3601]
+
+==============================================================================
+
+Section Cross References
+
+    buttons.o(i.ButtonsInit) refers to buttons.o(.data) for .data
+    buttons.o(i.ButtonsPoll) refers to buttons.o(.data) for .data
+    startup_rvmdk.o(RESET) refers to startup_rvmdk.o(STACK) for StackMem
+    startup_rvmdk.o(RESET) refers to usb_dev_keyboard.o(i.SysTickIntHandler) for SysTickIntHandler
+    startup_rvmdk.o(RESET) refers to uartstdio.o(i.UARTStdioIntHandler) for UARTStdioIntHandler
+    startup_rvmdk.o(RESET) refers to usbdhandler.o(i.USB0DeviceIntHandler) for USB0DeviceIntHandler
+    startup_rvmdk.o(RESET) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    uartstdio.o(i.UARTEchoSet) refers to uartstdio.o(.data) for .data
+    uartstdio.o(i.UARTFlushRx) refers to uartstdio.o(.data) for .data
+    uartstdio.o(i.UARTFlushTx) refers to uartstdio.o(i.IsBufferEmpty) for IsBufferEmpty
+    uartstdio.o(i.UARTFlushTx) refers to uartstdio.o(.data) for .data
+    uartstdio.o(i.UARTPeek) refers to uartstdio.o(i.GetBufferCount) for GetBufferCount
+    uartstdio.o(i.UARTPeek) refers to uartstdio.o(.data) for .data
+    uartstdio.o(i.UARTPeek) refers to uartstdio.o(.bss) for .bss
+    uartstdio.o(i.UARTPrimeTransmit) refers to uartstdio.o(i.IsBufferEmpty) for IsBufferEmpty
+    uartstdio.o(i.UARTPrimeTransmit) refers to uartstdio.o(.data) for .data
+    uartstdio.o(i.UARTPrimeTransmit) refers to uartstdio.o(.constdata) for .constdata
+    uartstdio.o(i.UARTPrimeTransmit) refers to uartstdio.o(.bss) for .bss
+    uartstdio.o(i.UARTRxBytesAvail) refers to uartstdio.o(i.GetBufferCount) for GetBufferCount
+    uartstdio.o(i.UARTRxBytesAvail) refers to uartstdio.o(.data) for .data
+    uartstdio.o(i.UARTStdioConfig) refers to uartstdio.o(i.UARTFlushRx) for UARTFlushRx
+    uartstdio.o(i.UARTStdioConfig) refers to uartstdio.o(i.UARTFlushTx) for UARTFlushTx
+    uartstdio.o(i.UARTStdioConfig) refers to uartstdio.o(.constdata) for .constdata
+    uartstdio.o(i.UARTStdioConfig) refers to uartstdio.o(.data) for .data
+    uartstdio.o(i.UARTStdioIntHandler) refers to uartstdio.o(i.UARTPrimeTransmit) for UARTPrimeTransmit
+    uartstdio.o(i.UARTStdioIntHandler) refers to uartstdio.o(i.IsBufferEmpty) for IsBufferEmpty
+    uartstdio.o(i.UARTStdioIntHandler) refers to uartstdio.o(i.UARTwrite) for UARTwrite
+    uartstdio.o(i.UARTStdioIntHandler) refers to uartstdio.o(i.IsBufferFull) for IsBufferFull
+    uartstdio.o(i.UARTStdioIntHandler) refers to uartstdio.o(.data) for .data
+    uartstdio.o(i.UARTStdioIntHandler) refers to uartstdio.o(.bss) for .bss
+    uartstdio.o(i.UARTTxBytesFree) refers to uartstdio.o(i.GetBufferCount) for GetBufferCount
+    uartstdio.o(i.UARTTxBytesFree) refers to uartstdio.o(.data) for .data
+    uartstdio.o(i.UARTgetc) refers to uartstdio.o(i.IsBufferEmpty) for IsBufferEmpty
+    uartstdio.o(i.UARTgetc) refers to uartstdio.o(.data) for .data
+    uartstdio.o(i.UARTgetc) refers to uartstdio.o(.bss) for .bss
+    uartstdio.o(i.UARTgets) refers to uartstdio.o(i.IsBufferEmpty) for IsBufferEmpty
+    uartstdio.o(i.UARTgets) refers to uartstdio.o(.bss) for .bss
+    uartstdio.o(i.UARTgets) refers to uartstdio.o(.data) for .data
+    uartstdio.o(i.UARTprintf) refers to uartstdio.o(i.UARTvprintf) for UARTvprintf
+    uartstdio.o(i.UARTvprintf) refers to uartstdio.o(i.UARTwrite) for UARTwrite
+    uartstdio.o(i.UARTvprintf) refers to uartstdio.o(.constdata) for .constdata
+    uartstdio.o(i.UARTwrite) refers to uartstdio.o(i.IsBufferFull) for IsBufferFull
+    uartstdio.o(i.UARTwrite) refers to uartstdio.o(i.IsBufferEmpty) for IsBufferEmpty
+    uartstdio.o(i.UARTwrite) refers to uartstdio.o(i.UARTPrimeTransmit) for UARTPrimeTransmit
+    uartstdio.o(i.UARTwrite) refers to uartstdio.o(.bss) for .bss
+    uartstdio.o(i.UARTwrite) refers to uartstdio.o(.data) for .data
+    uartstdio.o(.constdata) refers to uartstdio.o(.conststring) for .conststring
+    usb_dev_keyboard.o(i.ConfigureUART) refers to uart.o(i.UARTClockSourceSet) for UARTClockSourceSet
+    usb_dev_keyboard.o(i.ConfigureUART) refers to uartstdio.o(i.UARTStdioConfig) for UARTStdioConfig
+    usb_dev_keyboard.o(i.KeyboardHandler) refers to usb_dev_keyboard.o(.data) for .data
+    usb_dev_keyboard.o(i.SendArrowL) refers to usb_dev_keyboard.o(i.SendString) for SendString
+    usb_dev_keyboard.o(i.SendArrowR) refers to usb_dev_keyboard.o(i.SendString) for SendString
+    usb_dev_keyboard.o(i.SendString) refers to usbdhidkeyb.o(i.USBDHIDKeyboardKeyStateChange) for USBDHIDKeyboardKeyStateChange
+    usb_dev_keyboard.o(i.SendString) refers to usb_dev_keyboard.o(i.WaitForSendIdle) for WaitForSendIdle
+    usb_dev_keyboard.o(i.SendString) refers to usb_dev_keyboard.o(.data) for .data
+    usb_dev_keyboard.o(i.SendString) refers to usb_keyb_structs.o(.data) for g_sKeyboardDevice
+    usb_dev_keyboard.o(i.SysTickIntHandler) refers to usb_dev_keyboard.o(.data) for .data
+    usb_dev_keyboard.o(i.WaitForSendIdle) refers to usb_dev_keyboard.o(.data) for .data
+    usb_dev_keyboard.o(i.main) refers to usb_dev_keyboard.o(i.ConfigureUART) for ConfigureUART
+    usb_dev_keyboard.o(i.main) refers to uartstdio.o(i.UARTprintf) for UARTprintf
+    usb_dev_keyboard.o(i.main) refers to buttons.o(i.ButtonsInit) for ButtonsInit
+    usb_dev_keyboard.o(i.main) refers to usbmode.o(i.USBStackModeSet) for USBStackModeSet
+    usb_dev_keyboard.o(i.main) refers to usbdhidkeyb.o(i.USBDHIDKeyboardInit) for USBDHIDKeyboardInit
+    usb_dev_keyboard.o(i.main) refers to buttons.o(i.ButtonsPoll) for ButtonsPoll
+    usb_dev_keyboard.o(i.main) refers to usbdhidkeyb.o(i.USBDHIDKeyboardRemoteWakeupRequest) for USBDHIDKeyboardRemoteWakeupRequest
+    usb_dev_keyboard.o(i.main) refers to usb_dev_keyboard.o(i.SendString) for SendString
+    usb_dev_keyboard.o(i.main) refers to usb_dev_keyboard.o(.data) for .data
+    usb_dev_keyboard.o(i.main) refers to usb_keyb_structs.o(.data) for g_sKeyboardDevice
+    usb_keyb_structs.o(.constdata) refers to usb_keyb_structs.o(.constdata) for g_pui8LangDescriptor
+    usb_keyb_structs.o(.constdata) refers to usb_keyb_structs.o(.constdata) for g_pui8ManufacturerString
+    usb_keyb_structs.o(.constdata) refers to usb_keyb_structs.o(.constdata) for g_pui8ProductString
+    usb_keyb_structs.o(.constdata) refers to usb_keyb_structs.o(.constdata) for g_pui8SeriailNumberString
+    usb_keyb_structs.o(.constdata) refers to usb_keyb_structs.o(.constdata) for g_pui8HIDInterfaceString
+    usb_keyb_structs.o(.constdata) refers to usb_keyb_structs.o(.constdata) for g_pui8ConfigString
+    usb_keyb_structs.o(.data) refers to usb_dev_keyboard.o(i.KeyboardHandler) for KeyboardHandler
+    usb_keyb_structs.o(.data) refers to usb_keyb_structs.o(.constdata) for g_ppui8StringDescriptors
+    uart.o(i.UARTIntRegister) refers to interrupt.o(i.IntRegister) for IntRegister
+    uart.o(i.UARTIntRegister) refers to interrupt.o(i.IntEnable) for IntEnable
+    uart.o(i.UARTIntRegister) refers to uart.o(.constdata) for .constdata
+    uart.o(i.UARTIntUnregister) refers to interrupt.o(i.IntDisable) for IntDisable
+    uart.o(i.UARTIntUnregister) refers to interrupt.o(i.IntUnregister) for IntUnregister
+    uart.o(i.UARTIntUnregister) refers to uart.o(.constdata) for .constdata
+    usbdhandler.o(i.USB0DeviceIntHandler) refers to usb.o(i.USBIntStatusControl) for USBIntStatusControl
+    usbdhandler.o(i.USB0DeviceIntHandler) refers to usbdenum.o(i.USBDeviceIntHandlerInternal) for USBDeviceIntHandlerInternal
+    usbdhidkeyb.o(i.HIDKeyboardTxHandler) refers to usbdhid.o(i.USBDHIDReportWrite) for USBDHIDReportWrite
+    usbdhidkeyb.o(i.USBDHIDKeyboardCompositeInit) refers to usbdhid.o(i.USBDHIDCompositeInit) for USBDHIDCompositeInit
+    usbdhidkeyb.o(i.USBDHIDKeyboardCompositeInit) refers to usbdhidkeyb.o(i.HIDKeyboardRxHandler) for HIDKeyboardRxHandler
+    usbdhidkeyb.o(i.USBDHIDKeyboardCompositeInit) refers to usbdhidkeyb.o(i.HIDKeyboardTxHandler) for HIDKeyboardTxHandler
+    usbdhidkeyb.o(i.USBDHIDKeyboardCompositeInit) refers to usbdhidkeyb.o(.constdata) for .constdata
+    usbdhidkeyb.o(i.USBDHIDKeyboardInit) refers to usbdhidkeyb.o(i.USBDHIDKeyboardCompositeInit) for USBDHIDKeyboardCompositeInit
+    usbdhidkeyb.o(i.USBDHIDKeyboardInit) refers to usbdhid.o(i.USBDHIDInit) for USBDHIDInit
+    usbdhidkeyb.o(i.USBDHIDKeyboardInit) refers to usbdhidkeyb.o(.data) for .data
+    usbdhidkeyb.o(i.USBDHIDKeyboardKeyStateChange) refers to usbdhid.o(i.USBDHIDTxPacketAvailable) for USBDHIDTxPacketAvailable
+    usbdhidkeyb.o(i.USBDHIDKeyboardKeyStateChange) refers to usbdhid.o(i.USBDHIDReportWrite) for USBDHIDReportWrite
+    usbdhidkeyb.o(i.USBDHIDKeyboardPowerStatusSet) refers to usbdhid.o(i.USBDHIDPowerStatusSet) for USBDHIDPowerStatusSet
+    usbdhidkeyb.o(i.USBDHIDKeyboardRemoteWakeupRequest) refers to usbdhid.o(i.USBDHIDRemoteWakeupRequest) for USBDHIDRemoteWakeupRequest
+    usbdhidkeyb.o(i.USBDHIDKeyboardTerm) refers to usbdhid.o(i.USBDHIDTerm) for USBDHIDTerm
+    usbdhidkeyb.o(.constdata) refers to usbdhidkeyb.o(.data) for g_sHIDConfigHeader
+    usbdhidkeyb.o(.constdata) refers to usbdhidkeyb.o(.constdata) for g_pui8KeybReportDescriptor
+    usbdhidkeyb.o(.constdata) refers to usbdhidkeyb.o(.data) for g_pui8KeybDescriptor
+    usbdhidkeyb.o(.constdata) refers to usbdhidkeyb.o(.data) for g_pui8HIDInterface
+    usbdhidkeyb.o(.constdata) refers to usbdhidkeyb.o(.constdata) for g_pui8HIDInEndpoint
+    usbdhidkeyb.o(.constdata) refers to usbdhidkeyb.o(.constdata) for g_pui8HIDOutEndpoint
+    usbdhidkeyb.o(.data) refers to usbdhidkeyb.o(.constdata) for g_sKeybHIDDescriptor
+    usbdhidkeyb.o(.data) refers to usbdhidkeyb.o(.constdata) for g_sHIDConfigSection
+    usbdhidkeyb.o(.data) refers to usbdhidkeyb.o(.constdata) for g_sHIDInterfaceSection
+    usbdhidkeyb.o(.data) refers to usbdhidkeyb.o(.data) for g_sHIDDescriptorSection
+    usbdhidkeyb.o(.data) refers to usbdhidkeyb.o(.constdata) for g_sHIDInEndpointSection
+    usbdhidkeyb.o(.data) refers to usbdhidkeyb.o(.constdata) for g_sHIDOutEndpointSection
+    usbdhidkeyb.o(.data) refers to usbdhidkeyb.o(.data) for g_psHIDSections
+    usbmode.o(i.OTGDeviceDisconnect) refers to usbmode.o(i.USBOTGSetMode) for USBOTGSetMode
+    usbmode.o(i.OTGDeviceDisconnect) refers to usbmode.o(.data) for .data
+    usbmode.o(i.USB0DualModeIntHandler) refers to usb.o(i.USBIntStatusControl) for USBIntStatusControl
+    usbmode.o(i.USB0DualModeIntHandler) refers to usbhostenum.o(i.USBHostIntHandlerInternal) for USBHostIntHandlerInternal
+    usbmode.o(i.USB0DualModeIntHandler) refers to usbdenum.o(i.USBDeviceIntHandlerInternal) for USBDeviceIntHandlerInternal
+    usbmode.o(i.USB0DualModeIntHandler) refers to usbmode.o(.data) for .data
+    usbmode.o(i.USB0OTGModeIntHandler) refers to usb.o(i.USBIntStatusControl) for USBIntStatusControl
+    usbmode.o(i.USB0OTGModeIntHandler) refers to usbhostenum.o(i.USBHCDPowerAutomatic) for USBHCDPowerAutomatic
+    usbmode.o(i.USB0OTGModeIntHandler) refers to usb.o(i.USBModeGet) for USBModeGet
+    usbmode.o(i.USB0OTGModeIntHandler) refers to usbmode.o(i.USBOTGSetMode) for USBOTGSetMode
+    usbmode.o(i.USB0OTGModeIntHandler) refers to usbhostenum.o(i.USBHostIntHandlerInternal) for USBHostIntHandlerInternal
+    usbmode.o(i.USB0OTGModeIntHandler) refers to usbhostenum.o(i.InternalUSBHCDSendEvent) for InternalUSBHCDSendEvent
+    usbmode.o(i.USB0OTGModeIntHandler) refers to usbdenum.o(i.USBDeviceIntHandlerInternal) for USBDeviceIntHandlerInternal
+    usbmode.o(i.USB0OTGModeIntHandler) refers to usbmode.o(.data) for .data
+    usbmode.o(i.USBDualModeInit) refers to usb.o(i.USBHostEndpointConfig) for USBHostEndpointConfig
+    usbmode.o(i.USBDualModeInit) refers to usb.o(i.USBIntEnableControl) for USBIntEnableControl
+    usbmode.o(i.USBDualModeInit) refers to usb.o(i.USBIntEnableEndpoint) for USBIntEnableEndpoint
+    usbmode.o(i.USBDualModeInit) refers to usbtick.o(i.InternalUSBTickInit) for InternalUSBTickInit
+    usbmode.o(i.USBDualModeInit) refers to interrupt.o(i.IntEnable) for IntEnable
+    usbmode.o(i.USBDualModeInit) refers to usb.o(i.USBOTGSessionRequest) for USBOTGSessionRequest
+    usbmode.o(i.USBDualModeInit) refers to usbhostenum.o(i.USBHCDPowerConfigGet) for USBHCDPowerConfigGet
+    usbmode.o(i.USBDualModeInit) refers to usb.o(i.USBHostPwrConfig) for USBHostPwrConfig
+    usbmode.o(i.USBDualModeInit) refers to usbhostenum.o(i.USBHCDPowerAutomatic) for USBHCDPowerAutomatic
+    usbmode.o(i.USBDualModeInit) refers to usb.o(i.USBHostPwrEnable) for USBHostPwrEnable
+    usbmode.o(i.USBDualModeInit) refers to usbdenum.o(.bss) for g_psDCDInst
+    usbmode.o(i.USBDualModeTerm) refers to interrupt.o(i.IntDisable) for IntDisable
+    usbmode.o(i.USBDualModeTerm) refers to usb.o(i.USBIntDisableControl) for USBIntDisableControl
+    usbmode.o(i.USBDualModeTerm) refers to usb.o(i.USBIntDisableEndpoint) for USBIntDisableEndpoint
+    usbmode.o(i.USBDualModeTerm) refers to usbdenum.o(.bss) for g_psDCDInst
+    usbmode.o(i.USBOTGFeatureSet) refers to usbdenum.o(i.USBDCDFeatureSet) for USBDCDFeatureSet
+    usbmode.o(i.USBOTGFeatureSet) refers to usbhostenum.o(i.USBHCDFeatureSet) for USBHCDFeatureSet
+    usbmode.o(i.USBOTGMain) refers to usb.o(i.USBOTGSessionRequest) for USBOTGSessionRequest
+    usbmode.o(i.USBOTGMain) refers to usbmode.o(i.USBOTGSetMode) for USBOTGSetMode
+    usbmode.o(i.USBOTGMain) refers to usbhostenum.o(i.USBHCDPowerAutomatic) for USBHCDPowerAutomatic
+    usbmode.o(i.USBOTGMain) refers to usbhostenum.o(i.InternalUSBHCDSendEvent) for InternalUSBHCDSendEvent
+    usbmode.o(i.USBOTGMain) refers to usbhostenum.o(i.USBHCDMain) for USBHCDMain
+    usbmode.o(i.USBOTGMain) refers to usbmode.o(.data) for .data
+    usbmode.o(i.USBOTGModeInit) refers to sysctl.o(i.SysCtlPeripheralEnable) for SysCtlPeripheralEnable
+    usbmode.o(i.USBOTGModeInit) refers to sysctl.o(i.SysCtlUSBPLLEnable) for SysCtlUSBPLLEnable
+    usbmode.o(i.USBOTGModeInit) refers to usbhostenum.o(i.USBHCDInit) for USBHCDInit
+    usbmode.o(i.USBOTGModeInit) refers to usb.o(i.USBHostEndpointConfig) for USBHostEndpointConfig
+    usbmode.o(i.USBOTGModeInit) refers to usb.o(i.USBIntEnableControl) for USBIntEnableControl
+    usbmode.o(i.USBOTGModeInit) refers to usb.o(i.USBOTGMode) for USBOTGMode
+    usbmode.o(i.USBOTGModeInit) refers to usb.o(i.USBIntEnableEndpoint) for USBIntEnableEndpoint
+    usbmode.o(i.USBOTGModeInit) refers to usbhostenum.o(i.USBHCDPowerConfigGet) for USBHCDPowerConfigGet
+    usbmode.o(i.USBOTGModeInit) refers to usbhostenum.o(i.USBHCDPowerConfigSet) for USBHCDPowerConfigSet
+    usbmode.o(i.USBOTGModeInit) refers to usbhostenum.o(i.USBHCDPowerAutomatic) for USBHCDPowerAutomatic
+    usbmode.o(i.USBOTGModeInit) refers to usb.o(i.USBHostPwrEnable) for USBHostPwrEnable
+    usbmode.o(i.USBOTGModeInit) refers to interrupt.o(i.IntEnable) for IntEnable
+    usbmode.o(i.USBOTGModeInit) refers to usbmode.o(.data) for .data
+    usbmode.o(i.USBOTGModeTerm) refers to interrupt.o(i.IntDisable) for IntDisable
+    usbmode.o(i.USBOTGModeTerm) refers to usb.o(i.USBIntDisableControl) for USBIntDisableControl
+    usbmode.o(i.USBOTGModeTerm) refers to usb.o(i.USBIntDisableEndpoint) for USBIntDisableEndpoint
+    usbmode.o(i.USBOTGModeTerm) refers to usbmode.o(i.USBOTGSetMode) for USBOTGSetMode
+    usbmode.o(i.USBOTGModeTerm) refers to usbdenum.o(.bss) for g_psDCDInst
+    usbmode.o(i.USBOTGPollRate) refers to usbmode.o(.data) for .data
+    usbmode.o(i.USBOTGSetMode) refers to usb.o(i.USBHostSuspend) for USBHostSuspend
+    usbmode.o(i.USBOTGSetMode) refers to usb.o(i.USBOTGSessionRequest) for USBOTGSessionRequest
+    usbmode.o(i.USBOTGSetMode) refers to usbhostenum.o(i.USBHCDPowerAutomatic) for USBHCDPowerAutomatic
+    usbmode.o(i.USBOTGSetMode) refers to usbhostenum.o(i.InternalUSBHCDSendEvent) for InternalUSBHCDSendEvent
+    usbmode.o(i.USBOTGSetMode) refers to usbmode.o(.data) for .data
+    usbmode.o(i.USBStackModeSet) refers to usbmode.o(.data) for .data
+    interrupt.o(i.IntDisable) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntEnable) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntIsEnabled) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntMasterDisable) refers to cpu.o(.emb_text) for CPUcpsid
+    interrupt.o(i.IntMasterEnable) refers to cpu.o(.emb_text) for CPUcpsie
+    interrupt.o(i.IntPendClear) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntPendSet) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntPriorityGet) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntPriorityGroupingGet) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntPriorityGroupingSet) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntPriorityMaskGet) refers to cpu.o(.emb_text) for CPUbasepriGet
+    interrupt.o(i.IntPriorityMaskSet) refers to cpu.o(.emb_text) for CPUbasepriSet
+    interrupt.o(i.IntPrioritySet) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntRegister) refers to interrupt.o(vtable) for vtable
+    interrupt.o(i.IntUnregister) refers to interrupt.o(i._IntDefaultHandler) for _IntDefaultHandler
+    interrupt.o(i.IntUnregister) refers to interrupt.o(vtable) for vtable
+    sysctl.o(i.SysCtlClockFreqSet) refers to sysctl.o(.constdata) for .constdata
+    sysctl.o(i.SysCtlClockGet) refers to sysctl.o(.constdata) for .constdata
+    sysctl.o(i.SysCtlClockSet) refers to sysctl.o(.emb_text) for SysCtlDelay
+    sysctl.o(i.SysCtlDeepSleep) refers to cpu.o(.emb_text) for CPUwfi
+    sysctl.o(i.SysCtlIntRegister) refers to interrupt.o(i.IntRegister) for IntRegister
+    sysctl.o(i.SysCtlIntRegister) refers to interrupt.o(i.IntEnable) for IntEnable
+    sysctl.o(i.SysCtlIntUnregister) refers to interrupt.o(i.IntDisable) for IntDisable
+    sysctl.o(i.SysCtlIntUnregister) refers to interrupt.o(i.IntUnregister) for IntUnregister
+    sysctl.o(i.SysCtlSleep) refers to cpu.o(.emb_text) for CPUwfi
+    sysctl.o(i.SysCtlVCOGet) refers to sysctl.o(.constdata) for .constdata
+    usb.o(i.USBIntRegister) refers to interrupt.o(i.IntRegister) for IntRegister
+    usb.o(i.USBIntRegister) refers to interrupt.o(i.IntEnable) for IntEnable
+    usb.o(i.USBIntUnregister) refers to interrupt.o(i.IntDisable) for IntDisable
+    usb.o(i.USBIntUnregister) refers to interrupt.o(i.IntUnregister) for IntUnregister
+    usbdenum.o(i.USBDCDDeviceInfoInit) refers to usbdenum.o(.bss) for .bss
+    usbdenum.o(i.USBDCDFeatureGet) refers to usbdenum.o(.data) for .data
+    usbdenum.o(i.USBDCDFeatureSet) refers to usbdenum.o(.bss) for .bss
+    usbdenum.o(i.USBDCDFeatureSet) refers to usbdenum.o(.data) for .data
+    usbdenum.o(i.USBDCDInit) refers to sysctl.o(i.SysCtlPeripheralReset) for SysCtlPeripheralReset
+    usbdenum.o(i.USBDCDInit) refers to sysctl.o(i.SysCtlPeripheralEnable) for SysCtlPeripheralEnable
+    usbdenum.o(i.USBDCDInit) refers to sysctl.o(i.SysCtlUSBPLLEnable) for SysCtlUSBPLLEnable
+    usbdenum.o(i.USBDCDInit) refers to usb.o(i.USBClockEnable) for USBClockEnable
+    usbdenum.o(i.USBDCDInit) refers to usb.o(i.USBULPIEnable) for USBULPIEnable
+    usbdenum.o(i.USBDCDInit) refers to usbulpi.o(i.ULPIConfigSet) for ULPIConfigSet
+    usbdenum.o(i.USBDCDInit) refers to usb.o(i.USBULPIDisable) for USBULPIDisable
+    usbdenum.o(i.USBDCDInit) refers to usb.o(i.USBOTGMode) for USBOTGMode
+    usbdenum.o(i.USBDCDInit) refers to usb.o(i.USBDevMode) for USBDevMode
+    usbdenum.o(i.USBDCDInit) refers to usb.o(i.USBDevLPMConfig) for USBDevLPMConfig
+    usbdenum.o(i.USBDCDInit) refers to usb.o(i.USBLPMIntEnable) for USBLPMIntEnable
+    usbdenum.o(i.USBDCDInit) refers to usb.o(i.USBDevLPMEnable) for USBDevLPMEnable
+    usbdenum.o(i.USBDCDInit) refers to usb.o(i.USBDevLPMDisable) for USBDevLPMDisable
+    usbdenum.o(i.USBDCDInit) refers to usbdma.o(i.USBLibDMAInit) for USBLibDMAInit
+    usbdenum.o(i.USBDCDInit) refers to usbtick.o(i.InternalUSBTickInit) for InternalUSBTickInit
+    usbdenum.o(i.USBDCDInit) refers to usb.o(i.USBIntStatusControl) for USBIntStatusControl
+    usbdenum.o(i.USBDCDInit) refers to usb.o(i.USBIntStatusEndpoint) for USBIntStatusEndpoint
+    usbdenum.o(i.USBDCDInit) refers to usb.o(i.USBIntEnableControl) for USBIntEnableControl
+    usbdenum.o(i.USBDCDInit) refers to usb.o(i.USBIntEnableEndpoint) for USBIntEnableEndpoint
+    usbdenum.o(i.USBDCDInit) refers to usb.o(i.USBDevConnect) for USBDevConnect
+    usbdenum.o(i.USBDCDInit) refers to interrupt.o(i.IntEnable) for IntEnable
+    usbdenum.o(i.USBDCDInit) refers to usbdenum.o(.data) for .data
+    usbdenum.o(i.USBDCDInit) refers to usbdenum.o(.bss) for .bss
+    usbdenum.o(i.USBDCDInit) refers to usbmode.o(.data) for g_iUSBMode
+    usbdenum.o(i.USBDCDPowerStatusSet) refers to usbdenum.o(.bss) for .bss
+    usbdenum.o(i.USBDCDRemoteWakeLPM) refers to usb.o(i.USBLPMRemoteWakeEnabled) for USBLPMRemoteWakeEnabled
+    usbdenum.o(i.USBDCDRemoteWakeLPM) refers to usb.o(i.USBDevLPMRemoteWake) for USBDevLPMRemoteWake
+    usbdenum.o(i.USBDCDRemoteWakeupRequest) refers to usb.o(i.USBHostResume) for USBHostResume
+    usbdenum.o(i.USBDCDRemoteWakeupRequest) refers to usbdenum.o(.bss) for .bss
+    usbdenum.o(i.USBDCDRequestDataEP0) refers to usbdenum.o(.bss) for .bss
+    usbdenum.o(i.USBDCDSendDataEP0) refers to usbdenum.o(i.USBDEP0StateTx) for USBDEP0StateTx
+    usbdenum.o(i.USBDCDSendDataEP0) refers to usbdenum.o(.bss) for .bss
+    usbdenum.o(i.USBDCDSetDefaultConfiguration) refers to usbdenum.o(.bss) for .bss
+    usbdenum.o(i.USBDCDStallEP0) refers to usb.o(i.USBDevEndpointStall) for USBDevEndpointStall
+    usbdenum.o(i.USBDCDStallEP0) refers to usbdenum.o(.bss) for .bss
+    usbdenum.o(i.USBDCDTerm) refers to interrupt.o(i.IntDisable) for IntDisable
+    usbdenum.o(i.USBDCDTerm) refers to usbtick.o(i.InternalUSBTickReset) for InternalUSBTickReset
+    usbdenum.o(i.USBDCDTerm) refers to usb.o(i.USBIntDisableControl) for USBIntDisableControl
+    usbdenum.o(i.USBDCDTerm) refers to usb.o(i.USBIntDisableEndpoint) for USBIntDisableEndpoint
+    usbdenum.o(i.USBDCDTerm) refers to usb.o(i.USBDevDisconnect) for USBDevDisconnect
+    usbdenum.o(i.USBDCDTerm) refers to usb.o(i.USBIntStatusControl) for USBIntStatusControl
+    usbdenum.o(i.USBDCDTerm) refers to usb.o(i.USBIntStatusEndpoint) for USBIntStatusEndpoint
+    usbdenum.o(i.USBDCDTerm) refers to sysctl.o(i.SysCtlUSBPLLDisable) for SysCtlUSBPLLDisable
+    usbdenum.o(i.USBDCDTerm) refers to sysctl.o(i.SysCtlPeripheralDisable) for SysCtlPeripheralDisable
+    usbdenum.o(i.USBDCDTerm) refers to usbdenum.o(.bss) for .bss
+    usbdenum.o(i.USBDCDTerm) refers to usbdenum.o(.data) for .data
+    usbdenum.o(i.USBDClearFeature) refers to usb.o(i.USBDevEndpointDataAck) for USBDevEndpointDataAck
+    usbdenum.o(i.USBDClearFeature) refers to usb.o(i.USBDevEndpointStall) for USBDevEndpointStall
+    usbdenum.o(i.USBDClearFeature) refers to usb.o(i.USBDevEndpointStallClear) for USBDevEndpointStallClear
+    usbdenum.o(i.USBDClearFeature) refers to usbdenum.o(.bss) for .bss
+    usbdenum.o(i.USBDEP0StateTx) refers to usb.o(i.USBEndpointDataPut) for USBEndpointDataPut
+    usbdenum.o(i.USBDEP0StateTx) refers to usb.o(i.USBEndpointDataSend) for USBEndpointDataSend
+    usbdenum.o(i.USBDEP0StateTx) refers to usbdenum.o(.bss) for .bss
+    usbdenum.o(i.USBDEP0StateTx) refers to usbdenum.o(.data) for .data
+    usbdenum.o(i.USBDEP0StateTxConfig) refers to usb.o(i.USBEndpointDataPut) for USBEndpointDataPut
+    usbdenum.o(i.USBDEP0StateTxConfig) refers to usb.o(i.USBEndpointDataSend) for USBEndpointDataSend
+    usbdenum.o(i.USBDEP0StateTxConfig) refers to usbdcdesc.o(i.USBDCDConfigDescGetSize) for USBDCDConfigDescGetSize
+    usbdenum.o(i.USBDEP0StateTxConfig) refers to usbdenum.o(.bss) for .bss
+    usbdenum.o(i.USBDEP0StateTxConfig) refers to usbdenum.o(.data) for .data
+    usbdenum.o(i.USBDGetConfiguration) refers to usb.o(i.USBDevEndpointDataAck) for USBDevEndpointDataAck
+    usbdenum.o(i.USBDGetConfiguration) refers to usbdenum.o(i.USBDEP0StateTx) for USBDEP0StateTx
+    usbdenum.o(i.USBDGetDescriptor) refers to usb.o(i.USBDevEndpointDataAck) for USBDevEndpointDataAck
+    usbdenum.o(i.USBDGetDescriptor) refers to usb.o(i.USBDevEndpointStall) for USBDevEndpointStall
+    usbdenum.o(i.USBDGetDescriptor) refers to usbdcdesc.o(i.USBDCDConfigDescGetSize) for USBDCDConfigDescGetSize
+    usbdenum.o(i.USBDGetDescriptor) refers to usbdenum.o(i.USBDEP0StateTxConfig) for USBDEP0StateTxConfig
+    usbdenum.o(i.USBDGetDescriptor) refers to usbdenum.o(i.USBDEP0StateTx) for USBDEP0StateTx
+    usbdenum.o(i.USBDGetDescriptor) refers to usbdenum.o(.data) for .data
+    usbdenum.o(i.USBDGetDescriptor) refers to usbdenum.o(.bss) for .bss
+    usbdenum.o(i.USBDGetInterface) refers to usb.o(i.USBDevEndpointDataAck) for USBDevEndpointDataAck
+    usbdenum.o(i.USBDGetInterface) refers to usbdenum.o(i.USBDEP0StateTx) for USBDEP0StateTx
+    usbdenum.o(i.USBDGetInterface) refers to usb.o(i.USBDevEndpointStall) for USBDevEndpointStall
+    usbdenum.o(i.USBDGetInterface) refers to usbdenum.o(.bss) for .bss
+    usbdenum.o(i.USBDGetStatus) refers to usb.o(i.USBDevEndpointDataAck) for USBDevEndpointDataAck
+    usbdenum.o(i.USBDGetStatus) refers to usbdenum.o(i.USBDEP0StateTx) for USBDEP0StateTx
+    usbdenum.o(i.USBDGetStatus) refers to usb.o(i.USBDevEndpointStall) for USBDevEndpointStall
+    usbdenum.o(i.USBDGetStatus) refers to usbdenum.o(.bss) for .bss
+    usbdenum.o(i.USBDReadAndDispatchRequest) refers to usb.o(i.USBEndpointDataGet) for USBEndpointDataGet
+    usbdenum.o(i.USBDReadAndDispatchRequest) refers to usb.o(i.USBDevEndpointStall) for USBDevEndpointStall
+    usbdenum.o(i.USBDReadAndDispatchRequest) refers to usbdenum.o(.bss) for .bss
+    usbdenum.o(i.USBDReadAndDispatchRequest) refers to usbdenum.o(.data) for .data
+    usbdenum.o(i.USBDReadAndDispatchRequest) refers to usbdenum.o(.constdata) for .constdata
+    usbdenum.o(i.USBDSetAddress) refers to usb.o(i.USBDevEndpointDataAck) for USBDevEndpointDataAck
+    usbdenum.o(i.USBDSetConfiguration) refers to usb.o(i.USBDevEndpointDataAck) for USBDevEndpointDataAck
+    usbdenum.o(i.USBDSetConfiguration) refers to usb.o(i.USBDevEndpointStall) for USBDevEndpointStall
+    usbdenum.o(i.USBDSetConfiguration) refers to usbdconfig.o(i.USBDeviceConfig) for USBDeviceConfig
+    usbdenum.o(i.USBDSetConfiguration) refers to usbdenum.o(.data) for .data
+    usbdenum.o(i.USBDSetConfiguration) refers to usbdenum.o(.bss) for .bss
+    usbdenum.o(i.USBDSetDescriptor) refers to usb.o(i.USBDevEndpointDataAck) for USBDevEndpointDataAck
+    usbdenum.o(i.USBDSetDescriptor) refers to usb.o(i.USBDevEndpointStall) for USBDevEndpointStall
+    usbdenum.o(i.USBDSetDescriptor) refers to usbdenum.o(.bss) for .bss
+    usbdenum.o(i.USBDSetFeature) refers to usb.o(i.USBDevEndpointDataAck) for USBDevEndpointDataAck
+    usbdenum.o(i.USBDSetFeature) refers to usb.o(i.USBDevEndpointStall) for USBDevEndpointStall
+    usbdenum.o(i.USBDSetFeature) refers to usbdenum.o(.bss) for .bss
+    usbdenum.o(i.USBDSetInterface) refers to usb.o(i.USBDevEndpointDataAck) for USBDevEndpointDataAck
+    usbdenum.o(i.USBDSetInterface) refers to usbdcdesc.o(i.USBDCDConfigDescGetNum) for USBDCDConfigDescGetNum
+    usbdenum.o(i.USBDSetInterface) refers to usbdcdesc.o(i.USBDCDConfigGetInterface) for USBDCDConfigGetInterface
+    usbdenum.o(i.USBDSetInterface) refers to usbdconfig.o(i.USBDeviceConfigAlternate) for USBDeviceConfigAlternate
+    usbdenum.o(i.USBDSetInterface) refers to usb.o(i.USBDevEndpointStall) for USBDevEndpointStall
+    usbdenum.o(i.USBDSetInterface) refers to usbdenum.o(.data) for .data
+    usbdenum.o(i.USBDSetInterface) refers to usbdenum.o(.bss) for .bss
+    usbdenum.o(i.USBDSyncFrame) refers to usb.o(i.USBDevEndpointDataAck) for USBDevEndpointDataAck
+    usbdenum.o(i.USBDSyncFrame) refers to usb.o(i.USBDevEndpointStall) for USBDevEndpointStall
+    usbdenum.o(i.USBDSyncFrame) refers to usbdenum.o(.bss) for .bss
+    usbdenum.o(i.USBDeviceEnumHandler) refers to usb.o(i.USBEndpointStatus) for USBEndpointStatus
+    usbdenum.o(i.USBDeviceEnumHandler) refers to usb.o(i.USBDevAddrSet) for USBDevAddrSet
+    usbdenum.o(i.USBDeviceEnumHandler) refers to usbdenum.o(i.USBDReadAndDispatchRequest) for USBDReadAndDispatchRequest
+    usbdenum.o(i.USBDeviceEnumHandler) refers to usbdenum.o(i.USBDEP0StateTx) for USBDEP0StateTx
+    usbdenum.o(i.USBDeviceEnumHandler) refers to usbdenum.o(i.USBDEP0StateTxConfig) for USBDEP0StateTxConfig
+    usbdenum.o(i.USBDeviceEnumHandler) refers to usb.o(i.USBEndpointDataGet) for USBEndpointDataGet
+    usbdenum.o(i.USBDeviceEnumHandler) refers to usb.o(i.USBDevEndpointDataAck) for USBDevEndpointDataAck
+    usbdenum.o(i.USBDeviceEnumHandler) refers to usb.o(i.USBDevEndpointStatusClear) for USBDevEndpointStatusClear
+    usbdenum.o(i.USBDeviceEnumHandler) refers to usbdenum.o(.data) for .data
+    usbdenum.o(i.USBDeviceEnumHandler) refers to usbdenum.o(.bss) for .bss
+    usbdenum.o(i.USBDeviceEnumResetHandler) refers to usbdenum.o(.data) for .data
+    usbdenum.o(i.USBDeviceEnumResetHandler) refers to usbdenum.o(.bss) for .bss
+    usbdenum.o(i.USBDeviceIntHandlerInternal) refers to usbdenum.o(i.USBDeviceResumeTickHandler) for USBDeviceResumeTickHandler
+    usbdenum.o(i.USBDeviceIntHandlerInternal) refers to usb.o(i.USBDevDisconnect) for USBDevDisconnect
+    usbdenum.o(i.USBDeviceIntHandlerInternal) refers to usbtick.o(i.InternalUSBStartOfFrameTick) for InternalUSBStartOfFrameTick
+    usbdenum.o(i.USBDeviceIntHandlerInternal) refers to usb.o(i.USBLPMIntStatus) for USBLPMIntStatus
+    usbdenum.o(i.USBDeviceIntHandlerInternal) refers to usb.o(i.USBIntStatusEndpoint) for USBIntStatusEndpoint
+    usbdenum.o(i.USBDeviceIntHandlerInternal) refers to usbdenum.o(i.USBDeviceEnumHandler) for USBDeviceEnumHandler
+    usbdenum.o(i.USBDeviceIntHandlerInternal) refers to usb.o(i.USBDevLPMEnable) for USBDevLPMEnable
+    usbdenum.o(i.USBDeviceIntHandlerInternal) refers to usbdenum.o(.data) for .data
+    usbdenum.o(i.USBDeviceIntHandlerInternal) refers to usbdenum.o(.bss) for .bss
+    usbdenum.o(i.USBDeviceIntHandlerInternal) refers to usbtick.o(.data) for g_ui32USBSOFCount
+    usbdenum.o(i.USBDeviceResumeTickHandler) refers to usb.o(i.USBHostResume) for USBHostResume
+    usbdenum.o(i.USBDeviceResumeTickHandler) refers to usbdenum.o(.bss) for .bss
+    usbdenum.o(i.USBDeviceResumeTickHandler) refers to usbdenum.o(.data) for .data
+    usbdenum.o(.constdata) refers to usbdenum.o(i.USBDGetStatus) for USBDGetStatus
+    usbdenum.o(.constdata) refers to usbdenum.o(i.USBDClearFeature) for USBDClearFeature
+    usbdenum.o(.constdata) refers to usbdenum.o(i.USBDSetFeature) for USBDSetFeature
+    usbdenum.o(.constdata) refers to usbdenum.o(i.USBDSetAddress) for USBDSetAddress
+    usbdenum.o(.constdata) refers to usbdenum.o(i.USBDGetDescriptor) for USBDGetDescriptor
+    usbdenum.o(.constdata) refers to usbdenum.o(i.USBDSetDescriptor) for USBDSetDescriptor
+    usbdenum.o(.constdata) refers to usbdenum.o(i.USBDGetConfiguration) for USBDGetConfiguration
+    usbdenum.o(.constdata) refers to usbdenum.o(i.USBDSetConfiguration) for USBDSetConfiguration
+    usbdenum.o(.constdata) refers to usbdenum.o(i.USBDGetInterface) for USBDGetInterface
+    usbdenum.o(.constdata) refers to usbdenum.o(i.USBDSetInterface) for USBDSetInterface
+    usbdenum.o(.constdata) refers to usbdenum.o(i.USBDSyncFrame) for USBDSyncFrame
+    usbdhid.o(i.HIDTickHandler) refers to usbdhid.o(i.ProcessIdleTimers) for ProcessIdleTimers
+    usbdhid.o(i.HIDTickHandler) refers to usb.o(i.USBEndpointDataAvail) for USBEndpointDataAvail
+    usbdhid.o(i.HandleEndpoints) refers to usb.o(i.USBEndpointStatus) for USBEndpointStatus
+    usbdhid.o(i.HandleEndpoints) refers to usb.o(i.USBDevEndpointStatusClear) for USBDevEndpointStatusClear
+    usbdhid.o(i.HandleEndpoints) refers to usb.o(i.USBEndpointDataAvail) for USBEndpointDataAvail
+    usbdhid.o(i.HandleEndpoints) refers to usbdhid.o(i.ProcessIdleTimers) for ProcessIdleTimers
+    usbdhid.o(i.HandleEndpoints) refers to usb.o(i.USBEndpointDataPut) for USBEndpointDataPut
+    usbdhid.o(i.HandleEndpoints) refers to usb.o(i.USBEndpointDataSend) for USBEndpointDataSend
+    usbdhid.o(i.HandleGetDescriptor) refers to usbdenum.o(i.USBDCDSendDataEP0) for USBDCDSendDataEP0
+    usbdhid.o(i.HandleGetDescriptor) refers to usbdenum.o(i.USBDCDStallEP0) for USBDCDStallEP0
+    usbdhid.o(i.HandleRequest) refers to usbdenum.o(i.USBDCDRequestDataEP0) for USBDCDRequestDataEP0
+    usbdhid.o(i.HandleRequest) refers to usb.o(i.USBDevEndpointDataAck) for USBDevEndpointDataAck
+    usbdhid.o(i.HandleRequest) refers to usbdenum.o(i.USBDCDSendDataEP0) for USBDCDSendDataEP0
+    usbdhid.o(i.HandleRequest) refers to usbdhid.o(i.ProcessIdleTimers) for ProcessIdleTimers
+    usbdhid.o(i.HandleRequest) refers to usbdenum.o(i.USBDCDStallEP0) for USBDCDStallEP0
+    usbdhid.o(i.ProcessIdleTimers) refers to usbdhid.o(i.USBDHIDReportWrite) for USBDHIDReportWrite
+    usbdhid.o(i.USBDHIDCompositeInit) refers to usbdcdesc.o(i.USBDCDConfigGetInterfaceEndpoint) for USBDCDConfigGetInterfaceEndpoint
+    usbdhid.o(i.USBDHIDCompositeInit) refers to usbdenum.o(i.USBDCDDeviceInfoInit) for USBDCDDeviceInfoInit
+    usbdhid.o(i.USBDHIDCompositeInit) refers to usbtick.o(i.InternalUSBTickInit) for InternalUSBTickInit
+    usbdhid.o(i.USBDHIDCompositeInit) refers to usbtick.o(i.InternalUSBRegisterTickHandler) for InternalUSBRegisterTickHandler
+    usbdhid.o(i.USBDHIDCompositeInit) refers to usbdhid.o(.constdata) for .constdata
+    usbdhid.o(i.USBDHIDCompositeInit) refers to usbdhid.o(.data) for .data
+    usbdhid.o(i.USBDHIDCompositeInit) refers to usbdhid.o(i.HIDTickHandler) for HIDTickHandler
+    usbdhid.o(i.USBDHIDInit) refers to usbdhid.o(i.USBDHIDCompositeInit) for USBDHIDCompositeInit
+    usbdhid.o(i.USBDHIDInit) refers to usbdenum.o(i.USBDCDInit) for USBDCDInit
+    usbdhid.o(i.USBDHIDPacketRead) refers to usb.o(i.USBEndpointStatus) for USBEndpointStatus
+    usbdhid.o(i.USBDHIDPacketRead) refers to usb.o(i.USBEndpointDataAvail) for USBEndpointDataAvail
+    usbdhid.o(i.USBDHIDPacketRead) refers to usb.o(i.USBEndpointDataGet) for USBEndpointDataGet
+    usbdhid.o(i.USBDHIDPacketRead) refers to usb.o(i.USBDevEndpointStatusClear) for USBDevEndpointStatusClear
+    usbdhid.o(i.USBDHIDPacketRead) refers to usb.o(i.USBDevEndpointDataAck) for USBDevEndpointDataAck
+    usbdhid.o(i.USBDHIDPowerStatusSet) refers to usbdenum.o(i.USBDCDPowerStatusSet) for USBDCDPowerStatusSet
+    usbdhid.o(i.USBDHIDRemoteWakeupRequest) refers to usbdenum.o(i.USBDCDRemoteWakeupRequest) for USBDCDRemoteWakeupRequest
+    usbdhid.o(i.USBDHIDReportWrite) refers to usb.o(i.USBEndpointDataPut) for USBEndpointDataPut
+    usbdhid.o(i.USBDHIDReportWrite) refers to usb.o(i.USBEndpointDataSend) for USBEndpointDataSend
+    usbdhid.o(i.USBDHIDRxPacketAvailable) refers to usb.o(i.USBEndpointStatus) for USBEndpointStatus
+    usbdhid.o(i.USBDHIDRxPacketAvailable) refers to usb.o(i.USBEndpointDataAvail) for USBEndpointDataAvail
+    usbdhid.o(i.USBDHIDTerm) refers to usbdenum.o(i.USBDCDTerm) for USBDCDTerm
+    usbdhid.o(.constdata) refers to usbdhid.o(i.HandleGetDescriptor) for HandleGetDescriptor
+    usbdhid.o(.constdata) refers to usbdhid.o(i.HandleRequest) for HandleRequest
+    usbdhid.o(.constdata) refers to usbdhid.o(i.HandleConfigChange) for HandleConfigChange
+    usbdhid.o(.constdata) refers to usbdhid.o(i.HandleEP0DataReceived) for HandleEP0DataReceived
+    usbdhid.o(.constdata) refers to usbdhid.o(i.HandleEP0DataSent) for HandleEP0DataSent
+    usbdhid.o(.constdata) refers to usbdhid.o(i.HandleReset) for HandleReset
+    usbdhid.o(.constdata) refers to usbdhid.o(i.HandleSuspend) for HandleSuspend
+    usbdhid.o(.constdata) refers to usbdhid.o(i.HandleResume) for HandleResume
+    usbdhid.o(.constdata) refers to usbdhid.o(i.HandleDisconnect) for HandleDisconnect
+    usbdhid.o(.constdata) refers to usbdhid.o(i.HandleEndpoints) for HandleEndpoints
+    usbdhid.o(.constdata) refers to usbdhid.o(i.HandleDevice) for HandleDevice
+    usbhostenum.o(i.ConfigDescAlloc) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.ConfigDescFree) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.InternalUSBHCDSendEvent) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.ProcessUSBDeviceStateMachine) refers to interrupt.o(i.IntDisable) for IntDisable
+    usbhostenum.o(i.ProcessUSBDeviceStateMachine) refers to usbhostenum.o(i.USBHCDDeviceDisconnected) for USBHCDDeviceDisconnected
+    usbhostenum.o(i.ProcessUSBDeviceStateMachine) refers to sysctl.o(i.SysCtlPeripheralReset) for SysCtlPeripheralReset
+    usbhostenum.o(i.ProcessUSBDeviceStateMachine) refers to sysctl.o(.emb_text) for SysCtlDelay
+    usbhostenum.o(i.ProcessUSBDeviceStateMachine) refers to usbhostenum.o(i.USBHCDInitInternal) for USBHCDInitInternal
+    usbhostenum.o(i.ProcessUSBDeviceStateMachine) refers to usb.o(i.USBHostReset) for USBHostReset
+    usbhostenum.o(i.ProcessUSBDeviceStateMachine) refers to usbhostenum.o(i.USBHCDControlTransfer) for USBHCDControlTransfer
+    usbhostenum.o(i.ProcessUSBDeviceStateMachine) refers to usb.o(i.USBHostSpeedGet) for USBHostSpeedGet
+    usbhostenum.o(i.ProcessUSBDeviceStateMachine) refers to usbhostenum.o(i.InternalUSBHCDSendEvent) for InternalUSBHCDSendEvent
+    usbhostenum.o(i.ProcessUSBDeviceStateMachine) refers to usbhhub.o(i.USBHHubEnumerationError) for USBHHubEnumerationError
+    usbhostenum.o(i.ProcessUSBDeviceStateMachine) refers to usbdesc.o(i.USBDescGetInterface) for USBDescGetInterface
+    usbhostenum.o(i.ProcessUSBDeviceStateMachine) refers to usbhostenum.o(i.ConfigDescAlloc) for ConfigDescAlloc
+    usbhostenum.o(i.ProcessUSBDeviceStateMachine) refers to usbhhub.o(i.USBHHubEnumerationComplete) for USBHHubEnumerationComplete
+    usbhostenum.o(i.ProcessUSBDeviceStateMachine) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.ProcessUSBDeviceStateMachine) refers to usbhostenum.o(.data) for .data
+    usbhostenum.o(i.USB0HostIntHandler) refers to usb.o(i.USBIntStatusControl) for USBIntStatusControl
+    usbhostenum.o(i.USB0HostIntHandler) refers to usbhostenum.o(i.USBHostIntHandlerInternal) for USBHostIntHandlerInternal
+    usbhostenum.o(i.USBHCDControlTransfer) refers to usb.o(i.USBHostAddrSet) for USBHostAddrSet
+    usbhostenum.o(i.USBHCDControlTransfer) refers to usb.o(i.USBHostEndpointConfig) for USBHostEndpointConfig
+    usbhostenum.o(i.USBHCDControlTransfer) refers to usb.o(i.USBEndpointDataPut) for USBEndpointDataPut
+    usbhostenum.o(i.USBHCDControlTransfer) refers to usb.o(i.USBHostHubAddrSet) for USBHostHubAddrSet
+    usbhostenum.o(i.USBHCDControlTransfer) refers to usb.o(i.USBEndpointDataSend) for USBEndpointDataSend
+    usbhostenum.o(i.USBHCDControlTransfer) refers to interrupt.o(i.IntDisable) for IntDisable
+    usbhostenum.o(i.USBHCDControlTransfer) refers to usb.o(i.USBEndpointStatus) for USBEndpointStatus
+    usbhostenum.o(i.USBHCDControlTransfer) refers to usb.o(i.USBHostEndpointStatusClear) for USBHostEndpointStatusClear
+    usbhostenum.o(i.USBHCDControlTransfer) refers to usb.o(i.USBFIFOFlush) for USBFIFOFlush
+    usbhostenum.o(i.USBHCDControlTransfer) refers to usb.o(i.USBHostRequestStatus) for USBHostRequestStatus
+    usbhostenum.o(i.USBHCDControlTransfer) refers to usb.o(i.USBHostRequestIN) for USBHostRequestIN
+    usbhostenum.o(i.USBHCDControlTransfer) refers to usb.o(i.USBEndpointDataGet) for USBEndpointDataGet
+    usbhostenum.o(i.USBHCDControlTransfer) refers to usb.o(i.USBHostEndpointDataAck) for USBHostEndpointDataAck
+    usbhostenum.o(i.USBHCDControlTransfer) refers to interrupt.o(i.IntEnable) for IntEnable
+    usbhostenum.o(i.USBHCDControlTransfer) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHCDDevAddress) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHCDDevClass) refers to usbdesc.o(i.USBDescGetInterface) for USBDescGetInterface
+    usbhostenum.o(i.USBHCDDevClass) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHCDDevHubPort) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHCDDevProtocol) refers to usbdesc.o(i.USBDescGetInterface) for USBDescGetInterface
+    usbhostenum.o(i.USBHCDDevProtocol) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHCDDevSubClass) refers to usbdesc.o(i.USBDescGetInterface) for USBDescGetInterface
+    usbhostenum.o(i.USBHCDDevSubClass) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHCDDeviceDisconnected) refers to usbhostenum.o(i.InternalUSBHCDSendEvent) for InternalUSBHCDSendEvent
+    usbhostenum.o(i.USBHCDDeviceDisconnected) refers to usbhostenum.o(i.ConfigDescFree) for ConfigDescFree
+    usbhostenum.o(i.USBHCDDeviceDisconnected) refers to usbmode.o(i.OTGDeviceDisconnect) for OTGDeviceDisconnect
+    usbhostenum.o(i.USBHCDDeviceDisconnected) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHCDDeviceDisconnected) refers to usbmode.o(.data) for g_iUSBMode
+    usbhostenum.o(i.USBHCDEventDisable) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHCDEventEnable) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHCDFeatureSet) refers to usbhostenum.o(.data) for .data
+    usbhostenum.o(i.USBHCDFeatureSet) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHCDHubDeviceConnected) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHCDHubDeviceDisconnected) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHCDInit) refers to sysctl.o(i.SysCtlPeripheralReset) for SysCtlPeripheralReset
+    usbhostenum.o(i.USBHCDInit) refers to sysctl.o(i.SysCtlPeripheralEnable) for SysCtlPeripheralEnable
+    usbhostenum.o(i.USBHCDInit) refers to sysctl.o(i.SysCtlUSBPLLEnable) for SysCtlUSBPLLEnable
+    usbhostenum.o(i.USBHCDInit) refers to usb.o(i.USBClockEnable) for USBClockEnable
+    usbhostenum.o(i.USBHCDInit) refers to usb.o(i.USBULPIEnable) for USBULPIEnable
+    usbhostenum.o(i.USBHCDInit) refers to usbulpi.o(i.ULPIConfigSet) for ULPIConfigSet
+    usbhostenum.o(i.USBHCDInit) refers to usb.o(i.USBULPIDisable) for USBULPIDisable
+    usbhostenum.o(i.USBHCDInit) refers to usb.o(i.USBHostMode) for USBHostMode
+    usbhostenum.o(i.USBHCDInit) refers to usbhostenum.o(i.USBHCDInitInternal) for USBHCDInitInternal
+    usbhostenum.o(i.USBHCDInit) refers to usbmode.o(.data) for g_iUSBMode
+    usbhostenum.o(i.USBHCDInit) refers to usbhostenum.o(.data) for .data
+    usbhostenum.o(i.USBHCDInit) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHCDInitInternal) refers to usb.o(i.USBNumEndpointsGet) for USBNumEndpointsGet
+    usbhostenum.o(i.USBHCDInitInternal) refers to usbhhub.o(i.USBHHubInit) for USBHHubInit
+    usbhostenum.o(i.USBHCDInitInternal) refers to usbdma.o(i.USBLibDMAInit) for USBLibDMAInit
+    usbhostenum.o(i.USBHCDInitInternal) refers to usbtick.o(i.InternalUSBTickInit) for InternalUSBTickInit
+    usbhostenum.o(i.USBHCDInitInternal) refers to usb.o(i.USBHostEndpointConfig) for USBHostEndpointConfig
+    usbhostenum.o(i.USBHCDInitInternal) refers to usb.o(i.USBIntEnableControl) for USBIntEnableControl
+    usbhostenum.o(i.USBHCDInitInternal) refers to usb.o(i.USBIntEnableEndpoint) for USBIntEnableEndpoint
+    usbhostenum.o(i.USBHCDInitInternal) refers to interrupt.o(i.IntEnable) for IntEnable
+    usbhostenum.o(i.USBHCDInitInternal) refers to usbhostenum.o(i.USBHCDPowerConfigSet) for USBHCDPowerConfigSet
+    usbhostenum.o(i.USBHCDInitInternal) refers to usb.o(i.USBHostPwrEnable) for USBHostPwrEnable
+    usbhostenum.o(i.USBHCDInitInternal) refers to usb.o(i.USBOTGSessionRequest) for USBOTGSessionRequest
+    usbhostenum.o(i.USBHCDInitInternal) refers to usb.o(i.USBHostLPMConfig) for USBHostLPMConfig
+    usbhostenum.o(i.USBHCDInitInternal) refers to usb.o(i.USBLPMIntEnable) for USBLPMIntEnable
+    usbhostenum.o(i.USBHCDInitInternal) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHCDInitInternal) refers to usbhostenum.o(.data) for .data
+    usbhostenum.o(i.USBHCDInitInternal) refers to usbmode.o(.data) for g_iUSBMode
+    usbhostenum.o(i.USBHCDLPMResume) refers to usb.o(i.USBHostLPMResume) for USBHostLPMResume
+    usbhostenum.o(i.USBHCDLPMSleep) refers to interrupt.o(i.IntDisable) for IntDisable
+    usbhostenum.o(i.USBHCDLPMSleep) refers to usb.o(i.USBHostLPMSend) for USBHostLPMSend
+    usbhostenum.o(i.USBHCDLPMSleep) refers to interrupt.o(i.IntEnable) for IntEnable
+    usbhostenum.o(i.USBHCDLPMSleep) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHCDMain) refers to interrupt.o(i.IntDisable) for IntDisable
+    usbhostenum.o(i.USBHCDMain) refers to usbhostenum.o(i.InternalUSBHCDSendEvent) for InternalUSBHCDSendEvent
+    usbhostenum.o(i.USBHCDMain) refers to usbhostenum.o(i.USBHostCheckPipes) for USBHostCheckPipes
+    usbhostenum.o(i.USBHCDMain) refers to usbhhub.o(i.USBHHubMain) for USBHHubMain
+    usbhostenum.o(i.USBHCDMain) refers to interrupt.o(i.IntEnable) for IntEnable
+    usbhostenum.o(i.USBHCDMain) refers to usbhostenum.o(i.ProcessUSBDeviceStateMachine) for ProcessUSBDeviceStateMachine
+    usbhostenum.o(i.USBHCDMain) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHCDPipeAlloc) refers to usbhostenum.o(i.USBHCDPipeAllocSize) for USBHCDPipeAllocSize
+    usbhostenum.o(i.USBHCDPipeAllocSize) refers to usb.o(i.USBHostEndpointStatusClear) for USBHostEndpointStatusClear
+    usbhostenum.o(i.USBHCDPipeAllocSize) refers to usb.o(i.USBEndpointDataToggleClear) for USBEndpointDataToggleClear
+    usbhostenum.o(i.USBHCDPipeAllocSize) refers to usb.o(i.USBFIFOConfigSet) for USBFIFOConfigSet
+    usbhostenum.o(i.USBHCDPipeAllocSize) refers to usb.o(i.USBHostAddrSet) for USBHostAddrSet
+    usbhostenum.o(i.USBHCDPipeAllocSize) refers to usb.o(i.USBHostHubAddrSet) for USBHostHubAddrSet
+    usbhostenum.o(i.USBHCDPipeAllocSize) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHCDPipeAllocSize) refers to usbhostenum.o(.data) for .data
+    usbhostenum.o(i.USBHCDPipeConfig) refers to usb.o(i.USBHostEndpointConfig) for USBHostEndpointConfig
+    usbhostenum.o(i.USBHCDPipeConfig) refers to usbhostenum.o(.data) for .data
+    usbhostenum.o(i.USBHCDPipeConfig) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHCDPipeDataAck) refers to usb.o(i.USBHostEndpointDataAck) for USBHostEndpointDataAck
+    usbhostenum.o(i.USBHCDPipeDataAck) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHCDPipeFree) refers to usb.o(i.USBHostAddrSet) for USBHostAddrSet
+    usbhostenum.o(i.USBHCDPipeFree) refers to usb.o(i.USBHostHubAddrSet) for USBHostHubAddrSet
+    usbhostenum.o(i.USBHCDPipeFree) refers to usb.o(i.USBHostRequestINClear) for USBHostRequestINClear
+    usbhostenum.o(i.USBHCDPipeFree) refers to usbhostenum.o(.data) for .data
+    usbhostenum.o(i.USBHCDPipeFree) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHCDPipeRead) refers to interrupt.o(i.IntDisable) for IntDisable
+    usbhostenum.o(i.USBHCDPipeRead) refers to interrupt.o(i.IntEnable) for IntEnable
+    usbhostenum.o(i.USBHCDPipeRead) refers to usb.o(i.USBEndpointDMADisable) for USBEndpointDMADisable
+    usbhostenum.o(i.USBHCDPipeRead) refers to usb.o(i.USBHostRequestIN) for USBHostRequestIN
+    usbhostenum.o(i.USBHCDPipeRead) refers to usbhostenum.o(i.USBHCDControlTransfer) for USBHCDControlTransfer
+    usbhostenum.o(i.USBHCDPipeRead) refers to usb.o(i.USBEndpointDataToggleClear) for USBEndpointDataToggleClear
+    usbhostenum.o(i.USBHCDPipeRead) refers to sysctl.o(.emb_text) for SysCtlDelay
+    usbhostenum.o(i.USBHCDPipeRead) refers to usb.o(i.USBHostEndpointDataAck) for USBHostEndpointDataAck
+    usbhostenum.o(i.USBHCDPipeRead) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHCDPipeRead) refers to usbhostenum.o(.data) for .data
+    usbhostenum.o(i.USBHCDPipeReadNonBlocking) refers to usb.o(i.USBEndpointDataGet) for USBEndpointDataGet
+    usbhostenum.o(i.USBHCDPipeReadNonBlocking) refers to usb.o(i.USBHostEndpointDataAck) for USBHostEndpointDataAck
+    usbhostenum.o(i.USBHCDPipeReadNonBlocking) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHCDPipeSchedule) refers to usb.o(i.USBEndpointDataPut) for USBEndpointDataPut
+    usbhostenum.o(i.USBHCDPipeSchedule) refers to usb.o(i.USBEndpointDataSend) for USBEndpointDataSend
+    usbhostenum.o(i.USBHCDPipeSchedule) refers to usb.o(i.USBHostRequestIN) for USBHostRequestIN
+    usbhostenum.o(i.USBHCDPipeSchedule) refers to usb.o(i.USBEndpointDMADisable) for USBEndpointDMADisable
+    usbhostenum.o(i.USBHCDPipeSchedule) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHCDPipeTransferSizeGet) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHCDPipeWrite) refers to interrupt.o(i.IntDisable) for IntDisable
+    usbhostenum.o(i.USBHCDPipeWrite) refers to interrupt.o(i.IntEnable) for IntEnable
+    usbhostenum.o(i.USBHCDPipeWrite) refers to usb.o(i.USBEndpointDMADisable) for USBEndpointDMADisable
+    usbhostenum.o(i.USBHCDPipeWrite) refers to usb.o(i.USBEndpointDataPut) for USBEndpointDataPut
+    usbhostenum.o(i.USBHCDPipeWrite) refers to usb.o(i.USBEndpointDataSend) for USBEndpointDataSend
+    usbhostenum.o(i.USBHCDPipeWrite) refers to usbhostenum.o(i.USBHCDControlTransfer) for USBHCDControlTransfer
+    usbhostenum.o(i.USBHCDPipeWrite) refers to usb.o(i.USBEndpointDataToggleClear) for USBEndpointDataToggleClear
+    usbhostenum.o(i.USBHCDPipeWrite) refers to sysctl.o(.emb_text) for SysCtlDelay
+    usbhostenum.o(i.USBHCDPipeWrite) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHCDPipeWrite) refers to usbhostenum.o(.data) for .data
+    usbhostenum.o(i.USBHCDPowerAutomatic) refers to usbhostenum.o(.data) for .data
+    usbhostenum.o(i.USBHCDPowerConfigGet) refers to usbhostenum.o(.data) for .data
+    usbhostenum.o(i.USBHCDPowerConfigInit) refers to usbhostenum.o(.data) for .data
+    usbhostenum.o(i.USBHCDPowerConfigSet) refers to usb.o(i.USBHostPwrConfig) for USBHostPwrConfig
+    usbhostenum.o(i.USBHCDPowerConfigSet) refers to usb.o(i.USBHostPwrEnable) for USBHostPwrEnable
+    usbhostenum.o(i.USBHCDPowerConfigSet) refers to usbhostenum.o(.data) for .data
+    usbhostenum.o(i.USBHCDRegisterDrivers) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHCDReset) refers to usb.o(i.USBHostReset) for USBHostReset
+    usbhostenum.o(i.USBHCDReset) refers to sysctl.o(.emb_text) for SysCtlDelay
+    usbhostenum.o(i.USBHCDReset) refers to usbhostenum.o(.data) for .data
+    usbhostenum.o(i.USBHCDResume) refers to usb.o(i.USBHostResume) for USBHostResume
+    usbhostenum.o(i.USBHCDResume) refers to sysctl.o(.emb_text) for SysCtlDelay
+    usbhostenum.o(i.USBHCDResume) refers to usbhostenum.o(.data) for .data
+    usbhostenum.o(i.USBHCDSetAddress) refers to usbhostenum.o(i.USBHCDControlTransfer) for USBHCDControlTransfer
+    usbhostenum.o(i.USBHCDSetAddress) refers to sysctl.o(.emb_text) for SysCtlDelay
+    usbhostenum.o(i.USBHCDSetAddress) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHCDSetAddress) refers to usbhostenum.o(.data) for .data
+    usbhostenum.o(i.USBHCDSetConfig) refers to usbhostenum.o(i.USBHCDControlTransfer) for USBHCDControlTransfer
+    usbhostenum.o(i.USBHCDSetInterface) refers to usbhostenum.o(i.USBHCDControlTransfer) for USBHCDControlTransfer
+    usbhostenum.o(i.USBHCDStringDescriptorGet) refers to usbhostenum.o(i.USBHCDControlTransfer) for USBHCDControlTransfer
+    usbhostenum.o(i.USBHCDSuspend) refers to usb.o(i.USBHostSuspend) for USBHostSuspend
+    usbhostenum.o(i.USBHCDTerm) refers to usb.o(i.USBOTGSessionRequest) for USBOTGSessionRequest
+    usbhostenum.o(i.USBHCDTerm) refers to usb.o(i.USBHostPwrDisable) for USBHostPwrDisable
+    usbhostenum.o(i.USBHCDTerm) refers to interrupt.o(i.IntDisable) for IntDisable
+    usbhostenum.o(i.USBHCDTerm) refers to usb.o(i.USBIntDisableControl) for USBIntDisableControl
+    usbhostenum.o(i.USBHCDTerm) refers to usb.o(i.USBIntDisableEndpoint) for USBIntDisableEndpoint
+    usbhostenum.o(i.USBHCDTerm) refers to usbhostenum.o(i.ConfigDescFree) for ConfigDescFree
+    usbhostenum.o(i.USBHCDTerm) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHostCheckPipes) refers to usbhostenum.o(.data) for .data
+    usbhostenum.o(i.USBHostCheckPipes) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHostIntHandlerInternal) refers to usb.o(i.USBHostPwrDisable) for USBHostPwrDisable
+    usbhostenum.o(i.USBHostIntHandlerInternal) refers to interrupt.o(i.IntDisable) for IntDisable
+    usbhostenum.o(i.USBHostIntHandlerInternal) refers to usb.o(i.USBHostPwrEnable) for USBHostPwrEnable
+    usbhostenum.o(i.USBHostIntHandlerInternal) refers to usb.o(i.USBOTGSessionRequest) for USBOTGSessionRequest
+    usbhostenum.o(i.USBHostIntHandlerInternal) refers to usb.o(i.USBOTGMode) for USBOTGMode
+    usbhostenum.o(i.USBHostIntHandlerInternal) refers to usbtick.o(i.InternalUSBStartOfFrameTick) for InternalUSBStartOfFrameTick
+    usbhostenum.o(i.USBHostIntHandlerInternal) refers to usb.o(i.USBLPMIntStatus) for USBLPMIntStatus
+    usbhostenum.o(i.USBHostIntHandlerInternal) refers to usb.o(i.USBHostEndpointDataAck) for USBHostEndpointDataAck
+    usbhostenum.o(i.USBHostIntHandlerInternal) refers to usb.o(i.USBEndpointDataSend) for USBEndpointDataSend
+    usbhostenum.o(i.USBHostIntHandlerInternal) refers to usb.o(i.USBIntStatusEndpoint) for USBIntStatusEndpoint
+    usbhostenum.o(i.USBHostIntHandlerInternal) refers to usb.o(i.USBEndpointStatus) for USBEndpointStatus
+    usbhostenum.o(i.USBHostIntHandlerInternal) refers to usb.o(i.USBHostEndpointStatusClear) for USBHostEndpointStatusClear
+    usbhostenum.o(i.USBHostIntHandlerInternal) refers to usbdma.o(i.USBLibDMAAddrGet) for USBLibDMAAddrGet
+    usbhostenum.o(i.USBHostIntHandlerInternal) refers to usb.o(i.USBEndpointDataAvail) for USBEndpointDataAvail
+    usbhostenum.o(i.USBHostIntHandlerInternal) refers to usb.o(i.USBEndpointDataGet) for USBEndpointDataGet
+    usbhostenum.o(i.USBHostIntHandlerInternal) refers to usbhostenum.o(.bss) for .bss
+    usbhostenum.o(i.USBHostIntHandlerInternal) refers to usbmode.o(.data) for g_iUSBMode
+    usbhostenum.o(i.USBHostIntHandlerInternal) refers to usbtick.o(.data) for g_ui32USBSOFCount
+    usbhostenum.o(i.USBHostIntHandlerInternal) refers to usbhostenum.o(.data) for .data
+    usbtick.o(i.InternalUSBRegisterTickHandler) refers to usbtick.o(.bss) for .bss
+    usbtick.o(i.InternalUSBStartOfFrameTick) refers to usbtick.o(.data) for .data
+    usbtick.o(i.InternalUSBStartOfFrameTick) refers to usbtick.o(.bss) for .bss
+    usbtick.o(i.InternalUSBTickInit) refers to usbtick.o(.data) for .data
+    usbtick.o(i.InternalUSBTickInit) refers to usbtick.o(.bss) for .bss
+    usbtick.o(i.InternalUSBTickReset) refers to usbtick.o(.data) for .data
+    usbdcdesc.o(i.USBDCDConfigDescGet) refers to usbdesc.o(i.USBDescGetNum) for USBDescGetNum
+    usbdcdesc.o(i.USBDCDConfigDescGet) refers to usbdesc.o(i.USBDescGet) for USBDescGet
+    usbdcdesc.o(i.USBDCDConfigDescGetNum) refers to usbdesc.o(i.USBDescGetNum) for USBDescGetNum
+    usbdcdesc.o(i.USBDCDConfigGetInterface) refers to usbdesc.o(i.USBDescGetNum) for USBDescGetNum
+    usbdcdesc.o(i.USBDCDConfigGetInterface) refers to usbdesc.o(i.USBDescGet) for USBDescGet
+    usbdcdesc.o(i.USBDCDConfigGetInterfaceEndpoint) refers to usbdcdesc.o(i.USBDCDConfigGetInterface) for USBDCDConfigGetInterface
+    usbdconfig.o(i.USBDeviceConfig) refers to usbdcdesc.o(i.USBDCDConfigDescGetNum) for USBDCDConfigDescGetNum
+    usbdconfig.o(i.USBDeviceConfig) refers to usbdcdesc.o(i.USBDCDConfigDescGet) for USBDCDConfigDescGet
+    usbdconfig.o(i.USBDeviceConfig) refers to usbdcdesc.o(i.USBDCDConfigGetInterface) for USBDCDConfigGetInterface
+    usbdconfig.o(i.USBDeviceConfig) refers to usbdcdesc.o(i.USBDCDConfigGetInterfaceEndpoint) for USBDCDConfigGetInterfaceEndpoint
+    usbdconfig.o(i.USBDeviceConfig) refers to usb.o(i.USBDevEndpointConfigSet) for USBDevEndpointConfigSet
+    usbdconfig.o(i.USBDeviceConfig) refers to usb.o(i.USBFIFOConfigSet) for USBFIFOConfigSet
+    usbdconfig.o(i.USBDeviceConfigAlternate) refers to usbdcdesc.o(i.USBDCDConfigDescGetNum) for USBDCDConfigDescGetNum
+    usbdconfig.o(i.USBDeviceConfigAlternate) refers to usbdcdesc.o(i.USBDCDConfigGetInterface) for USBDCDConfigGetInterface
+    usbdconfig.o(i.USBDeviceConfigAlternate) refers to usbdcdesc.o(i.USBDCDConfigGetInterfaceEndpoint) for USBDCDConfigGetInterfaceEndpoint
+    usbdconfig.o(i.USBDeviceConfigAlternate) refers to usb.o(i.USBDevEndpointConfigSet) for USBDevEndpointConfigSet
+    usbdma.o(i.USBLibDMAInit) refers to usb.o(i.USBControllerVersion) for USBControllerVersion
+    usbdma.o(i.USBLibDMAInit) refers to usbdma.o(.bss) for .bss
+    usbdma.o(i.USBLibDMAInit) refers to usbdma.o(i.uDMAUSBArbSizeSet) for uDMAUSBArbSizeSet
+    usbdma.o(i.USBLibDMAInit) refers to usbdma.o(i.uDMAUSBChannelAllocate) for uDMAUSBChannelAllocate
+    usbdma.o(i.USBLibDMAInit) refers to usbdma.o(i.uDMAUSBChannelDisable) for uDMAUSBChannelDisable
+    usbdma.o(i.USBLibDMAInit) refers to usbdma.o(i.uDMAUSBChannelEnable) for uDMAUSBChannelEnable
+    usbdma.o(i.USBLibDMAInit) refers to usbdma.o(i.uDMAUSBChannelIntEnable) for uDMAUSBChannelIntEnable
+    usbdma.o(i.USBLibDMAInit) refers to usbdma.o(i.uDMAUSBChannelIntDisable) for uDMAUSBChannelIntDisable
+    usbdma.o(i.USBLibDMAInit) refers to usbdma.o(i.uDMAUSBChannelRelease) for uDMAUSBChannelRelease
+    usbdma.o(i.USBLibDMAInit) refers to usbdma.o(i.uDMAUSBChannelStatus) for uDMAUSBChannelStatus
+    usbdma.o(i.USBLibDMAInit) refers to usbdma.o(i.DMAUSBIntHandler) for DMAUSBIntHandler
+    usbdma.o(i.USBLibDMAInit) refers to usbdma.o(i.uDMAUSBIntStatus) for uDMAUSBIntStatus
+    usbdma.o(i.USBLibDMAInit) refers to usbdma.o(i.DMAUSBIntStatusClear) for DMAUSBIntStatusClear
+    usbdma.o(i.USBLibDMAInit) refers to usbdma.o(i.DMAUSBStatus) for DMAUSBStatus
+    usbdma.o(i.USBLibDMAInit) refers to usbdma.o(i.uDMAUSBTransfer) for uDMAUSBTransfer
+    usbdma.o(i.USBLibDMAInit) refers to usbdma.o(i.uDMAUSBUnitSizeSet) for uDMAUSBUnitSizeSet
+    usbdma.o(i.USBLibDMAInit) refers to usbdma.o(i.iDMAUSBArbSizeSet) for iDMAUSBArbSizeSet
+    usbdma.o(i.USBLibDMAInit) refers to usbdma.o(i.iDMAUSBChannelAllocate) for iDMAUSBChannelAllocate
+    usbdma.o(i.USBLibDMAInit) refers to usbdma.o(i.iDMAUSBChannelStatus) for iDMAUSBChannelStatus
+    usbdma.o(i.USBLibDMAInit) refers to usbdma.o(i.iDMAUSBIntStatus) for iDMAUSBIntStatus
+    usbdma.o(i.USBLibDMAInit) refers to usbdma.o(i.iDMAUSBChannelIntEnable) for iDMAUSBChannelIntEnable
+    usbdma.o(i.USBLibDMAInit) refers to usbdma.o(i.iDMAUSBChannelIntDisable) for iDMAUSBChannelIntDisable
+    usbdma.o(i.USBLibDMAInit) refers to usbdma.o(i.iDMAUSBTransfer) for iDMAUSBTransfer
+    usbdma.o(i.USBLibDMAInit) refers to usbdma.o(i.iDMAUSBChannelRelease) for iDMAUSBChannelRelease
+    usbdma.o(i.USBLibDMAInit) refers to usbdma.o(i.iDMAUSBChannelEnable) for iDMAUSBChannelEnable
+    usbdma.o(i.USBLibDMAInit) refers to usbdma.o(i.iDMAUSBChannelDisable) for iDMAUSBChannelDisable
+    usbdma.o(i.USBLibDMAInit) refers to usbdma.o(i.iDMAUSBUnitSizeSet) for iDMAUSBUnitSizeSet
+    usbdma.o(i.iDMAUSBChannelAllocate) refers to usb.o(i.USBDMAChannelDisable) for USBDMAChannelDisable
+    usbdma.o(i.iDMAUSBChannelDisable) refers to usb.o(i.USBDMAChannelDisable) for USBDMAChannelDisable
+    usbdma.o(i.iDMAUSBChannelDisable) refers to usb.o(i.USBDMAChannelIntDisable) for USBDMAChannelIntDisable
+    usbdma.o(i.iDMAUSBChannelEnable) refers to interrupt.o(i.IntIsEnabled) for IntIsEnabled
+    usbdma.o(i.iDMAUSBChannelEnable) refers to interrupt.o(i.IntDisable) for IntDisable
+    usbdma.o(i.iDMAUSBChannelEnable) refers to usb.o(i.USBDMAChannelIntEnable) for USBDMAChannelIntEnable
+    usbdma.o(i.iDMAUSBChannelEnable) refers to usb.o(i.USBDMAChannelEnable) for USBDMAChannelEnable
+    usbdma.o(i.iDMAUSBChannelEnable) refers to interrupt.o(i.IntEnable) for IntEnable
+    usbdma.o(i.iDMAUSBChannelIntDisable) refers to usb.o(i.USBDMAChannelIntDisable) for USBDMAChannelIntDisable
+    usbdma.o(i.iDMAUSBChannelIntEnable) refers to usb.o(i.USBDMAChannelIntEnable) for USBDMAChannelIntEnable
+    usbdma.o(i.iDMAUSBChannelRelease) refers to usb.o(i.USBDMAChannelDisable) for USBDMAChannelDisable
+    usbdma.o(i.iDMAUSBChannelStatus) refers to usb.o(i.USBDMAChannelStatus) for USBDMAChannelStatus
+    usbdma.o(i.iDMAUSBIntStatus) refers to usb.o(i.USBDMAChannelIntStatus) for USBDMAChannelIntStatus
+    usbdma.o(i.iDMAUSBTransfer) refers to usb.o(i.USBDMAChannelAddressSet) for USBDMAChannelAddressSet
+    usbdma.o(i.iDMAUSBTransfer) refers to usb.o(i.USBDMAChannelCountSet) for USBDMAChannelCountSet
+    usbdma.o(i.iDMAUSBTransfer) refers to usb.o(i.USBEndpointPacketCountSet) for USBEndpointPacketCountSet
+    usbdma.o(i.iDMAUSBTransfer) refers to usb.o(i.USBEndpointDMAConfigSet) for USBEndpointDMAConfigSet
+    usbdma.o(i.iDMAUSBTransfer) refers to usb.o(i.USBDMAChannelConfigSet) for USBDMAChannelConfigSet
+    usbdma.o(i.iDMAUSBTransfer) refers to usb.o(i.USBEndpointDMAEnable) for USBEndpointDMAEnable
+    usbdma.o(i.iDMAUSBTransfer) refers to usb.o(i.USBDMAChannelEnable) for USBDMAChannelEnable
+    usbdma.o(i.iDMAUSBTransfer) refers to usb.o(i.USBEndpointDMADisable) for USBEndpointDMADisable
+    usbdma.o(i.uDMAUSBArbSizeSet) refers to udma.o(i.uDMAChannelControlSet) for uDMAChannelControlSet
+    usbdma.o(i.uDMAUSBChannelAllocate) refers to usb.o(i.USBEndpointDMAChannel) for USBEndpointDMAChannel
+    usbdma.o(i.uDMAUSBChannelAllocate) refers to udma.o(i.uDMAChannelAttributeDisable) for uDMAChannelAttributeDisable
+    usbdma.o(i.uDMAUSBChannelAllocate) refers to udma.o(i.uDMAChannelControlSet) for uDMAChannelControlSet
+    usbdma.o(i.uDMAUSBChannelAllocate) refers to usb.o(i.USBEndpointDMADisable) for USBEndpointDMADisable
+    usbdma.o(i.uDMAUSBChannelDisable) refers to usb.o(i.USBEndpointDMADisable) for USBEndpointDMADisable
+    usbdma.o(i.uDMAUSBChannelDisable) refers to udma.o(i.uDMAChannelDisable) for uDMAChannelDisable
+    usbdma.o(i.uDMAUSBChannelEnable) refers to interrupt.o(i.IntIsEnabled) for IntIsEnabled
+    usbdma.o(i.uDMAUSBChannelEnable) refers to interrupt.o(i.IntDisable) for IntDisable
+    usbdma.o(i.uDMAUSBChannelEnable) refers to usb.o(i.USBEndpointDMAEnable) for USBEndpointDMAEnable
+    usbdma.o(i.uDMAUSBChannelEnable) refers to udma.o(i.uDMAChannelEnable) for uDMAChannelEnable
+    usbdma.o(i.uDMAUSBChannelEnable) refers to interrupt.o(i.IntEnable) for IntEnable
+    usbdma.o(i.uDMAUSBChannelRelease) refers to udma.o(i.uDMAChannelAttributeDisable) for uDMAChannelAttributeDisable
+    usbdma.o(i.uDMAUSBChannelRelease) refers to usb.o(i.USBEndpointDMADisable) for USBEndpointDMADisable
+    usbdma.o(i.uDMAUSBIntStatus) refers to udma.o(i.uDMAChannelModeGet) for uDMAChannelModeGet
+    usbdma.o(i.uDMAUSBTransfer) refers to usb.o(i.USBFIFOAddrGet) for USBFIFOAddrGet
+    usbdma.o(i.uDMAUSBTransfer) refers to udma.o(i.uDMAChannelTransferSet) for uDMAChannelTransferSet
+    usbdma.o(i.uDMAUSBTransfer) refers to usb.o(i.USBEndpointPacketCountSet) for USBEndpointPacketCountSet
+    usbdma.o(i.uDMAUSBTransfer) refers to usb.o(i.USBEndpointDMAConfigSet) for USBEndpointDMAConfigSet
+    usbdma.o(i.uDMAUSBTransfer) refers to usbdma.o(i.uDMAUSBChannelEnable) for uDMAUSBChannelEnable
+    usbdma.o(i.uDMAUSBUnitSizeSet) refers to udma.o(i.uDMAChannelControlSet) for uDMAChannelControlSet
+    usbhhub.o(i.HubDriverClose) refers to usbhostenum.o(i.USBHCDHubDeviceDisconnected) for USBHCDHubDeviceDisconnected
+    usbhhub.o(i.HubDriverClose) refers to usbhostenum.o(i.USBHCDPipeFree) for USBHCDPipeFree
+    usbhhub.o(i.HubDriverClose) refers to usbhhub.o(.bss) for .bss
+    usbhhub.o(i.HubDriverOpen) refers to usbdesc.o(i.USBDescGetInterface) for USBDescGetInterface
+    usbhhub.o(i.HubDriverOpen) refers to usbdesc.o(i.USBDescGetInterfaceEndpoint) for USBDescGetInterfaceEndpoint
+    usbhhub.o(i.HubDriverOpen) refers to usbhostenum.o(i.USBHCDPipeAlloc) for USBHCDPipeAlloc
+    usbhhub.o(i.HubDriverOpen) refers to usbhostenum.o(i.USBHCDPipeConfig) for USBHCDPipeConfig
+    usbhhub.o(i.HubDriverOpen) refers to usbhostenum.o(i.USBHCDControlTransfer) for USBHCDControlTransfer
+    usbhhub.o(i.HubDriverOpen) refers to usbhostenum.o(i.USBHCDPipeFree) for USBHCDPipeFree
+    usbhhub.o(i.HubDriverOpen) refers to usbhhub.o(.bss) for .bss
+    usbhhub.o(i.HubDriverOpen) refers to usbhhub.o(i.HubIntINCallback) for HubIntINCallback
+    usbhhub.o(i.HubIntINCallback) refers to usbhostenum.o(i.USBHCDPipeSchedule) for USBHCDPipeSchedule
+    usbhhub.o(i.HubIntINCallback) refers to usbhostenum.o(i.USBHCDPipeDataAck) for USBHCDPipeDataAck
+    usbhhub.o(i.HubIntINCallback) refers to usbhhub.o(.bss) for .bss
+    usbhhub.o(i.HubIntINCallback) refers to usbhhub.o(.data) for .data
+    usbhhub.o(i.USBHHubEnumerationComplete) refers to usbhhub.o(.bss) for .bss
+    usbhhub.o(i.USBHHubEnumerationError) refers to usbhhub.o(.bss) for .bss
+    usbhhub.o(i.USBHHubInit) refers to usbhhub.o(.data) for .data
+    usbhhub.o(i.USBHHubInit) refers to usbhhub.o(.bss) for .bss
+    usbhhub.o(i.USBHHubLPMSleep) refers to usbhostenum.o(i.USBHCDLPMSleep) for USBHCDLPMSleep
+    usbhhub.o(i.USBHHubLPMStatus) refers to usbhostenum.o(i.USBHCDLPMStatus) for USBHCDLPMStatus
+    usbhhub.o(i.USBHHubMain) refers to usbhostenum.o(i.USBHCDControlTransfer) for USBHCDControlTransfer
+    usbhhub.o(i.USBHHubMain) refers to usbhostenum.o(i.USBHCDHubDeviceConnected) for USBHCDHubDeviceConnected
+    usbhhub.o(i.USBHHubMain) refers to interrupt.o(i.IntDisable) for IntDisable
+    usbhhub.o(i.USBHHubMain) refers to interrupt.o(i.IntEnable) for IntEnable
+    usbhhub.o(i.USBHHubMain) refers to usbhostenum.o(i.USBHCDHubDeviceDisconnected) for USBHCDHubDeviceDisconnected
+    usbhhub.o(i.USBHHubMain) refers to usbhhub.o(.bss) for .bss
+    usbhhub.o(i.USBHHubMain) refers to usbhhub.o(.data) for .data
+    usbhhub.o(i.USBHHubOpen) refers to usbhhub.o(.bss) for .bss
+    usbhhub.o(.constdata) refers to usbhhub.o(i.HubDriverOpen) for HubDriverOpen
+    usbhhub.o(.constdata) refers to usbhhub.o(i.HubDriverClose) for HubDriverClose
+    usbulpi.o(i.ULPIConfigSet) refers to usb.o(i.USBULPIRegRead) for USBULPIRegRead
+    usbulpi.o(i.ULPIConfigSet) refers to usb.o(i.USBULPIRegWrite) for USBULPIRegWrite
+    usbulpi.o(i.ULPIPowerTransceiver) refers to usb.o(i.USBULPIRegWrite) for USBULPIRegWrite
+    udma.o(i.uDMAIntRegister) refers to interrupt.o(i.IntRegister) for IntRegister
+    udma.o(i.uDMAIntRegister) refers to interrupt.o(i.IntEnable) for IntEnable
+    udma.o(i.uDMAIntUnregister) refers to interrupt.o(i.IntDisable) for IntDisable
+    udma.o(i.uDMAIntUnregister) refers to interrupt.o(i.IntUnregister) for IntUnregister
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000F) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$00000011) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry12b.o(.ARM.Collect$$$$0000000E) for __rt_lib_shutdown_fini
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_rvmdk.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_rvmdk.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to usb_dev_keyboard.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to usb_dev_keyboard.o(i.main) for main
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing startup_rvmdk.o(HEAP), (0 bytes).
+    Removing startup_rvmdk.o(.text), (0 bytes).
+    Removing uartstdio.o(i.GetBufferCount), (18 bytes).
+    Removing uartstdio.o(i.UARTEchoSet), (16 bytes).
+    Removing uartstdio.o(i.UARTPeek), (60 bytes).
+    Removing uartstdio.o(i.UARTRxBytesAvail), (16 bytes).
+    Removing uartstdio.o(i.UARTTxBytesFree), (24 bytes).
+    Removing uartstdio.o(i.UARTgetc), (44 bytes).
+    Removing uartstdio.o(i.UARTgets), (88 bytes).
+    Removing usb_dev_keyboard.o(i.SendArrowL), (6 bytes).
+    Removing usb_dev_keyboard.o(i.SendArrowR), (6 bytes).
+    Removing usb_dev_keyboard.o(.data), (1 bytes).
+    Removing uart.o(i.UART9BitAddrSend), (38 bytes).
+    Removing uart.o(i.UART9BitAddrSet), (10 bytes).
+    Removing uart.o(i.UART9BitDisable), (14 bytes).
+    Removing uart.o(i.UART9BitEnable), (14 bytes).
+    Removing uart.o(i.UARTBreakCtl), (18 bytes).
+    Removing uart.o(i.UARTBusy), (8 bytes).
+    Removing uart.o(i.UARTCharGet), (12 bytes).
+    Removing uart.o(i.UARTCharGetNonBlocking), (16 bytes).
+    Removing uart.o(i.UARTCharPut), (12 bytes).
+    Removing uart.o(i.UARTCharPutNonBlocking), (16 bytes).
+    Removing uart.o(i.UARTCharsAvail), (10 bytes).
+    Removing uart.o(i.UARTClockSourceGet), (6 bytes).
+    Removing uart.o(i.UARTConfigGetExpClk), (46 bytes).
+    Removing uart.o(i.UARTConfigSetExpClk), (110 bytes).
+    Removing uart.o(i.UARTDMADisable), (10 bytes).
+    Removing uart.o(i.UARTDMAEnable), (8 bytes).
+    Removing uart.o(i.UARTDisable), (30 bytes).
+    Removing uart.o(i.UARTDisableSIR), (10 bytes).
+    Removing uart.o(i.UARTEnable), (20 bytes).
+    Removing uart.o(i.UARTEnableSIR), (18 bytes).
+    Removing uart.o(i.UARTFIFODisable), (10 bytes).
+    Removing uart.o(i.UARTFIFOEnable), (10 bytes).
+    Removing uart.o(i.UARTFIFOLevelGet), (16 bytes).
+    Removing uart.o(i.UARTFIFOLevelSet), (6 bytes).
+    Removing uart.o(i.UARTFlowControlGet), (8 bytes).
+    Removing uart.o(i.UARTFlowControlSet), (12 bytes).
+    Removing uart.o(i.UARTIntClear), (4 bytes).
+    Removing uart.o(i.UARTIntDisable), (10 bytes).
+    Removing uart.o(i.UARTIntEnable), (8 bytes).
+    Removing uart.o(i.UARTIntRegister), (88 bytes).
+    Removing uart.o(i.UARTIntStatus), (10 bytes).
+    Removing uart.o(i.UARTIntUnregister), (88 bytes).
+    Removing uart.o(i.UARTLoopbackEnable), (10 bytes).
+    Removing uart.o(i.UARTModemControlClear), (14 bytes).
+    Removing uart.o(i.UARTModemControlGet), (8 bytes).
+    Removing uart.o(i.UARTModemControlSet), (12 bytes).
+    Removing uart.o(i.UARTModemStatusGet), (10 bytes).
+    Removing uart.o(i.UARTParityModeGet), (8 bytes).
+    Removing uart.o(i.UARTParityModeSet), (12 bytes).
+    Removing uart.o(i.UARTRxErrorClear), (6 bytes).
+    Removing uart.o(i.UARTRxErrorGet), (8 bytes).
+    Removing uart.o(i.UARTSmartCardDisable), (10 bytes).
+    Removing uart.o(i.UARTSmartCardEnable), (22 bytes).
+    Removing uart.o(i.UARTSpaceAvail), (10 bytes).
+    Removing uart.o(i.UARTTxIntModeGet), (8 bytes).
+    Removing uart.o(i.UARTTxIntModeSet), (12 bytes).
+    Removing uart.o(.constdata), (128 bytes).
+    Removing usbdhidkeyb.o(i.USBDHIDKeyboardPowerStatusSet), (6 bytes).
+    Removing usbdhidkeyb.o(i.USBDHIDKeyboardSetCBData), (8 bytes).
+    Removing usbdhidkeyb.o(i.USBDHIDKeyboardTerm), (12 bytes).
+    Removing usbmode.o(i.OTGDeviceDisconnect), (28 bytes).
+    Removing usbmode.o(i.USB0DualModeIntHandler), (76 bytes).
+    Removing usbmode.o(i.USB0OTGModeIntHandler), (204 bytes).
+    Removing usbmode.o(i.USBDualModeInit), (116 bytes).
+    Removing usbmode.o(i.USBDualModeTerm), (44 bytes).
+    Removing usbmode.o(i.USBOTGFeatureSet), (44 bytes).
+    Removing usbmode.o(i.USBOTGMain), (136 bytes).
+    Removing usbmode.o(i.USBOTGModeInit), (184 bytes).
+    Removing usbmode.o(i.USBOTGModeTerm), (52 bytes).
+    Removing usbmode.o(i.USBOTGPollRate), (12 bytes).
+    Removing usbmode.o(i.USBOTGSetMode), (136 bytes).
+    Removing interrupt.o(i.IntMasterDisable), (14 bytes).
+    Removing interrupt.o(i.IntMasterEnable), (14 bytes).
+    Removing interrupt.o(i.IntPendClear), (68 bytes).
+    Removing interrupt.o(i.IntPendSet), (84 bytes).
+    Removing interrupt.o(i.IntPriorityGet), (28 bytes).
+    Removing interrupt.o(i.IntPriorityGroupingGet), (36 bytes).
+    Removing interrupt.o(i.IntPriorityGroupingSet), (28 bytes).
+    Removing interrupt.o(i.IntPriorityMaskGet), (4 bytes).
+    Removing interrupt.o(i.IntPriorityMaskSet), (4 bytes).
+    Removing interrupt.o(i.IntPrioritySet), (40 bytes).
+    Removing interrupt.o(i.IntRegister), (52 bytes).
+    Removing interrupt.o(i.IntTrigger), (12 bytes).
+    Removing interrupt.o(i.IntUnregister), (20 bytes).
+    Removing interrupt.o(i._IntDefaultHandler), (2 bytes).
+    Removing interrupt.o(vtable), (620 bytes).
+    Removing sysctl.o(.emb_text), (6 bytes).
+    Removing sysctl.o(i.SysCtlAltClkConfig), (12 bytes).
+    Removing sysctl.o(i.SysCtlClockFreqSet), (740 bytes).
+    Removing sysctl.o(i.SysCtlClockGet), (340 bytes).
+    Removing sysctl.o(i.SysCtlClockOutConfig), (20 bytes).
+    Removing sysctl.o(i.SysCtlClockSet), (288 bytes).
+    Removing sysctl.o(i.SysCtlDeepSleep), (32 bytes).
+    Removing sysctl.o(i.SysCtlDeepSleepClockConfigSet), (112 bytes).
+    Removing sysctl.o(i.SysCtlDeepSleepClockSet), (12 bytes).
+    Removing sysctl.o(i.SysCtlDeepSleepPowerSet), (12 bytes).
+    Removing sysctl.o(i.SysCtlFlashSectorSizeGet), (56 bytes).
+    Removing sysctl.o(i.SysCtlFlashSizeGet), (56 bytes).
+    Removing sysctl.o(i.SysCtlGPIOAHBDisable), (28 bytes).
+    Removing sysctl.o(i.SysCtlGPIOAHBEnable), (24 bytes).
+    Removing sysctl.o(i.SysCtlIntClear), (12 bytes).
+    Removing sysctl.o(i.SysCtlIntDisable), (16 bytes).
+    Removing sysctl.o(i.SysCtlIntEnable), (16 bytes).
+    Removing sysctl.o(i.SysCtlIntRegister), (20 bytes).
+    Removing sysctl.o(i.SysCtlIntStatus), (16 bytes).
+    Removing sysctl.o(i.SysCtlIntUnregister), (18 bytes).
+    Removing sysctl.o(i.SysCtlLDODeepSleepGet), (12 bytes).
+    Removing sysctl.o(i.SysCtlLDODeepSleepSet), (12 bytes).
+    Removing sysctl.o(i.SysCtlLDOSleepGet), (12 bytes).
+    Removing sysctl.o(i.SysCtlLDOSleepSet), (12 bytes).
+    Removing sysctl.o(i.SysCtlMOSCConfigSet), (12 bytes).
+    Removing sysctl.o(i.SysCtlNMIClear), (16 bytes).
+    Removing sysctl.o(i.SysCtlNMIStatus), (12 bytes).
+    Removing sysctl.o(i.SysCtlPIOSCCalibrate), (76 bytes).
+    Removing sysctl.o(i.SysCtlPWMClockGet), (24 bytes).
+    Removing sysctl.o(i.SysCtlPWMClockSet), (20 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralClockGating), (68 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralDeepSleepDisable), (40 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralDeepSleepEnable), (40 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralDisable), (40 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralPowerOff), (40 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralPowerOn), (40 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralPresent), (44 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralReady), (44 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralSleepDisable), (40 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralSleepEnable), (40 bytes).
+    Removing sysctl.o(i.SysCtlReset), (16 bytes).
+    Removing sysctl.o(i.SysCtlResetBehaviorGet), (12 bytes).
+    Removing sysctl.o(i.SysCtlResetBehaviorSet), (12 bytes).
+    Removing sysctl.o(i.SysCtlResetCauseClear), (16 bytes).
+    Removing sysctl.o(i.SysCtlResetCauseGet), (12 bytes).
+    Removing sysctl.o(i.SysCtlSRAMSizeGet), (16 bytes).
+    Removing sysctl.o(i.SysCtlSleep), (4 bytes).
+    Removing sysctl.o(i.SysCtlSleepPowerSet), (12 bytes).
+    Removing sysctl.o(i.SysCtlUSBPLLDisable), (16 bytes).
+    Removing sysctl.o(i.SysCtlVCOGet), (120 bytes).
+    Removing sysctl.o(i.SysCtlVoltageEventClear), (16 bytes).
+    Removing sysctl.o(i.SysCtlVoltageEventConfig), (12 bytes).
+    Removing sysctl.o(i.SysCtlVoltageEventStatus), (12 bytes).
+    Removing sysctl.o(.constdata), (596 bytes).
+    Removing usb.o(i.USBClockDisable), (8 bytes).
+    Removing usb.o(i.USBDMAChannelAddressGet), (10 bytes).
+    Removing usb.o(i.USBDMAChannelCountGet), (10 bytes).
+    Removing usb.o(i.USBDMAChannelStatusClear), (20 bytes).
+    Removing usb.o(i.USBDMANumChannels), (8 bytes).
+    Removing usb.o(i.USBDevAddrGet), (4 bytes).
+    Removing usb.o(i.USBDevEndpointConfigGet), (144 bytes).
+    Removing usb.o(i.USBDevLPMRemoteWake), (14 bytes).
+    Removing usb.o(i.USBDevSpeedGet), (14 bytes).
+    Removing usb.o(i.USBEndpointDataToggleClear), (36 bytes).
+    Removing usb.o(i.USBFIFOConfigGet), (80 bytes).
+    Removing usb.o(i.USBFIFOFlush), (80 bytes).
+    Removing usb.o(i.USBFrameNumberGet), (4 bytes).
+    Removing usb.o(i.USBHighSpeed), (18 bytes).
+    Removing usb.o(i.USBHostAddrGet), (20 bytes).
+    Removing usb.o(i.USBHostAddrSet), (22 bytes).
+    Removing usb.o(i.USBHostEndpointConfig), (242 bytes).
+    Removing usb.o(i.USBHostEndpointDataAck), (32 bytes).
+    Removing usb.o(i.USBHostEndpointDataToggle), (112 bytes).
+    Removing usb.o(i.USBHostEndpointPing), (28 bytes).
+    Removing usb.o(i.USBHostEndpointSpeed), (84 bytes).
+    Removing usb.o(i.USBHostEndpointStatusClear), (40 bytes).
+    Removing usb.o(i.USBHostHubAddrGet), (20 bytes).
+    Removing usb.o(i.USBHostHubAddrSet), (70 bytes).
+    Removing usb.o(i.USBHostLPMConfig), (24 bytes).
+    Removing usb.o(i.USBHostLPMResume), (14 bytes).
+    Removing usb.o(i.USBHostLPMSend), (36 bytes).
+    Removing usb.o(i.USBHostMode), (8 bytes).
+    Removing usb.o(i.USBHostPwrConfig), (26 bytes).
+    Removing usb.o(i.USBHostPwrDisable), (14 bytes).
+    Removing usb.o(i.USBHostPwrEnable), (14 bytes).
+    Removing usb.o(i.USBHostPwrFaultDisable), (14 bytes).
+    Removing usb.o(i.USBHostPwrFaultEnable), (14 bytes).
+    Removing usb.o(i.USBHostRequestIN), (18 bytes).
+    Removing usb.o(i.USBHostRequestINClear), (22 bytes).
+    Removing usb.o(i.USBHostRequestStatus), (8 bytes).
+    Removing usb.o(i.USBHostReset), (18 bytes).
+    Removing usb.o(i.USBHostSpeedGet), (44 bytes).
+    Removing usb.o(i.USBHostSuspend), (10 bytes).
+    Removing usb.o(i.USBIntDisableControl), (44 bytes).
+    Removing usb.o(i.USBIntDisableEndpoint), (24 bytes).
+    Removing usb.o(i.USBIntRegister), (68 bytes).
+    Removing usb.o(i.USBIntUnregister), (68 bytes).
+    Removing usb.o(i.USBLPMEndpointGet), (10 bytes).
+    Removing usb.o(i.USBLPMIntDisable), (14 bytes).
+    Removing usb.o(i.USBLPMLinkStateGet), (10 bytes).
+    Removing usb.o(i.USBLPMRemoteWakeEnabled), (14 bytes).
+    Removing usb.o(i.USBModeConfig), (6 bytes).
+    Removing usb.o(i.USBModeGet), (10 bytes).
+    Removing usb.o(i.USBNumEndpointsGet), (10 bytes).
+    Removing usb.o(i.USBOTGSessionRequest), (22 bytes).
+    Removing usb.o(i.USBPHYPowerOff), (10 bytes).
+    Removing usb.o(i.USBPHYPowerOn), (10 bytes).
+    Removing usb.o(i.USBULPIConfig), (6 bytes).
+    Removing usbdenum.o(i.USBDCDFeatureGet), (24 bytes).
+    Removing usbdenum.o(i.USBDCDFeatureSet), (128 bytes).
+    Removing usbdenum.o(i.USBDCDPowerStatusSet), (28 bytes).
+    Removing usbdenum.o(i.USBDCDRemoteWakeLPM), (32 bytes).
+    Removing usbdenum.o(i.USBDCDSetDefaultConfiguration), (12 bytes).
+    Removing usbdenum.o(i.USBDCDTerm), (92 bytes).
+    Removing usbdenum.o(i.USBDeviceEnumResetHandler), (64 bytes).
+    Removing usbdhid.o(i.USBDHIDPacketRead), (134 bytes).
+    Removing usbdhid.o(i.USBDHIDPowerStatusSet), (6 bytes).
+    Removing usbdhid.o(i.USBDHIDRxPacketAvailable), (38 bytes).
+    Removing usbdhid.o(i.USBDHIDSetRxCBData), (8 bytes).
+    Removing usbdhid.o(i.USBDHIDSetTxCBData), (8 bytes).
+    Removing usbdhid.o(i.USBDHIDTerm), (18 bytes).
+    Removing usbhostenum.o(i.ConfigDescAlloc), (112 bytes).
+    Removing usbhostenum.o(i.ConfigDescFree), (64 bytes).
+    Removing usbhostenum.o(i.InternalUSBHCDSendEvent), (56 bytes).
+    Removing usbhostenum.o(i.ProcessUSBDeviceStateMachine), (984 bytes).
+    Removing usbhostenum.o(i.USB0HostIntHandler), (24 bytes).
+    Removing usbhostenum.o(i.USBHCDControlTransfer), (628 bytes).
+    Removing usbhostenum.o(i.USBHCDDevAddress), (40 bytes).
+    Removing usbhostenum.o(i.USBHCDDevClass), (60 bytes).
+    Removing usbhostenum.o(i.USBHCDDevHubPort), (40 bytes).
+    Removing usbhostenum.o(i.USBHCDDevProtocol), (60 bytes).
+    Removing usbhostenum.o(i.USBHCDDevSubClass), (60 bytes).
+    Removing usbhostenum.o(i.USBHCDDeviceDisconnected), (160 bytes).
+    Removing usbhostenum.o(i.USBHCDEventDisable), (88 bytes).
+    Removing usbhostenum.o(i.USBHCDEventEnable), (88 bytes).
+    Removing usbhostenum.o(i.USBHCDFeatureSet), (140 bytes).
+    Removing usbhostenum.o(i.USBHCDHubDeviceConnected), (100 bytes).
+    Removing usbhostenum.o(i.USBHCDHubDeviceDisconnected), (16 bytes).
+    Removing usbhostenum.o(i.USBHCDInit), (256 bytes).
+    Removing usbhostenum.o(i.USBHCDInitInternal), (404 bytes).
+    Removing usbhostenum.o(i.USBHCDLPMResume), (12 bytes).
+    Removing usbhostenum.o(i.USBHCDLPMSleep), (88 bytes).
+    Removing usbhostenum.o(i.USBHCDLPMStatus), (26 bytes).
+    Removing usbhostenum.o(i.USBHCDMain), (248 bytes).
+    Removing usbhostenum.o(i.USBHCDPipeAlloc), (12 bytes).
+    Removing usbhostenum.o(i.USBHCDPipeAllocSize), (756 bytes).
+    Removing usbhostenum.o(i.USBHCDPipeConfig), (236 bytes).
+    Removing usbhostenum.o(i.USBHCDPipeDataAck), (48 bytes).
+    Removing usbhostenum.o(i.USBHCDPipeFree), (292 bytes).
+    Removing usbhostenum.o(i.USBHCDPipeRead), (520 bytes).
+    Removing usbhostenum.o(i.USBHCDPipeReadNonBlocking), (68 bytes).
+    Removing usbhostenum.o(i.USBHCDPipeSchedule), (180 bytes).
+    Removing usbhostenum.o(i.USBHCDPipeTransferSizeGet), (28 bytes).
+    Removing usbhostenum.o(i.USBHCDPipeWrite), (492 bytes).
+    Removing usbhostenum.o(i.USBHCDPowerAutomatic), (20 bytes).
+    Removing usbhostenum.o(i.USBHCDPowerConfigGet), (12 bytes).
+    Removing usbhostenum.o(i.USBHCDPowerConfigInit), (12 bytes).
+    Removing usbhostenum.o(i.USBHCDPowerConfigSet), (84 bytes).
+    Removing usbhostenum.o(i.USBHCDRegisterDrivers), (16 bytes).
+    Removing usbhostenum.o(i.USBHCDReset), (60 bytes).
+    Removing usbhostenum.o(i.USBHCDResume), (44 bytes).
+    Removing usbhostenum.o(i.USBHCDSetAddress), (84 bytes).
+    Removing usbhostenum.o(i.USBHCDSetConfig), (48 bytes).
+    Removing usbhostenum.o(i.USBHCDSetInterface), (50 bytes).
+    Removing usbhostenum.o(i.USBHCDStringDescriptorGet), (58 bytes).
+    Removing usbhostenum.o(i.USBHCDSuspend), (12 bytes).
+    Removing usbhostenum.o(i.USBHCDTerm), (136 bytes).
+    Removing usbhostenum.o(i.USBHostCheckPipes), (116 bytes).
+    Removing usbhostenum.o(i.USBHostIntHandlerInternal), (1188 bytes).
+    Removing usbhostenum.o(.bss), (1812 bytes).
+    Removing usbhostenum.o(.data), (32 bytes).
+    Removing usbtick.o(i.InternalUSBTickReset), (12 bytes).
+    Removing cpu.o(.emb_text), (38 bytes).
+    Removing usbdcdesc.o(i.USBDCDConfigGetNumAlternateInterfaces), (88 bytes).
+    Removing usbdesc.o(i.USBDescGetInterface), (122 bytes).
+    Removing usbdesc.o(i.USBDescGetInterfaceEndpoint), (66 bytes).
+    Removing usbdesc.o(i.USBDescGetNumAlternateInterfaces), (42 bytes).
+    Removing usbdma.o(i.USBLibDMAAddrGet), (8 bytes).
+    Removing usbdma.o(i.USBLibDMASizeGet), (8 bytes).
+    Removing usbhhub.o(i.HubDriverClose), (132 bytes).
+    Removing usbhhub.o(i.HubDriverOpen), (400 bytes).
+    Removing usbhhub.o(i.HubIntINCallback), (88 bytes).
+    Removing usbhhub.o(i.USBHHubClose), (8 bytes).
+    Removing usbhhub.o(i.USBHHubEnumerationComplete), (28 bytes).
+    Removing usbhhub.o(i.USBHHubEnumerationError), (28 bytes).
+    Removing usbhhub.o(i.USBHHubInit), (68 bytes).
+    Removing usbhhub.o(i.USBHHubLPMSleep), (6 bytes).
+    Removing usbhhub.o(i.USBHHubLPMStatus), (6 bytes).
+    Removing usbhhub.o(i.USBHHubMain), (888 bytes).
+    Removing usbhhub.o(i.USBHHubOpen), (20 bytes).
+    Removing usbhhub.o(.bss), (156 bytes).
+    Removing usbhhub.o(.constdata), (16 bytes).
+    Removing usbhhub.o(.data), (8 bytes).
+    Removing usbulpi.o(i.ULPIPowerTransceiver), (18 bytes).
+    Removing udma.o(i.uDMAChannelAssign), (44 bytes).
+    Removing udma.o(i.uDMAChannelAttributeEnable), (72 bytes).
+    Removing udma.o(i.uDMAChannelAttributeGet), (64 bytes).
+    Removing udma.o(i.uDMAChannelIsEnabled), (28 bytes).
+    Removing udma.o(i.uDMAChannelRequest), (20 bytes).
+    Removing udma.o(i.uDMAChannelScatterGatherSet), (84 bytes).
+    Removing udma.o(i.uDMAChannelSelectDefault), (16 bytes).
+    Removing udma.o(i.uDMAChannelSelectSecondary), (16 bytes).
+    Removing udma.o(i.uDMAChannelSizeGet), (32 bytes).
+    Removing udma.o(i.uDMAControlAlternateBaseGet), (12 bytes).
+    Removing udma.o(i.uDMAControlBaseGet), (12 bytes).
+    Removing udma.o(i.uDMAControlBaseSet), (12 bytes).
+    Removing udma.o(i.uDMADisable), (12 bytes).
+    Removing udma.o(i.uDMAEnable), (12 bytes).
+    Removing udma.o(i.uDMAErrorStatusClear), (12 bytes).
+    Removing udma.o(i.uDMAErrorStatusGet), (12 bytes).
+    Removing udma.o(i.uDMAIntClear), (12 bytes).
+    Removing udma.o(i.uDMAIntRegister), (18 bytes).
+    Removing udma.o(i.uDMAIntStatus), (12 bytes).
+    Removing udma.o(i.uDMAIntUnregister), (18 bytes).
+
+302 unused section(s) (total 21955 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      648  startup_rvmdk.o(RESET)
+    ../clib/../cmprslib/zerorunl.c           0x00000000   Number         0  __dczerorl.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12b.o ABSOLUTE
+    ..\..\..\..\utils\uartstdio.c            0x00000000   Number         0  uartstdio.o ABSOLUTE
+    ..\drivers\buttons.c                     0x00000000   Number         0  buttons.o ABSOLUTE
+    cpu.c                                    0x00000000   Number         0  cpu.o ABSOLUTE
+    cpu.c                                    0x00000000   Number         0  cpu.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    device\usbdcdesc.c                       0x00000000   Number         0  usbdcdesc.o ABSOLUTE
+    device\usbdconfig.c                      0x00000000   Number         0  usbdconfig.o ABSOLUTE
+    device\usbdenum.c                        0x00000000   Number         0  usbdenum.o ABSOLUTE
+    device\usbdhandler.c                     0x00000000   Number         0  usbdhandler.o ABSOLUTE
+    device\usbdhid.c                         0x00000000   Number         0  usbdhid.o ABSOLUTE
+    device\usbdhidkeyb.c                     0x00000000   Number         0  usbdhidkeyb.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    host\usbhhub.c                           0x00000000   Number         0  usbhhub.o ABSOLUTE
+    host\usbhostenum.c                       0x00000000   Number         0  usbhostenum.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    interrupt.c                              0x00000000   Number         0  interrupt.o ABSOLUTE
+    startup_rvmdk.S                          0x00000000   Number         0  startup_rvmdk.o ABSOLUTE
+    sysctl.c                                 0x00000000   Number         0  sysctl.o ABSOLUTE
+    sysctl.c                                 0x00000000   Number         0  sysctl.o ABSOLUTE
+    uart.c                                   0x00000000   Number         0  uart.o ABSOLUTE
+    udma.c                                   0x00000000   Number         0  udma.o ABSOLUTE
+    usb.c                                    0x00000000   Number         0  usb.o ABSOLUTE
+    usb_dev_keyboard.c                       0x00000000   Number         0  usb_dev_keyboard.o ABSOLUTE
+    usb_keyb_structs.c                       0x00000000   Number         0  usb_keyb_structs.o ABSOLUTE
+    usbdesc.c                                0x00000000   Number         0  usbdesc.o ABSOLUTE
+    usbdma.c                                 0x00000000   Number         0  usbdma.o ABSOLUTE
+    usbmode.c                                0x00000000   Number         0  usbmode.o ABSOLUTE
+    usbtick.c                                0x00000000   Number         0  usbtick.o ABSOLUTE
+    usbulpi.c                                0x00000000   Number         0  usbulpi.o ABSOLUTE
+    $v0                                      0x0000026c   Number         0  startup_rvmdk.o(RESET)
+    NmiSR                                    0x00000281   Thumb Code     0  startup_rvmdk.o(RESET)
+    FaultISR                                 0x00000283   Thumb Code     0  startup_rvmdk.o(RESET)
+    IntDefaultHandler                        0x00000285   Thumb Code     0  startup_rvmdk.o(RESET)
+    .ARM.Collect$$$$00000000                 0x00000288   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x00000288   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x0000028c   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x00000290   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x00000290   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x00000290   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000E                 0x00000298   Section        4  entry12b.o(.ARM.Collect$$$$0000000E)
+    .ARM.Collect$$$$0000000F                 0x0000029c   Section        0  entry10a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00000011                 0x0000029c   Section        0  entry11a.o(.ARM.Collect$$$$00000011)
+    .ARM.Collect$$$$00002712                 0x0000029c   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x0000029c   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x000002a0   Section       36  init.o(.text)
+    .text                                    0x000002c4   Section        0  __dczerorl.o(.text)
+    i.ButtonsInit                            0x00000300   Section        0  buttons.o(i.ButtonsInit)
+    i.ButtonsPoll                            0x00000364   Section        0  buttons.o(i.ButtonsPoll)
+    i.ConfigureUART                          0x000003bc   Section        0  usb_dev_keyboard.o(i.ConfigureUART)
+    i.DMAUSBIntHandler                       0x00000418   Section        0  usbdma.o(i.DMAUSBIntHandler)
+    DMAUSBIntHandler                         0x00000419   Thumb Code    64  usbdma.o(i.DMAUSBIntHandler)
+    i.DMAUSBIntStatusClear                   0x00000458   Section        0  usbdma.o(i.DMAUSBIntStatusClear)
+    DMAUSBIntStatusClear                     0x00000459   Thumb Code    14  usbdma.o(i.DMAUSBIntStatusClear)
+    i.DMAUSBStatus                           0x00000466   Section        0  usbdma.o(i.DMAUSBStatus)
+    DMAUSBStatus                             0x00000467   Thumb Code     4  usbdma.o(i.DMAUSBStatus)
+    i.HIDKeyboardRxHandler                   0x0000046a   Section        0  usbdhidkeyb.o(i.HIDKeyboardRxHandler)
+    HIDKeyboardRxHandler                     0x0000046b   Thumb Code   184  usbdhidkeyb.o(i.HIDKeyboardRxHandler)
+    i.HIDKeyboardTxHandler                   0x00000522   Section        0  usbdhidkeyb.o(i.HIDKeyboardTxHandler)
+    HIDKeyboardTxHandler                     0x00000523   Thumb Code    62  usbdhidkeyb.o(i.HIDKeyboardTxHandler)
+    i.HIDTickHandler                         0x00000560   Section        0  usbdhid.o(i.HIDTickHandler)
+    HIDTickHandler                           0x00000561   Thumb Code    60  usbdhid.o(i.HIDTickHandler)
+    i.HandleConfigChange                     0x000005a0   Section        0  usbdhid.o(i.HandleConfigChange)
+    HandleConfigChange                       0x000005a1   Thumb Code    78  usbdhid.o(i.HandleConfigChange)
+    i.HandleDevice                           0x000005ee   Section        0  usbdhid.o(i.HandleDevice)
+    HandleDevice                             0x000005ef   Thumb Code   128  usbdhid.o(i.HandleDevice)
+    i.HandleDisconnect                       0x0000066e   Section        0  usbdhid.o(i.HandleDisconnect)
+    HandleDisconnect                         0x0000066f   Thumb Code    30  usbdhid.o(i.HandleDisconnect)
+    i.HandleEP0DataReceived                  0x0000068c   Section        0  usbdhid.o(i.HandleEP0DataReceived)
+    HandleEP0DataReceived                    0x0000068d   Thumb Code    44  usbdhid.o(i.HandleEP0DataReceived)
+    i.HandleEP0DataSent                      0x000006b8   Section        0  usbdhid.o(i.HandleEP0DataSent)
+    HandleEP0DataSent                        0x000006b9   Thumb Code    32  usbdhid.o(i.HandleEP0DataSent)
+    i.HandleEndpoints                        0x000006d8   Section        0  usbdhid.o(i.HandleEndpoints)
+    HandleEndpoints                          0x000006d9   Thumb Code   286  usbdhid.o(i.HandleEndpoints)
+    i.HandleGetDescriptor                    0x000007fc   Section        0  usbdhid.o(i.HandleGetDescriptor)
+    HandleGetDescriptor                      0x000007fd   Thumb Code   184  usbdhid.o(i.HandleGetDescriptor)
+    i.HandleRequest                          0x000008b4   Section        0  usbdhid.o(i.HandleRequest)
+    HandleRequest                            0x000008b5   Thumb Code   414  usbdhid.o(i.HandleRequest)
+    i.HandleReset                            0x00000a52   Section        0  usbdhid.o(i.HandleReset)
+    HandleReset                              0x00000a53   Thumb Code    30  usbdhid.o(i.HandleReset)
+    i.HandleResume                           0x00000a70   Section        0  usbdhid.o(i.HandleResume)
+    HandleResume                             0x00000a71   Thumb Code    12  usbdhid.o(i.HandleResume)
+    i.HandleSuspend                          0x00000a7c   Section        0  usbdhid.o(i.HandleSuspend)
+    HandleSuspend                            0x00000a7d   Thumb Code    12  usbdhid.o(i.HandleSuspend)
+    i.IntDisable                             0x00000a88   Section        0  interrupt.o(i.IntDisable)
+    i.IntEnable                              0x00000aec   Section        0  interrupt.o(i.IntEnable)
+    i.IntIsEnabled                           0x00000b50   Section        0  interrupt.o(i.IntIsEnabled)
+    i.InternalUSBRegisterTickHandler         0x00000bb0   Section        0  usbtick.o(i.InternalUSBRegisterTickHandler)
+    i.InternalUSBStartOfFrameTick            0x00000be4   Section        0  usbtick.o(i.InternalUSBStartOfFrameTick)
+    i.InternalUSBTickInit                    0x00000c1c   Section        0  usbtick.o(i.InternalUSBTickInit)
+    i.IsBufferEmpty                          0x00000c54   Section        0  uartstdio.o(i.IsBufferEmpty)
+    IsBufferEmpty                            0x00000c55   Thumb Code    16  uartstdio.o(i.IsBufferEmpty)
+    i.IsBufferFull                           0x00000c64   Section        0  uartstdio.o(i.IsBufferFull)
+    IsBufferFull                             0x00000c65   Thumb Code    26  uartstdio.o(i.IsBufferFull)
+    i.KeyboardHandler                        0x00000c80   Section        0  usb_dev_keyboard.o(i.KeyboardHandler)
+    i.ProcessIdleTimers                      0x00000cd8   Section        0  usbdhid.o(i.ProcessIdleTimers)
+    ProcessIdleTimers                        0x00000cd9   Thumb Code   176  usbdhid.o(i.ProcessIdleTimers)
+    i.SendString                             0x00000d88   Section        0  usb_dev_keyboard.o(i.SendString)
+    i.SysCtlPeripheralEnable                 0x00000de4   Section        0  sysctl.o(i.SysCtlPeripheralEnable)
+    i.SysCtlPeripheralReset                  0x00000e0c   Section        0  sysctl.o(i.SysCtlPeripheralReset)
+    i.SysCtlUSBPLLEnable                     0x00000e48   Section        0  sysctl.o(i.SysCtlUSBPLLEnable)
+    i.SysTickIntHandler                      0x00000e58   Section        0  usb_dev_keyboard.o(i.SysTickIntHandler)
+    i.UARTClockSourceSet                     0x00000e68   Section        0  uart.o(i.UARTClockSourceSet)
+    i.UARTFlushRx                            0x00000e70   Section        0  uartstdio.o(i.UARTFlushRx)
+    i.UARTFlushTx                            0x00000e98   Section        0  uartstdio.o(i.UARTFlushTx)
+    i.UARTPrimeTransmit                      0x00000ed0   Section        0  uartstdio.o(i.UARTPrimeTransmit)
+    UARTPrimeTransmit                        0x00000ed1   Thumb Code   108  uartstdio.o(i.UARTPrimeTransmit)
+    i.UARTStdioConfig                        0x00000f48   Section        0  uartstdio.o(i.UARTStdioConfig)
+    i.UARTStdioIntHandler                    0x00000fe0   Section        0  uartstdio.o(i.UARTStdioIntHandler)
+    i.UARTprintf                             0x000010e8   Section        0  uartstdio.o(i.UARTprintf)
+    i.UARTvprintf                            0x000010fc   Section        0  uartstdio.o(i.UARTvprintf)
+    i.UARTwrite                              0x000012b0   Section        0  uartstdio.o(i.UARTwrite)
+    i.ULPIConfigSet                          0x00001344   Section        0  usbulpi.o(i.ULPIConfigSet)
+    i.USB0DeviceIntHandler                   0x000013a0   Section        0  usbdhandler.o(i.USB0DeviceIntHandler)
+    i.USBClockEnable                         0x000013b8   Section        0  usb.o(i.USBClockEnable)
+    i.USBControllerVersion                   0x000013c2   Section        0  usb.o(i.USBControllerVersion)
+    i.USBDCDConfigDescGet                    0x000013cc   Section        0  usbdcdesc.o(i.USBDCDConfigDescGet)
+    i.USBDCDConfigDescGetNum                 0x00001422   Section        0  usbdcdesc.o(i.USBDCDConfigDescGetNum)
+    i.USBDCDConfigDescGetSize                0x00001458   Section        0  usbdcdesc.o(i.USBDCDConfigDescGetSize)
+    i.USBDCDConfigGetInterface               0x0000147a   Section        0  usbdcdesc.o(i.USBDCDConfigGetInterface)
+    i.USBDCDConfigGetInterfaceEndpoint       0x00001536   Section        0  usbdcdesc.o(i.USBDCDConfigGetInterfaceEndpoint)
+    i.USBDCDDeviceInfoInit                   0x00001594   Section        0  usbdenum.o(i.USBDCDDeviceInfoInit)
+    i.USBDCDInit                             0x000015d8   Section        0  usbdenum.o(i.USBDCDInit)
+    i.USBDCDRemoteWakeupRequest              0x00001780   Section        0  usbdenum.o(i.USBDCDRemoteWakeupRequest)
+    i.USBDCDRequestDataEP0                   0x000017b8   Section        0  usbdenum.o(i.USBDCDRequestDataEP0)
+    i.USBDCDSendDataEP0                      0x000017cc   Section        0  usbdenum.o(i.USBDCDSendDataEP0)
+    i.USBDCDStallEP0                         0x000017e0   Section        0  usbdenum.o(i.USBDCDStallEP0)
+    i.USBDClearFeature                       0x000017fc   Section        0  usbdenum.o(i.USBDClearFeature)
+    USBDClearFeature                         0x000017fd   Thumb Code   156  usbdenum.o(i.USBDClearFeature)
+    i.USBDEP0StateTx                         0x000018a0   Section        0  usbdenum.o(i.USBDEP0StateTx)
+    USBDEP0StateTx                           0x000018a1   Thumb Code   104  usbdenum.o(i.USBDEP0StateTx)
+    i.USBDEP0StateTxConfig                   0x00001914   Section        0  usbdenum.o(i.USBDEP0StateTxConfig)
+    USBDEP0StateTxConfig                     0x00001915   Thumb Code   358  usbdenum.o(i.USBDEP0StateTxConfig)
+    i.USBDGetConfiguration                   0x00001a88   Section        0  usbdenum.o(i.USBDGetConfiguration)
+    USBDGetConfiguration                     0x00001a89   Thumb Code    46  usbdenum.o(i.USBDGetConfiguration)
+    i.USBDGetDescriptor                      0x00001abc   Section        0  usbdenum.o(i.USBDGetDescriptor)
+    USBDGetDescriptor                        0x00001abd   Thumb Code   354  usbdenum.o(i.USBDGetDescriptor)
+    i.USBDGetInterface                       0x00001c2c   Section        0  usbdenum.o(i.USBDGetInterface)
+    USBDGetInterface                         0x00001c2d   Thumb Code    82  usbdenum.o(i.USBDGetInterface)
+    i.USBDGetStatus                          0x00001c88   Section        0  usbdenum.o(i.USBDGetStatus)
+    USBDGetStatus                            0x00001c89   Thumb Code   124  usbdenum.o(i.USBDGetStatus)
+    i.USBDHIDCompositeInit                   0x00001d0c   Section        0  usbdhid.o(i.USBDHIDCompositeInit)
+    i.USBDHIDInit                            0x00001e08   Section        0  usbdhid.o(i.USBDHIDInit)
+    i.USBDHIDKeyboardCompositeInit           0x00001e30   Section        0  usbdhidkeyb.o(i.USBDHIDKeyboardCompositeInit)
+    i.USBDHIDKeyboardInit                    0x00001ed4   Section        0  usbdhidkeyb.o(i.USBDHIDKeyboardInit)
+    i.USBDHIDKeyboardKeyStateChange          0x00001f0c   Section        0  usbdhidkeyb.o(i.USBDHIDKeyboardKeyStateChange)
+    i.USBDHIDKeyboardRemoteWakeupRequest     0x00001ffa   Section        0  usbdhidkeyb.o(i.USBDHIDKeyboardRemoteWakeupRequest)
+    i.USBDHIDRemoteWakeupRequest             0x00002000   Section        0  usbdhid.o(i.USBDHIDRemoteWakeupRequest)
+    i.USBDHIDReportWrite                     0x00002006   Section        0  usbdhid.o(i.USBDHIDReportWrite)
+    i.USBDHIDTxPacketAvailable               0x000020a8   Section        0  usbdhid.o(i.USBDHIDTxPacketAvailable)
+    i.USBDMAChannelAddressSet                0x000020b6   Section        0  usb.o(i.USBDMAChannelAddressSet)
+    i.USBDMAChannelConfigSet                 0x000020c0   Section        0  usb.o(i.USBDMAChannelConfigSet)
+    i.USBDMAChannelCountSet                  0x000020d6   Section        0  usb.o(i.USBDMAChannelCountSet)
+    i.USBDMAChannelDisable                   0x000020e0   Section        0  usb.o(i.USBDMAChannelDisable)
+    i.USBDMAChannelEnable                    0x000020f2   Section        0  usb.o(i.USBDMAChannelEnable)
+    i.USBDMAChannelIntDisable                0x00002104   Section        0  usb.o(i.USBDMAChannelIntDisable)
+    i.USBDMAChannelIntEnable                 0x00002116   Section        0  usb.o(i.USBDMAChannelIntEnable)
+    i.USBDMAChannelIntStatus                 0x00002128   Section        0  usb.o(i.USBDMAChannelIntStatus)
+    i.USBDMAChannelStatus                    0x0000212e   Section        0  usb.o(i.USBDMAChannelStatus)
+    i.USBDReadAndDispatchRequest             0x0000213c   Section        0  usbdenum.o(i.USBDReadAndDispatchRequest)
+    USBDReadAndDispatchRequest               0x0000213d   Thumb Code   104  usbdenum.o(i.USBDReadAndDispatchRequest)
+    i.USBDSetAddress                         0x000021b8   Section        0  usbdenum.o(i.USBDSetAddress)
+    USBDSetAddress                           0x000021b9   Thumb Code    30  usbdenum.o(i.USBDSetAddress)
+    i.USBDSetConfiguration                   0x000021dc   Section        0  usbdenum.o(i.USBDSetConfiguration)
+    USBDSetConfiguration                     0x000021dd   Thumb Code   152  usbdenum.o(i.USBDSetConfiguration)
+    i.USBDSetDescriptor                      0x00002280   Section        0  usbdenum.o(i.USBDSetDescriptor)
+    USBDSetDescriptor                        0x00002281   Thumb Code    32  usbdenum.o(i.USBDSetDescriptor)
+    i.USBDSetFeature                         0x000022a8   Section        0  usbdenum.o(i.USBDSetFeature)
+    USBDSetFeature                           0x000022a9   Thumb Code   122  usbdenum.o(i.USBDSetFeature)
+    i.USBDSetInterface                       0x0000232c   Section        0  usbdenum.o(i.USBDSetInterface)
+    USBDSetInterface                         0x0000232d   Thumb Code   176  usbdenum.o(i.USBDSetInterface)
+    i.USBDSyncFrame                          0x000023e8   Section        0  usbdenum.o(i.USBDSyncFrame)
+    USBDSyncFrame                            0x000023e9   Thumb Code    32  usbdenum.o(i.USBDSyncFrame)
+    i.USBDescGet                             0x00002410   Section        0  usbdesc.o(i.USBDescGet)
+    i.USBDescGetNum                          0x00002446   Section        0  usbdesc.o(i.USBDescGetNum)
+    i.USBDevAddrSet                          0x00002474   Section        0  usb.o(i.USBDevAddrSet)
+    i.USBDevConnect                          0x00002478   Section        0  usb.o(i.USBDevConnect)
+    i.USBDevDisconnect                       0x00002482   Section        0  usb.o(i.USBDevDisconnect)
+    i.USBDevEndpointConfigSet                0x0000248c   Section        0  usb.o(i.USBDevEndpointConfigSet)
+    i.USBDevEndpointDataAck                  0x00002514   Section        0  usb.o(i.USBDevEndpointDataAck)
+    i.USBDevEndpointStall                    0x00002538   Section        0  usb.o(i.USBDevEndpointStall)
+    i.USBDevEndpointStallClear               0x0000256c   Section        0  usb.o(i.USBDevEndpointStallClear)
+    i.USBDevEndpointStatusClear              0x000025b6   Section        0  usb.o(i.USBDevEndpointStatusClear)
+    i.USBDevLPMConfig                        0x00002614   Section        0  usb.o(i.USBDevLPMConfig)
+    i.USBDevLPMDisable                       0x0000261a   Section        0  usb.o(i.USBDevLPMDisable)
+    i.USBDevLPMEnable                        0x00002628   Section        0  usb.o(i.USBDevLPMEnable)
+    i.USBDevMode                             0x00002636   Section        0  usb.o(i.USBDevMode)
+    i.USBDeviceConfig                        0x00002640   Section        0  usbdconfig.o(i.USBDeviceConfig)
+    i.USBDeviceConfigAlternate               0x000027e0   Section        0  usbdconfig.o(i.USBDeviceConfigAlternate)
+    i.USBDeviceEnumHandler                   0x000028a8   Section        0  usbdenum.o(i.USBDeviceEnumHandler)
+    i.USBDeviceIntHandlerInternal            0x00002994   Section        0  usbdenum.o(i.USBDeviceIntHandlerInternal)
+    i.USBDeviceResumeTickHandler             0x00002b2c   Section        0  usbdenum.o(i.USBDeviceResumeTickHandler)
+    i.USBEndpointDMAChannel                  0x00002b84   Section        0  usb.o(i.USBEndpointDMAChannel)
+    i.USBEndpointDMAConfigSet                0x00002b9e   Section        0  usb.o(i.USBEndpointDMAConfigSet)
+    i.USBEndpointDMADisable                  0x00002bf4   Section        0  usb.o(i.USBEndpointDMADisable)
+    i.USBEndpointDMAEnable                   0x00002c18   Section        0  usb.o(i.USBEndpointDMAEnable)
+    i.USBEndpointDataAvail                   0x00002c3c   Section        0  usb.o(i.USBEndpointDataAvail)
+    i.USBEndpointDataGet                     0x00002c5a   Section        0  usb.o(i.USBEndpointDataGet)
+    i.USBEndpointDataPut                     0x00002cae   Section        0  usb.o(i.USBEndpointDataPut)
+    i.USBEndpointDataSend                    0x00002ce8   Section        0  usb.o(i.USBEndpointDataSend)
+    i.USBEndpointPacketCountSet              0x00002d18   Section        0  usb.o(i.USBEndpointPacketCountSet)
+    i.USBEndpointStatus                      0x00002d24   Section        0  usb.o(i.USBEndpointStatus)
+    i.USBFIFOAddrGet                         0x00002d34   Section        0  usb.o(i.USBFIFOAddrGet)
+    i.USBFIFOConfigSet                       0x00002d3c   Section        0  usb.o(i.USBFIFOConfigSet)
+    i.USBHostResume                          0x00002d7c   Section        0  usb.o(i.USBHostResume)
+    i.USBIntEnableControl                    0x00002d90   Section        0  usb.o(i.USBIntEnableControl)
+    i.USBIntEnableEndpoint                   0x00002dbc   Section        0  usb.o(i.USBIntEnableEndpoint)
+    i.USBIntStatusControl                    0x00002dd4   Section        0  usb.o(i.USBIntStatusControl)
+    i.USBIntStatusEndpoint                   0x00002e10   Section        0  usb.o(i.USBIntStatusEndpoint)
+    i.USBLPMIntEnable                        0x00002e1a   Section        0  usb.o(i.USBLPMIntEnable)
+    i.USBLPMIntStatus                        0x00002e26   Section        0  usb.o(i.USBLPMIntStatus)
+    i.USBLibDMAInit                          0x00002e2c   Section        0  usbdma.o(i.USBLibDMAInit)
+    i.USBOTGMode                             0x00002f88   Section        0  usb.o(i.USBOTGMode)
+    i.USBStackModeSet                        0x00002f90   Section        0  usbmode.o(i.USBStackModeSet)
+    i.USBULPIDisable                         0x00002fac   Section        0  usb.o(i.USBULPIDisable)
+    i.USBULPIEnable                          0x00002fba   Section        0  usb.o(i.USBULPIEnable)
+    i.USBULPIRegRead                         0x00002fc8   Section        0  usb.o(i.USBULPIRegRead)
+    i.USBULPIRegWrite                        0x00002fe8   Section        0  usb.o(i.USBULPIRegWrite)
+    i.WaitForSendIdle                        0x00003008   Section        0  usb_dev_keyboard.o(i.WaitForSendIdle)
+    i.__scatterload_copy                     0x00003038   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x00003046   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00003048   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.iDMAUSBArbSizeSet                      0x00003056   Section        0  usbdma.o(i.iDMAUSBArbSizeSet)
+    iDMAUSBArbSizeSet                        0x00003057   Thumb Code     2  usbdma.o(i.iDMAUSBArbSizeSet)
+    i.iDMAUSBChannelAllocate                 0x00003058   Section        0  usbdma.o(i.iDMAUSBChannelAllocate)
+    iDMAUSBChannelAllocate                   0x00003059   Thumb Code   132  usbdma.o(i.iDMAUSBChannelAllocate)
+    i.iDMAUSBChannelDisable                  0x000030dc   Section        0  usbdma.o(i.iDMAUSBChannelDisable)
+    iDMAUSBChannelDisable                    0x000030dd   Thumb Code    52  usbdma.o(i.iDMAUSBChannelDisable)
+    i.iDMAUSBChannelEnable                   0x00003110   Section        0  usbdma.o(i.iDMAUSBChannelEnable)
+    iDMAUSBChannelEnable                     0x00003111   Thumb Code    82  usbdma.o(i.iDMAUSBChannelEnable)
+    i.iDMAUSBChannelIntDisable               0x00003162   Section        0  usbdma.o(i.iDMAUSBChannelIntDisable)
+    iDMAUSBChannelIntDisable                 0x00003163   Thumb Code     8  usbdma.o(i.iDMAUSBChannelIntDisable)
+    i.iDMAUSBChannelIntEnable                0x0000316a   Section        0  usbdma.o(i.iDMAUSBChannelIntEnable)
+    iDMAUSBChannelIntEnable                  0x0000316b   Thumb Code     8  usbdma.o(i.iDMAUSBChannelIntEnable)
+    i.iDMAUSBChannelRelease                  0x00003172   Section        0  usbdma.o(i.iDMAUSBChannelRelease)
+    iDMAUSBChannelRelease                    0x00003173   Thumb Code    62  usbdma.o(i.iDMAUSBChannelRelease)
+    i.iDMAUSBChannelStatus                   0x000031b0   Section        0  usbdma.o(i.iDMAUSBChannelStatus)
+    iDMAUSBChannelStatus                     0x000031b1   Thumb Code    56  usbdma.o(i.iDMAUSBChannelStatus)
+    i.iDMAUSBIntStatus                       0x000031e8   Section        0  usbdma.o(i.iDMAUSBIntStatus)
+    iDMAUSBIntStatus                         0x000031e9   Thumb Code     6  usbdma.o(i.iDMAUSBIntStatus)
+    i.iDMAUSBTransfer                        0x000031ee   Section        0  usbdma.o(i.iDMAUSBTransfer)
+    iDMAUSBTransfer                          0x000031ef   Thumb Code   244  usbdma.o(i.iDMAUSBTransfer)
+    i.iDMAUSBUnitSizeSet                     0x000032e2   Section        0  usbdma.o(i.iDMAUSBUnitSizeSet)
+    iDMAUSBUnitSizeSet                       0x000032e3   Thumb Code     2  usbdma.o(i.iDMAUSBUnitSizeSet)
+    i.main                                   0x000032e4   Section        0  usb_dev_keyboard.o(i.main)
+    i.uDMAChannelAttributeDisable            0x000034bc   Section        0  udma.o(i.uDMAChannelAttributeDisable)
+    i.uDMAChannelControlSet                  0x00003504   Section        0  udma.o(i.uDMAChannelControlSet)
+    i.uDMAChannelDisable                     0x00003524   Section        0  udma.o(i.uDMAChannelDisable)
+    i.uDMAChannelEnable                      0x00003538   Section        0  udma.o(i.uDMAChannelEnable)
+    i.uDMAChannelModeGet                     0x0000354c   Section        0  udma.o(i.uDMAChannelModeGet)
+    i.uDMAChannelTransferSet                 0x00003574   Section        0  udma.o(i.uDMAChannelTransferSet)
+    i.uDMAUSBArbSizeSet                      0x000035f4   Section        0  usbdma.o(i.uDMAUSBArbSizeSet)
+    uDMAUSBArbSizeSet                        0x000035f5   Thumb Code   104  usbdma.o(i.uDMAUSBArbSizeSet)
+    i.uDMAUSBChannelAllocate                 0x0000365c   Section        0  usbdma.o(i.uDMAUSBChannelAllocate)
+    uDMAUSBChannelAllocate                   0x0000365d   Thumb Code   184  usbdma.o(i.uDMAUSBChannelAllocate)
+    i.uDMAUSBChannelDisable                  0x0000371c   Section        0  usbdma.o(i.uDMAUSBChannelDisable)
+    uDMAUSBChannelDisable                    0x0000371d   Thumb Code    88  usbdma.o(i.uDMAUSBChannelDisable)
+    i.uDMAUSBChannelEnable                   0x00003774   Section        0  usbdma.o(i.uDMAUSBChannelEnable)
+    uDMAUSBChannelEnable                     0x00003775   Thumb Code   106  usbdma.o(i.uDMAUSBChannelEnable)
+    i.uDMAUSBChannelIntDisable               0x000037de   Section        0  usbdma.o(i.uDMAUSBChannelIntDisable)
+    uDMAUSBChannelIntDisable                 0x000037df   Thumb Code     2  usbdma.o(i.uDMAUSBChannelIntDisable)
+    i.uDMAUSBChannelIntEnable                0x000037e0   Section        0  usbdma.o(i.uDMAUSBChannelIntEnable)
+    uDMAUSBChannelIntEnable                  0x000037e1   Thumb Code     2  usbdma.o(i.uDMAUSBChannelIntEnable)
+    i.uDMAUSBChannelRelease                  0x000037e2   Section        0  usbdma.o(i.uDMAUSBChannelRelease)
+    uDMAUSBChannelRelease                    0x000037e3   Thumb Code    90  usbdma.o(i.uDMAUSBChannelRelease)
+    i.uDMAUSBChannelStatus                   0x0000383c   Section        0  usbdma.o(i.uDMAUSBChannelStatus)
+    uDMAUSBChannelStatus                     0x0000383d   Thumb Code    38  usbdma.o(i.uDMAUSBChannelStatus)
+    i.uDMAUSBIntStatus                       0x00003862   Section        0  usbdma.o(i.uDMAUSBIntStatus)
+    uDMAUSBIntStatus                         0x00003863   Thumb Code    52  usbdma.o(i.uDMAUSBIntStatus)
+    i.uDMAUSBTransfer                        0x00003896   Section        0  usbdma.o(i.uDMAUSBTransfer)
+    uDMAUSBTransfer                          0x00003897   Thumb Code   200  usbdma.o(i.uDMAUSBTransfer)
+    i.uDMAUSBUnitSizeSet                     0x0000395e   Section        0  usbdma.o(i.uDMAUSBUnitSizeSet)
+    uDMAUSBUnitSizeSet                       0x0000395f   Thumb Code    84  usbdma.o(i.uDMAUSBUnitSizeSet)
+    .constdata                               0x000039b4   Section       40  uartstdio.o(.constdata)
+    g_pcHex                                  0x000039b4   Data           4  uartstdio.o(.constdata)
+    g_ui32UARTBase                           0x000039b8   Data          12  uartstdio.o(.constdata)
+    g_ui32UARTInt                            0x000039c4   Data          12  uartstdio.o(.constdata)
+    g_ui32UARTPeriph                         0x000039d0   Data          12  uartstdio.o(.constdata)
+    .constdata                               0x000039dc   Section        4  usb_keyb_structs.o(.constdata)
+    .constdata                               0x000039e0   Section       36  usb_keyb_structs.o(.constdata)
+    .constdata                               0x00003a04   Section       34  usb_keyb_structs.o(.constdata)
+    .constdata                               0x00003a26   Section       18  usb_keyb_structs.o(.constdata)
+    .constdata                               0x00003a38   Section       46  usb_keyb_structs.o(.constdata)
+    .constdata                               0x00003a66   Section       54  usb_keyb_structs.o(.constdata)
+    .constdata                               0x00003a9c   Section       24  usb_keyb_structs.o(.constdata)
+    .constdata                               0x00003ab4   Section        7  usbdhidkeyb.o(.constdata)
+    g_pui8HIDInEndpoint                      0x00003ab4   Data           7  usbdhidkeyb.o(.constdata)
+    .constdata                               0x00003abb   Section        7  usbdhidkeyb.o(.constdata)
+    g_pui8HIDOutEndpoint                     0x00003abb   Data           7  usbdhidkeyb.o(.constdata)
+    .constdata                               0x00003ac2   Section       63  usbdhidkeyb.o(.constdata)
+    g_pui8KeybReportDescriptor               0x00003ac2   Data          63  usbdhidkeyb.o(.constdata)
+    .constdata                               0x00003b04   Section       17  usbdhidkeyb.o(.constdata)
+    g_ppsHIDConfigDescriptors                0x00003b04   Data           4  usbdhidkeyb.o(.constdata)
+    g_pui8KeybClassDescriptors               0x00003b08   Data           4  usbdhidkeyb.o(.constdata)
+    g_sKeybHIDDescriptor                     0x00003b0c   Data           9  usbdhidkeyb.o(.constdata)
+    .constdata                               0x00003b18   Section        8  usbdhidkeyb.o(.constdata)
+    g_sHIDConfigSection                      0x00003b18   Data           8  usbdhidkeyb.o(.constdata)
+    .constdata                               0x00003b20   Section        8  usbdhidkeyb.o(.constdata)
+    g_sHIDInterfaceSection                   0x00003b20   Data           8  usbdhidkeyb.o(.constdata)
+    .constdata                               0x00003b28   Section        8  usbdhidkeyb.o(.constdata)
+    g_sHIDInEndpointSection                  0x00003b28   Data           8  usbdhidkeyb.o(.constdata)
+    .constdata                               0x00003b30   Section        8  usbdhidkeyb.o(.constdata)
+    g_sHIDOutEndpointSection                 0x00003b30   Data           8  usbdhidkeyb.o(.constdata)
+    .constdata                               0x00003b38   Section      268  interrupt.o(.constdata)
+    g_pui32Priority                          0x00003b38   Data          32  interrupt.o(.constdata)
+    g_pui32Regs                              0x00003b58   Data         156  interrupt.o(.constdata)
+    g_pui32EnRegs                            0x00003bf4   Data          20  interrupt.o(.constdata)
+    g_pui32Dii16Regs                         0x00003c08   Data          20  interrupt.o(.constdata)
+    g_pui32PendRegs                          0x00003c1c   Data          20  interrupt.o(.constdata)
+    g_pui32UnpendRegs                        0x00003c30   Data          20  interrupt.o(.constdata)
+    .constdata                               0x00003c44   Section       52  usbdenum.o(.constdata)
+    g_psUSBDStdRequests                      0x00003c44   Data          52  usbdenum.o(.constdata)
+    .constdata                               0x00003c78   Section       48  usbdhid.o(.constdata)
+    .conststring                             0x00003ca8   Section       17  uartstdio.o(.conststring)
+    .data                                    0x20000000   Section        3  buttons.o(.data)
+    g_ui8ButtonStates                        0x20000000   Data           1  buttons.o(.data)
+    ui8SwitchClockA                          0x20000001   Data           1  buttons.o(.data)
+    ui8SwitchClockB                          0x20000002   Data           1  buttons.o(.data)
+    .data                                    0x20000004   Section       28  uartstdio.o(.data)
+    bLastWasCR                               0x20000004   Data           1  uartstdio.o(.data)
+    g_bDisableEcho                           0x20000005   Data           1  uartstdio.o(.data)
+    g_ui32UARTTxWriteIndex                   0x20000008   Data           4  uartstdio.o(.data)
+    g_ui32UARTTxReadIndex                    0x2000000c   Data           4  uartstdio.o(.data)
+    g_ui32UARTRxWriteIndex                   0x20000010   Data           4  uartstdio.o(.data)
+    g_ui32UARTRxReadIndex                    0x20000014   Data           4  uartstdio.o(.data)
+    g_ui32Base                               0x20000018   Data           4  uartstdio.o(.data)
+    g_ui32PortNum                            0x2000001c   Data           4  uartstdio.o(.data)
+    .data                                    0x20000020   Section        8  usb_dev_keyboard.o(.data)
+    .data                                    0x20000028   Section      164  usb_keyb_structs.o(.data)
+    .data                                    0x200000cc   Section        9  usbdhidkeyb.o(.data)
+    g_pui8KeybDescriptor                     0x200000cc   Data           9  usbdhidkeyb.o(.data)
+    .data                                    0x200000d5   Section        9  usbdhidkeyb.o(.data)
+    g_pui8HIDInterface                       0x200000d5   Data           9  usbdhidkeyb.o(.data)
+    .data                                    0x200000e0   Section        8  usbdhidkeyb.o(.data)
+    g_sHIDDescriptorSection                  0x200000e0   Data           8  usbdhidkeyb.o(.data)
+    .data                                    0x200000e8   Section       20  usbdhidkeyb.o(.data)
+    g_psHIDSections                          0x200000e8   Data          20  usbdhidkeyb.o(.data)
+    .data                                    0x200000fc   Section        8  usbdhidkeyb.o(.data)
+    g_sHIDConfigHeader                       0x200000fc   Data           8  usbdhidkeyb.o(.data)
+    .data                                    0x20000104   Section       16  usbmode.o(.data)
+    g_iDualMode                              0x20000105   Data           1  usbmode.o(.data)
+    g_pfnUSBModeCallback                     0x20000110   Data           4  usbmode.o(.data)
+    .data                                    0x20000114   Section       16  usbdenum.o(.data)
+    g_ui32PLLDiv                             0x20000114   Data           4  usbdenum.o(.data)
+    ui32SOFDivide                            0x20000118   Data           4  usbdenum.o(.data)
+    g_ui32ULPISupport                        0x2000011c   Data           4  usbdenum.o(.data)
+    .data                                    0x20000124   Section       18  usbdhid.o(.data)
+    .data                                    0x20000138   Section        8  usbtick.o(.data)
+    .data                                    0x20000140   Section        4  usbtick.o(.data)
+    .bss                                     0x20000144   Section     1152  uartstdio.o(.bss)
+    g_pcUARTTxBuffer                         0x20000144   Data        1024  uartstdio.o(.bss)
+    g_pcUARTRxBuffer                         0x20000544   Data         128  uartstdio.o(.bss)
+    .bss                                     0x200005c4   Section      144  usbdenum.o(.bss)
+    g_pui8DataBufferIn                       0x200005c4   Data          64  usbdenum.o(.bss)
+    .bss                                     0x20000654   Section       48  usbtick.o(.bss)
+    .bss                                     0x20000684   Section      272  usbdma.o(.bss)
+    g_psUSBDMAInst                           0x20000684   Data         272  usbdma.o(.bss)
+    STACK                                    0x20000798   Section     1024  startup_rvmdk.o(STACK)
+    StackMem                                 0x20000798   Data           0  startup_rvmdk.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  usb_dev_keyboard.o ABSOLUTE
+    __Vectors                                0x00000000   Data           0  startup_rvmdk.o(RESET)
+    __arm_fini_                               - Undefined Weak Reference
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    Reset_Handler                            0x0000026d   Thumb Code     0  startup_rvmdk.o(RESET)
+    __main                                   0x00000289   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x00000289   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x0000028d   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x00000291   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x00000291   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x00000291   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x00000291   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_lib_shutdown_fini                   0x00000299   Thumb Code     0  entry12b.o(.ARM.Collect$$$$0000000E)
+    __rt_final_cpp                           0x0000029d   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000F)
+    __rt_final_exit                          0x0000029d   Thumb Code     0  entry11a.o(.ARM.Collect$$$$00000011)
+    __scatterload                            0x000002a1   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x000002a1   Thumb Code     0  init.o(.text)
+    __decompress                             0x000002c5   Thumb Code     0  __dczerorl.o(.text)
+    __decompress0                            0x000002c5   Thumb Code    58  __dczerorl.o(.text)
+    ButtonsInit                              0x00000301   Thumb Code    78  buttons.o(i.ButtonsInit)
+    ButtonsPoll                              0x00000365   Thumb Code    78  buttons.o(i.ButtonsPoll)
+    ConfigureUART                            0x000003bd   Thumb Code    76  usb_dev_keyboard.o(i.ConfigureUART)
+    IntDisable                               0x00000a89   Thumb Code    92  interrupt.o(i.IntDisable)
+    IntEnable                                0x00000aed   Thumb Code    92  interrupt.o(i.IntEnable)
+    IntIsEnabled                             0x00000b51   Thumb Code    88  interrupt.o(i.IntIsEnabled)
+    InternalUSBRegisterTickHandler           0x00000bb1   Thumb Code    44  usbtick.o(i.InternalUSBRegisterTickHandler)
+    InternalUSBStartOfFrameTick              0x00000be5   Thumb Code    46  usbtick.o(i.InternalUSBStartOfFrameTick)
+    InternalUSBTickInit                      0x00000c1d   Thumb Code    46  usbtick.o(i.InternalUSBTickInit)
+    KeyboardHandler                          0x00000c81   Thumb Code    78  usb_dev_keyboard.o(i.KeyboardHandler)
+    SendString                               0x00000d89   Thumb Code    84  usb_dev_keyboard.o(i.SendString)
+    SysCtlPeripheralEnable                   0x00000de5   Thumb Code    36  sysctl.o(i.SysCtlPeripheralEnable)
+    SysCtlPeripheralReset                    0x00000e0d   Thumb Code    56  sysctl.o(i.SysCtlPeripheralReset)
+    SysCtlUSBPLLEnable                       0x00000e49   Thumb Code    12  sysctl.o(i.SysCtlUSBPLLEnable)
+    SysTickIntHandler                        0x00000e59   Thumb Code    10  usb_dev_keyboard.o(i.SysTickIntHandler)
+    UARTClockSourceSet                       0x00000e69   Thumb Code     6  uart.o(i.UARTClockSourceSet)
+    UARTFlushRx                              0x00000e71   Thumb Code    36  uartstdio.o(i.UARTFlushRx)
+    UARTFlushTx                              0x00000e99   Thumb Code    52  uartstdio.o(i.UARTFlushTx)
+    UARTStdioConfig                          0x00000f49   Thumb Code   142  uartstdio.o(i.UARTStdioConfig)
+    UARTStdioIntHandler                      0x00000fe1   Thumb Code   248  uartstdio.o(i.UARTStdioIntHandler)
+    UARTprintf                               0x000010e9   Thumb Code    18  uartstdio.o(i.UARTprintf)
+    UARTvprintf                              0x000010fd   Thumb Code   420  uartstdio.o(i.UARTvprintf)
+    UARTwrite                                0x000012b1   Thumb Code   140  uartstdio.o(i.UARTwrite)
+    ULPIConfigSet                            0x00001345   Thumb Code    90  usbulpi.o(i.ULPIConfigSet)
+    USB0DeviceIntHandler                     0x000013a1   Thumb Code    20  usbdhandler.o(i.USB0DeviceIntHandler)
+    USBClockEnable                           0x000013b9   Thumb Code    10  usb.o(i.USBClockEnable)
+    USBControllerVersion                     0x000013c3   Thumb Code    10  usb.o(i.USBControllerVersion)
+    USBDCDConfigDescGet                      0x000013cd   Thumb Code    86  usbdcdesc.o(i.USBDCDConfigDescGet)
+    USBDCDConfigDescGetNum                   0x00001423   Thumb Code    54  usbdcdesc.o(i.USBDCDConfigDescGetNum)
+    USBDCDConfigDescGetSize                  0x00001459   Thumb Code    34  usbdcdesc.o(i.USBDCDConfigDescGetSize)
+    USBDCDConfigGetInterface                 0x0000147b   Thumb Code   188  usbdcdesc.o(i.USBDCDConfigGetInterface)
+    USBDCDConfigGetInterfaceEndpoint         0x00001537   Thumb Code    94  usbdcdesc.o(i.USBDCDConfigGetInterfaceEndpoint)
+    USBDCDDeviceInfoInit                     0x00001595   Thumb Code    54  usbdenum.o(i.USBDCDDeviceInfoInit)
+    USBDCDInit                               0x000015d9   Thumb Code   392  usbdenum.o(i.USBDCDInit)
+    USBDCDRemoteWakeupRequest                0x00001781   Thumb Code    46  usbdenum.o(i.USBDCDRemoteWakeupRequest)
+    USBDCDRequestDataEP0                     0x000017b9   Thumb Code    14  usbdenum.o(i.USBDCDRequestDataEP0)
+    USBDCDSendDataEP0                        0x000017cd   Thumb Code    14  usbdenum.o(i.USBDCDSendDataEP0)
+    USBDCDStallEP0                           0x000017e1   Thumb Code    20  usbdenum.o(i.USBDCDStallEP0)
+    USBDHIDCompositeInit                     0x00001d0d   Thumb Code   236  usbdhid.o(i.USBDHIDCompositeInit)
+    USBDHIDInit                              0x00001e09   Thumb Code    38  usbdhid.o(i.USBDHIDInit)
+    USBDHIDKeyboardCompositeInit             0x00001e31   Thumb Code   146  usbdhidkeyb.o(i.USBDHIDKeyboardCompositeInit)
+    USBDHIDKeyboardInit                      0x00001ed5   Thumb Code    50  usbdhidkeyb.o(i.USBDHIDKeyboardInit)
+    USBDHIDKeyboardKeyStateChange            0x00001f0d   Thumb Code   238  usbdhidkeyb.o(i.USBDHIDKeyboardKeyStateChange)
+    USBDHIDKeyboardRemoteWakeupRequest       0x00001ffb   Thumb Code     6  usbdhidkeyb.o(i.USBDHIDKeyboardRemoteWakeupRequest)
+    USBDHIDRemoteWakeupRequest               0x00002001   Thumb Code     6  usbdhid.o(i.USBDHIDRemoteWakeupRequest)
+    USBDHIDReportWrite                       0x00002007   Thumb Code   162  usbdhid.o(i.USBDHIDReportWrite)
+    USBDHIDTxPacketAvailable                 0x000020a9   Thumb Code    14  usbdhid.o(i.USBDHIDTxPacketAvailable)
+    USBDMAChannelAddressSet                  0x000020b7   Thumb Code    10  usb.o(i.USBDMAChannelAddressSet)
+    USBDMAChannelConfigSet                   0x000020c1   Thumb Code    22  usb.o(i.USBDMAChannelConfigSet)
+    USBDMAChannelCountSet                    0x000020d7   Thumb Code    10  usb.o(i.USBDMAChannelCountSet)
+    USBDMAChannelDisable                     0x000020e1   Thumb Code    18  usb.o(i.USBDMAChannelDisable)
+    USBDMAChannelEnable                      0x000020f3   Thumb Code    18  usb.o(i.USBDMAChannelEnable)
+    USBDMAChannelIntDisable                  0x00002105   Thumb Code    18  usb.o(i.USBDMAChannelIntDisable)
+    USBDMAChannelIntEnable                   0x00002117   Thumb Code    18  usb.o(i.USBDMAChannelIntEnable)
+    USBDMAChannelIntStatus                   0x00002129   Thumb Code     6  usb.o(i.USBDMAChannelIntStatus)
+    USBDMAChannelStatus                      0x0000212f   Thumb Code    14  usb.o(i.USBDMAChannelStatus)
+    USBDescGet                               0x00002411   Thumb Code    54  usbdesc.o(i.USBDescGet)
+    USBDescGetNum                            0x00002447   Thumb Code    46  usbdesc.o(i.USBDescGetNum)
+    USBDevAddrSet                            0x00002475   Thumb Code     4  usb.o(i.USBDevAddrSet)
+    USBDevConnect                            0x00002479   Thumb Code    10  usb.o(i.USBDevConnect)
+    USBDevDisconnect                         0x00002483   Thumb Code    10  usb.o(i.USBDevDisconnect)
+    USBDevEndpointConfigSet                  0x0000248d   Thumb Code   136  usb.o(i.USBDevEndpointConfigSet)
+    USBDevEndpointDataAck                    0x00002515   Thumb Code    36  usb.o(i.USBDevEndpointDataAck)
+    USBDevEndpointStall                      0x00002539   Thumb Code    52  usb.o(i.USBDevEndpointStall)
+    USBDevEndpointStallClear                 0x0000256d   Thumb Code    74  usb.o(i.USBDevEndpointStallClear)
+    USBDevEndpointStatusClear                0x000025b7   Thumb Code    94  usb.o(i.USBDevEndpointStatusClear)
+    USBDevLPMConfig                          0x00002615   Thumb Code     6  usb.o(i.USBDevLPMConfig)
+    USBDevLPMDisable                         0x0000261b   Thumb Code    14  usb.o(i.USBDevLPMDisable)
+    USBDevLPMEnable                          0x00002629   Thumb Code    14  usb.o(i.USBDevLPMEnable)
+    USBDevMode                               0x00002637   Thumb Code     8  usb.o(i.USBDevMode)
+    USBDeviceConfig                          0x00002641   Thumb Code   410  usbdconfig.o(i.USBDeviceConfig)
+    USBDeviceConfigAlternate                 0x000027e1   Thumb Code   194  usbdconfig.o(i.USBDeviceConfigAlternate)
+    USBDeviceEnumHandler                     0x000028a9   Thumb Code   224  usbdenum.o(i.USBDeviceEnumHandler)
+    USBDeviceIntHandlerInternal              0x00002995   Thumb Code   388  usbdenum.o(i.USBDeviceIntHandlerInternal)
+    USBDeviceResumeTickHandler               0x00002b2d   Thumb Code    76  usbdenum.o(i.USBDeviceResumeTickHandler)
+    USBEndpointDMAChannel                    0x00002b85   Thumb Code    26  usb.o(i.USBEndpointDMAChannel)
+    USBEndpointDMAConfigSet                  0x00002b9f   Thumb Code    86  usb.o(i.USBEndpointDMAConfigSet)
+    USBEndpointDMADisable                    0x00002bf5   Thumb Code    36  usb.o(i.USBEndpointDMADisable)
+    USBEndpointDMAEnable                     0x00002c19   Thumb Code    36  usb.o(i.USBEndpointDMAEnable)
+    USBEndpointDataAvail                     0x00002c3d   Thumb Code    30  usb.o(i.USBEndpointDataAvail)
+    USBEndpointDataGet                       0x00002c5b   Thumb Code    84  usb.o(i.USBEndpointDataGet)
+    USBEndpointDataPut                       0x00002caf   Thumb Code    58  usb.o(i.USBEndpointDataPut)
+    USBEndpointDataSend                      0x00002ce9   Thumb Code    48  usb.o(i.USBEndpointDataSend)
+    USBEndpointPacketCountSet                0x00002d19   Thumb Code    12  usb.o(i.USBEndpointPacketCountSet)
+    USBEndpointStatus                        0x00002d25   Thumb Code    16  usb.o(i.USBEndpointStatus)
+    USBFIFOAddrGet                           0x00002d35   Thumb Code     8  usb.o(i.USBFIFOAddrGet)
+    USBFIFOConfigSet                         0x00002d3d   Thumb Code    64  usb.o(i.USBFIFOConfigSet)
+    USBHostResume                            0x00002d7d   Thumb Code    18  usb.o(i.USBHostResume)
+    USBIntEnableControl                      0x00002d91   Thumb Code    38  usb.o(i.USBIntEnableControl)
+    USBIntEnableEndpoint                     0x00002dbd   Thumb Code    22  usb.o(i.USBIntEnableEndpoint)
+    USBIntStatusControl                      0x00002dd5   Thumb Code    56  usb.o(i.USBIntStatusControl)
+    USBIntStatusEndpoint                     0x00002e11   Thumb Code    10  usb.o(i.USBIntStatusEndpoint)
+    USBLPMIntEnable                          0x00002e1b   Thumb Code    12  usb.o(i.USBLPMIntEnable)
+    USBLPMIntStatus                          0x00002e27   Thumb Code     6  usb.o(i.USBLPMIntStatus)
+    USBLibDMAInit                            0x00002e2d   Thumb Code   232  usbdma.o(i.USBLibDMAInit)
+    USBOTGMode                               0x00002f89   Thumb Code     8  usb.o(i.USBOTGMode)
+    USBStackModeSet                          0x00002f91   Thumb Code    24  usbmode.o(i.USBStackModeSet)
+    USBULPIDisable                           0x00002fad   Thumb Code    14  usb.o(i.USBULPIDisable)
+    USBULPIEnable                            0x00002fbb   Thumb Code    14  usb.o(i.USBULPIEnable)
+    USBULPIRegRead                           0x00002fc9   Thumb Code    32  usb.o(i.USBULPIRegRead)
+    USBULPIRegWrite                          0x00002fe9   Thumb Code    32  usb.o(i.USBULPIRegWrite)
+    WaitForSendIdle                          0x00003009   Thumb Code    44  usb_dev_keyboard.o(i.WaitForSendIdle)
+    __scatterload_copy                       0x00003039   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x00003047   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00003049   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    main                                     0x000032e5   Thumb Code   292  usb_dev_keyboard.o(i.main)
+    uDMAChannelAttributeDisable              0x000034bd   Thumb Code    66  udma.o(i.uDMAChannelAttributeDisable)
+    uDMAChannelControlSet                    0x00003505   Thumb Code    24  udma.o(i.uDMAChannelControlSet)
+    uDMAChannelDisable                       0x00003525   Thumb Code    16  udma.o(i.uDMAChannelDisable)
+    uDMAChannelEnable                        0x00003539   Thumb Code    16  udma.o(i.uDMAChannelEnable)
+    uDMAChannelModeGet                       0x0000354d   Thumb Code    34  udma.o(i.uDMAChannelModeGet)
+    uDMAChannelTransferSet                   0x00003575   Thumb Code   124  udma.o(i.uDMAChannelTransferSet)
+    g_pui8LangDescriptor                     0x000039dc   Data           4  usb_keyb_structs.o(.constdata)
+    g_pui8ManufacturerString                 0x000039e0   Data          36  usb_keyb_structs.o(.constdata)
+    g_pui8ProductString                      0x00003a04   Data          34  usb_keyb_structs.o(.constdata)
+    g_pui8SeriailNumberString                0x00003a26   Data          18  usb_keyb_structs.o(.constdata)
+    g_pui8HIDInterfaceString                 0x00003a38   Data          46  usb_keyb_structs.o(.constdata)
+    g_pui8ConfigString                       0x00003a66   Data          54  usb_keyb_structs.o(.constdata)
+    g_ppui8StringDescriptors                 0x00003a9c   Data          24  usb_keyb_structs.o(.constdata)
+    g_sHIDHandlers                           0x00003c78   Data          48  usbdhid.o(.constdata)
+    Region$$Table$$Base                      0x00003cbc   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00003cdc   Number         0  anon$$obj.o(Region$$Table)
+    g_bConnected                             0x20000020   Data           1  usb_dev_keyboard.o(.data)
+    g_bSuspended                             0x20000021   Data           1  usb_dev_keyboard.o(.data)
+    g_eKeyboardState                         0x20000022   Data           1  usb_dev_keyboard.o(.data)
+    g_ui32SysTickCount                       0x20000024   Data           4  usb_dev_keyboard.o(.data)
+    g_sKeyboardDevice                        0x20000028   Data         164  usb_keyb_structs.o(.data)
+    g_iUSBMode                               0x20000104   Data           1  usbmode.o(.data)
+    g_eOTGModeState                          0x20000106   Data           1  usbmode.o(.data)
+    g_ui32WaitTicks                          0x20000108   Data           4  usbmode.o(.data)
+    g_ui32PollRate                           0x2000010c   Data           4  usbmode.o(.data)
+    g_ppsDevInfo                             0x20000120   Data           4  usbdenum.o(.data)
+    g_pui8HIDDeviceDescriptor                0x20000124   Data          18  usbdhid.o(.data)
+    g_bUSBTimerInitialized                   0x20000138   Data           1  usbtick.o(.data)
+    g_ui32CurrentUSBTick                     0x2000013c   Data           4  usbtick.o(.data)
+    g_ui32USBSOFCount                        0x20000140   Data           4  usbtick.o(.data)
+    g_psDCDInst                              0x20000604   Data          80  usbdenum.o(.bss)
+    g_pfnTickHandlers                        0x20000654   Data          24  usbtick.o(.bss)
+    g_pvTickInstance                         0x2000066c   Data          24  usbtick.o(.bss)
+    __initial_sp                             0x20000b98   Data           0  startup_rvmdk.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x0000026d
+
+  Load Region LR_IROM (Base: 0x00000000, Size: 0x00003e20, Max: 0x00040000, ABSOLUTE, COMPRESSED[0x00003d34])
+
+    Execution Region ER_IROM (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00003cdc, Max: 0x00040000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000000   0x00000288   Code   RO           58  * RESET               startup_rvmdk.o
+    0x00000288   0x00000288   0x00000000   Code   RO         3166  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x00000288   0x00000288   0x00000004   Code   RO         3169    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x0000028c   0x0000028c   0x00000004   Code   RO         3172    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x00000290   0x00000290   0x00000000   Code   RO         3174    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x00000290   0x00000290   0x00000000   Code   RO         3176    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x00000290   0x00000290   0x00000008   Code   RO         3177    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x00000298   0x00000298   0x00000004   Code   RO         3184    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
+    0x0000029c   0x0000029c   0x00000000   Code   RO         3179    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
+    0x0000029c   0x0000029c   0x00000000   Code   RO         3181    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
+    0x0000029c   0x0000029c   0x00000004   Code   RO         3170    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x000002a0   0x000002a0   0x00000024   Code   RO         3185    .text               mc_w.l(init.o)
+    0x000002c4   0x000002c4   0x0000003a   Code   RO         3195    .text               mc_w.l(__dczerorl.o)
+    0x000002fe   0x000002fe   0x00000002   PAD
+    0x00000300   0x00000300   0x00000064   Code   RO            1    i.ButtonsInit       buttons.o
+    0x00000364   0x00000364   0x00000058   Code   RO            2    i.ButtonsPoll       buttons.o
+    0x000003bc   0x000003bc   0x0000005c   Code   RO          193    i.ConfigureUART     usb_dev_keyboard.o
+    0x00000418   0x00000418   0x00000040   Code   RO         2739    i.DMAUSBIntHandler  usblib.lib(usbdma.o)
+    0x00000458   0x00000458   0x0000000e   Code   RO         2740    i.DMAUSBIntStatusClear  usblib.lib(usbdma.o)
+    0x00000466   0x00000466   0x00000004   Code   RO         2741    i.DMAUSBStatus      usblib.lib(usbdma.o)
+    0x0000046a   0x0000046a   0x000000b8   Code   RO          697    i.HIDKeyboardRxHandler  usblib.lib(usbdhidkeyb.o)
+    0x00000522   0x00000522   0x0000003e   Code   RO          698    i.HIDKeyboardTxHandler  usblib.lib(usbdhidkeyb.o)
+    0x00000560   0x00000560   0x00000040   Code   RO         2155    i.HIDTickHandler    usblib.lib(usbdhid.o)
+    0x000005a0   0x000005a0   0x0000004e   Code   RO         2156    i.HandleConfigChange  usblib.lib(usbdhid.o)
+    0x000005ee   0x000005ee   0x00000080   Code   RO         2157    i.HandleDevice      usblib.lib(usbdhid.o)
+    0x0000066e   0x0000066e   0x0000001e   Code   RO         2158    i.HandleDisconnect  usblib.lib(usbdhid.o)
+    0x0000068c   0x0000068c   0x0000002c   Code   RO         2159    i.HandleEP0DataReceived  usblib.lib(usbdhid.o)
+    0x000006b8   0x000006b8   0x00000020   Code   RO         2160    i.HandleEP0DataSent  usblib.lib(usbdhid.o)
+    0x000006d8   0x000006d8   0x00000124   Code   RO         2161    i.HandleEndpoints   usblib.lib(usbdhid.o)
+    0x000007fc   0x000007fc   0x000000b8   Code   RO         2162    i.HandleGetDescriptor  usblib.lib(usbdhid.o)
+    0x000008b4   0x000008b4   0x0000019e   Code   RO         2163    i.HandleRequest     usblib.lib(usbdhid.o)
+    0x00000a52   0x00000a52   0x0000001e   Code   RO         2164    i.HandleReset       usblib.lib(usbdhid.o)
+    0x00000a70   0x00000a70   0x0000000c   Code   RO         2165    i.HandleResume      usblib.lib(usbdhid.o)
+    0x00000a7c   0x00000a7c   0x0000000c   Code   RO         2166    i.HandleSuspend     usblib.lib(usbdhid.o)
+    0x00000a88   0x00000a88   0x00000064   Code   RO          887    i.IntDisable        driverlib.lib(interrupt.o)
+    0x00000aec   0x00000aec   0x00000064   Code   RO          888    i.IntEnable         driverlib.lib(interrupt.o)
+    0x00000b50   0x00000b50   0x00000060   Code   RO          889    i.IntIsEnabled      driverlib.lib(interrupt.o)
+    0x00000bb0   0x00000bb0   0x00000034   Code   RO         2589    i.InternalUSBRegisterTickHandler  usblib.lib(usbtick.o)
+    0x00000be4   0x00000be4   0x00000038   Code   RO         2590    i.InternalUSBStartOfFrameTick  usblib.lib(usbtick.o)
+    0x00000c1c   0x00000c1c   0x00000038   Code   RO         2591    i.InternalUSBTickInit  usblib.lib(usbtick.o)
+    0x00000c54   0x00000c54   0x00000010   Code   RO           64    i.IsBufferEmpty     uartstdio.o
+    0x00000c64   0x00000c64   0x0000001a   Code   RO           65    i.IsBufferFull      uartstdio.o
+    0x00000c7e   0x00000c7e   0x00000002   PAD
+    0x00000c80   0x00000c80   0x00000058   Code   RO          194    i.KeyboardHandler   usb_dev_keyboard.o
+    0x00000cd8   0x00000cd8   0x000000b0   Code   RO         2167    i.ProcessIdleTimers  usblib.lib(usbdhid.o)
+    0x00000d88   0x00000d88   0x0000005c   Code   RO          197    i.SendString        usb_dev_keyboard.o
+    0x00000de4   0x00000de4   0x00000028   Code   RO         1037    i.SysCtlPeripheralEnable  driverlib.lib(sysctl.o)
+    0x00000e0c   0x00000e0c   0x0000003c   Code   RO         1042    i.SysCtlPeripheralReset  driverlib.lib(sysctl.o)
+    0x00000e48   0x00000e48   0x00000010   Code   RO         1054    i.SysCtlUSBPLLEnable  driverlib.lib(sysctl.o)
+    0x00000e58   0x00000e58   0x00000010   Code   RO          198    i.SysTickIntHandler  usb_dev_keyboard.o
+    0x00000e68   0x00000e68   0x00000006   Code   RO          349    i.UARTClockSourceSet  driverlib.lib(uart.o)
+    0x00000e6e   0x00000e6e   0x00000002   PAD
+    0x00000e70   0x00000e70   0x00000028   Code   RO           67    i.UARTFlushRx       uartstdio.o
+    0x00000e98   0x00000e98   0x00000038   Code   RO           68    i.UARTFlushTx       uartstdio.o
+    0x00000ed0   0x00000ed0   0x00000078   Code   RO           70    i.UARTPrimeTransmit  uartstdio.o
+    0x00000f48   0x00000f48   0x00000098   Code   RO           72    i.UARTStdioConfig   uartstdio.o
+    0x00000fe0   0x00000fe0   0x00000108   Code   RO           73    i.UARTStdioIntHandler  uartstdio.o
+    0x000010e8   0x000010e8   0x00000012   Code   RO           77    i.UARTprintf        uartstdio.o
+    0x000010fa   0x000010fa   0x00000002   PAD
+    0x000010fc   0x000010fc   0x000001b4   Code   RO           78    i.UARTvprintf       uartstdio.o
+    0x000012b0   0x000012b0   0x00000094   Code   RO           79    i.UARTwrite         uartstdio.o
+    0x00001344   0x00001344   0x0000005a   Code   RO         2980    i.ULPIConfigSet     usblib.lib(usbulpi.o)
+    0x0000139e   0x0000139e   0x00000002   PAD
+    0x000013a0   0x000013a0   0x00000018   Code   RO          656    i.USB0DeviceIntHandler  usblib.lib(usbdhandler.o)
+    0x000013b8   0x000013b8   0x0000000a   Code   RO         1352    i.USBClockEnable    driverlib.lib(usb.o)
+    0x000013c2   0x000013c2   0x0000000a   Code   RO         1353    i.USBControllerVersion  driverlib.lib(usb.o)
+    0x000013cc   0x000013cc   0x00000056   Code   RO         2640    i.USBDCDConfigDescGet  usblib.lib(usbdcdesc.o)
+    0x00001422   0x00001422   0x00000036   Code   RO         2641    i.USBDCDConfigDescGetNum  usblib.lib(usbdcdesc.o)
+    0x00001458   0x00001458   0x00000022   Code   RO         2642    i.USBDCDConfigDescGetSize  usblib.lib(usbdcdesc.o)
+    0x0000147a   0x0000147a   0x000000bc   Code   RO         2643    i.USBDCDConfigGetInterface  usblib.lib(usbdcdesc.o)
+    0x00001536   0x00001536   0x0000005e   Code   RO         2644    i.USBDCDConfigGetInterfaceEndpoint  usblib.lib(usbdcdesc.o)
+    0x00001594   0x00001594   0x00000044   Code   RO         1972    i.USBDCDDeviceInfoInit  usblib.lib(usbdenum.o)
+    0x000015d8   0x000015d8   0x000001a8   Code   RO         1975    i.USBDCDInit        usblib.lib(usbdenum.o)
+    0x00001780   0x00001780   0x00000038   Code   RO         1978    i.USBDCDRemoteWakeupRequest  usblib.lib(usbdenum.o)
+    0x000017b8   0x000017b8   0x00000014   Code   RO         1979    i.USBDCDRequestDataEP0  usblib.lib(usbdenum.o)
+    0x000017cc   0x000017cc   0x00000014   Code   RO         1980    i.USBDCDSendDataEP0  usblib.lib(usbdenum.o)
+    0x000017e0   0x000017e0   0x0000001c   Code   RO         1982    i.USBDCDStallEP0    usblib.lib(usbdenum.o)
+    0x000017fc   0x000017fc   0x000000a4   Code   RO         1984    i.USBDClearFeature  usblib.lib(usbdenum.o)
+    0x000018a0   0x000018a0   0x00000074   Code   RO         1985    i.USBDEP0StateTx    usblib.lib(usbdenum.o)
+    0x00001914   0x00001914   0x00000174   Code   RO         1986    i.USBDEP0StateTxConfig  usblib.lib(usbdenum.o)
+    0x00001a88   0x00001a88   0x00000034   Code   RO         1987    i.USBDGetConfiguration  usblib.lib(usbdenum.o)
+    0x00001abc   0x00001abc   0x00000170   Code   RO         1988    i.USBDGetDescriptor  usblib.lib(usbdenum.o)
+    0x00001c2c   0x00001c2c   0x0000005c   Code   RO         1989    i.USBDGetInterface  usblib.lib(usbdenum.o)
+    0x00001c88   0x00001c88   0x00000084   Code   RO         1990    i.USBDGetStatus     usblib.lib(usbdenum.o)
+    0x00001d0c   0x00001d0c   0x000000fc   Code   RO         2168    i.USBDHIDCompositeInit  usblib.lib(usbdhid.o)
+    0x00001e08   0x00001e08   0x00000026   Code   RO         2169    i.USBDHIDInit       usblib.lib(usbdhid.o)
+    0x00001e2e   0x00001e2e   0x00000002   PAD
+    0x00001e30   0x00001e30   0x000000a4   Code   RO          699    i.USBDHIDKeyboardCompositeInit  usblib.lib(usbdhidkeyb.o)
+    0x00001ed4   0x00001ed4   0x00000038   Code   RO          700    i.USBDHIDKeyboardInit  usblib.lib(usbdhidkeyb.o)
+    0x00001f0c   0x00001f0c   0x000000ee   Code   RO          701    i.USBDHIDKeyboardKeyStateChange  usblib.lib(usbdhidkeyb.o)
+    0x00001ffa   0x00001ffa   0x00000006   Code   RO          703    i.USBDHIDKeyboardRemoteWakeupRequest  usblib.lib(usbdhidkeyb.o)
+    0x00002000   0x00002000   0x00000006   Code   RO         2172    i.USBDHIDRemoteWakeupRequest  usblib.lib(usbdhid.o)
+    0x00002006   0x00002006   0x000000a2   Code   RO         2173    i.USBDHIDReportWrite  usblib.lib(usbdhid.o)
+    0x000020a8   0x000020a8   0x0000000e   Code   RO         2178    i.USBDHIDTxPacketAvailable  usblib.lib(usbdhid.o)
+    0x000020b6   0x000020b6   0x0000000a   Code   RO         1355    i.USBDMAChannelAddressSet  driverlib.lib(usb.o)
+    0x000020c0   0x000020c0   0x00000016   Code   RO         1356    i.USBDMAChannelConfigSet  driverlib.lib(usb.o)
+    0x000020d6   0x000020d6   0x0000000a   Code   RO         1358    i.USBDMAChannelCountSet  driverlib.lib(usb.o)
+    0x000020e0   0x000020e0   0x00000012   Code   RO         1359    i.USBDMAChannelDisable  driverlib.lib(usb.o)
+    0x000020f2   0x000020f2   0x00000012   Code   RO         1360    i.USBDMAChannelEnable  driverlib.lib(usb.o)
+    0x00002104   0x00002104   0x00000012   Code   RO         1361    i.USBDMAChannelIntDisable  driverlib.lib(usb.o)
+    0x00002116   0x00002116   0x00000012   Code   RO         1362    i.USBDMAChannelIntEnable  driverlib.lib(usb.o)
+    0x00002128   0x00002128   0x00000006   Code   RO         1363    i.USBDMAChannelIntStatus  driverlib.lib(usb.o)
+    0x0000212e   0x0000212e   0x0000000e   Code   RO         1364    i.USBDMAChannelStatus  driverlib.lib(usb.o)
+    0x0000213c   0x0000213c   0x0000007c   Code   RO         1991    i.USBDReadAndDispatchRequest  usblib.lib(usbdenum.o)
+    0x000021b8   0x000021b8   0x00000024   Code   RO         1992    i.USBDSetAddress    usblib.lib(usbdenum.o)
+    0x000021dc   0x000021dc   0x000000a4   Code   RO         1993    i.USBDSetConfiguration  usblib.lib(usbdenum.o)
+    0x00002280   0x00002280   0x00000028   Code   RO         1994    i.USBDSetDescriptor  usblib.lib(usbdenum.o)
+    0x000022a8   0x000022a8   0x00000084   Code   RO         1995    i.USBDSetFeature    usblib.lib(usbdenum.o)
+    0x0000232c   0x0000232c   0x000000bc   Code   RO         1996    i.USBDSetInterface  usblib.lib(usbdenum.o)
+    0x000023e8   0x000023e8   0x00000028   Code   RO         1997    i.USBDSyncFrame     usblib.lib(usbdenum.o)
+    0x00002410   0x00002410   0x00000036   Code   RO         2700    i.USBDescGet        usblib.lib(usbdesc.o)
+    0x00002446   0x00002446   0x0000002e   Code   RO         2703    i.USBDescGetNum     usblib.lib(usbdesc.o)
+    0x00002474   0x00002474   0x00000004   Code   RO         1368    i.USBDevAddrSet     driverlib.lib(usb.o)
+    0x00002478   0x00002478   0x0000000a   Code   RO         1369    i.USBDevConnect     driverlib.lib(usb.o)
+    0x00002482   0x00002482   0x0000000a   Code   RO         1370    i.USBDevDisconnect  driverlib.lib(usb.o)
+    0x0000248c   0x0000248c   0x00000088   Code   RO         1372    i.USBDevEndpointConfigSet  driverlib.lib(usb.o)
+    0x00002514   0x00002514   0x00000024   Code   RO         1373    i.USBDevEndpointDataAck  driverlib.lib(usb.o)
+    0x00002538   0x00002538   0x00000034   Code   RO         1374    i.USBDevEndpointStall  driverlib.lib(usb.o)
+    0x0000256c   0x0000256c   0x0000004a   Code   RO         1375    i.USBDevEndpointStallClear  driverlib.lib(usb.o)
+    0x000025b6   0x000025b6   0x0000005e   Code   RO         1376    i.USBDevEndpointStatusClear  driverlib.lib(usb.o)
+    0x00002614   0x00002614   0x00000006   Code   RO         1377    i.USBDevLPMConfig   driverlib.lib(usb.o)
+    0x0000261a   0x0000261a   0x0000000e   Code   RO         1378    i.USBDevLPMDisable  driverlib.lib(usb.o)
+    0x00002628   0x00002628   0x0000000e   Code   RO         1379    i.USBDevLPMEnable   driverlib.lib(usb.o)
+    0x00002636   0x00002636   0x00000008   Code   RO         1381    i.USBDevMode        driverlib.lib(usb.o)
+    0x0000263e   0x0000263e   0x00000002   PAD
+    0x00002640   0x00002640   0x000001a0   Code   RO         2682    i.USBDeviceConfig   usblib.lib(usbdconfig.o)
+    0x000027e0   0x000027e0   0x000000c8   Code   RO         2683    i.USBDeviceConfigAlternate  usblib.lib(usbdconfig.o)
+    0x000028a8   0x000028a8   0x000000ec   Code   RO         1998    i.USBDeviceEnumHandler  usblib.lib(usbdenum.o)
+    0x00002994   0x00002994   0x00000198   Code   RO         2000    i.USBDeviceIntHandlerInternal  usblib.lib(usbdenum.o)
+    0x00002b2c   0x00002b2c   0x00000058   Code   RO         2001    i.USBDeviceResumeTickHandler  usblib.lib(usbdenum.o)
+    0x00002b84   0x00002b84   0x0000001a   Code   RO         1383    i.USBEndpointDMAChannel  driverlib.lib(usb.o)
+    0x00002b9e   0x00002b9e   0x00000056   Code   RO         1384    i.USBEndpointDMAConfigSet  driverlib.lib(usb.o)
+    0x00002bf4   0x00002bf4   0x00000024   Code   RO         1385    i.USBEndpointDMADisable  driverlib.lib(usb.o)
+    0x00002c18   0x00002c18   0x00000024   Code   RO         1386    i.USBEndpointDMAEnable  driverlib.lib(usb.o)
+    0x00002c3c   0x00002c3c   0x0000001e   Code   RO         1387    i.USBEndpointDataAvail  driverlib.lib(usb.o)
+    0x00002c5a   0x00002c5a   0x00000054   Code   RO         1388    i.USBEndpointDataGet  driverlib.lib(usb.o)
+    0x00002cae   0x00002cae   0x0000003a   Code   RO         1389    i.USBEndpointDataPut  driverlib.lib(usb.o)
+    0x00002ce8   0x00002ce8   0x00000030   Code   RO         1390    i.USBEndpointDataSend  driverlib.lib(usb.o)
+    0x00002d18   0x00002d18   0x0000000c   Code   RO         1392    i.USBEndpointPacketCountSet  driverlib.lib(usb.o)
+    0x00002d24   0x00002d24   0x00000010   Code   RO         1393    i.USBEndpointStatus  driverlib.lib(usb.o)
+    0x00002d34   0x00002d34   0x00000008   Code   RO         1394    i.USBFIFOAddrGet    driverlib.lib(usb.o)
+    0x00002d3c   0x00002d3c   0x00000040   Code   RO         1396    i.USBFIFOConfigSet  driverlib.lib(usb.o)
+    0x00002d7c   0x00002d7c   0x00000012   Code   RO         1423    i.USBHostResume     driverlib.lib(usb.o)
+    0x00002d8e   0x00002d8e   0x00000002   PAD
+    0x00002d90   0x00002d90   0x0000002c   Code   RO         1428    i.USBIntEnableControl  driverlib.lib(usb.o)
+    0x00002dbc   0x00002dbc   0x00000016   Code   RO         1429    i.USBIntEnableEndpoint  driverlib.lib(usb.o)
+    0x00002dd2   0x00002dd2   0x00000002   PAD
+    0x00002dd4   0x00002dd4   0x0000003c   Code   RO         1431    i.USBIntStatusControl  driverlib.lib(usb.o)
+    0x00002e10   0x00002e10   0x0000000a   Code   RO         1432    i.USBIntStatusEndpoint  driverlib.lib(usb.o)
+    0x00002e1a   0x00002e1a   0x0000000c   Code   RO         1436    i.USBLPMIntEnable   driverlib.lib(usb.o)
+    0x00002e26   0x00002e26   0x00000006   Code   RO         1437    i.USBLPMIntStatus   driverlib.lib(usb.o)
+    0x00002e2c   0x00002e2c   0x0000015c   Code   RO         2743    i.USBLibDMAInit     usblib.lib(usbdma.o)
+    0x00002f88   0x00002f88   0x00000008   Code   RO         1443    i.USBOTGMode        driverlib.lib(usb.o)
+    0x00002f90   0x00002f90   0x0000001c   Code   RO          793    i.USBStackModeSet   usblib.lib(usbmode.o)
+    0x00002fac   0x00002fac   0x0000000e   Code   RO         1448    i.USBULPIDisable    driverlib.lib(usb.o)
+    0x00002fba   0x00002fba   0x0000000e   Code   RO         1449    i.USBULPIEnable     driverlib.lib(usb.o)
+    0x00002fc8   0x00002fc8   0x00000020   Code   RO         1450    i.USBULPIRegRead    driverlib.lib(usb.o)
+    0x00002fe8   0x00002fe8   0x00000020   Code   RO         1451    i.USBULPIRegWrite   driverlib.lib(usb.o)
+    0x00003008   0x00003008   0x00000030   Code   RO          199    i.WaitForSendIdle   usb_dev_keyboard.o
+    0x00003038   0x00003038   0x0000000e   Code   RO         3189    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x00003046   0x00003046   0x00000002   Code   RO         3190    i.__scatterload_null  mc_w.l(handlers.o)
+    0x00003048   0x00003048   0x0000000e   Code   RO         3191    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x00003056   0x00003056   0x00000002   Code   RO         2745    i.iDMAUSBArbSizeSet  usblib.lib(usbdma.o)
+    0x00003058   0x00003058   0x00000084   Code   RO         2746    i.iDMAUSBChannelAllocate  usblib.lib(usbdma.o)
+    0x000030dc   0x000030dc   0x00000034   Code   RO         2747    i.iDMAUSBChannelDisable  usblib.lib(usbdma.o)
+    0x00003110   0x00003110   0x00000052   Code   RO         2748    i.iDMAUSBChannelEnable  usblib.lib(usbdma.o)
+    0x00003162   0x00003162   0x00000008   Code   RO         2749    i.iDMAUSBChannelIntDisable  usblib.lib(usbdma.o)
+    0x0000316a   0x0000316a   0x00000008   Code   RO         2750    i.iDMAUSBChannelIntEnable  usblib.lib(usbdma.o)
+    0x00003172   0x00003172   0x0000003e   Code   RO         2751    i.iDMAUSBChannelRelease  usblib.lib(usbdma.o)
+    0x000031b0   0x000031b0   0x00000038   Code   RO         2752    i.iDMAUSBChannelStatus  usblib.lib(usbdma.o)
+    0x000031e8   0x000031e8   0x00000006   Code   RO         2753    i.iDMAUSBIntStatus  usblib.lib(usbdma.o)
+    0x000031ee   0x000031ee   0x000000f4   Code   RO         2754    i.iDMAUSBTransfer   usblib.lib(usbdma.o)
+    0x000032e2   0x000032e2   0x00000002   Code   RO         2755    i.iDMAUSBUnitSizeSet  usblib.lib(usbdma.o)
+    0x000032e4   0x000032e4   0x000001d8   Code   RO          200    i.main              usb_dev_keyboard.o
+    0x000034bc   0x000034bc   0x00000048   Code   RO         3002    i.uDMAChannelAttributeDisable  driverlib.lib(udma.o)
+    0x00003504   0x00003504   0x00000020   Code   RO         3005    i.uDMAChannelControlSet  driverlib.lib(udma.o)
+    0x00003524   0x00003524   0x00000014   Code   RO         3006    i.uDMAChannelDisable  driverlib.lib(udma.o)
+    0x00003538   0x00003538   0x00000014   Code   RO         3007    i.uDMAChannelEnable  driverlib.lib(udma.o)
+    0x0000354c   0x0000354c   0x00000028   Code   RO         3009    i.uDMAChannelModeGet  driverlib.lib(udma.o)
+    0x00003574   0x00003574   0x00000080   Code   RO         3015    i.uDMAChannelTransferSet  driverlib.lib(udma.o)
+    0x000035f4   0x000035f4   0x00000068   Code   RO         2756    i.uDMAUSBArbSizeSet  usblib.lib(usbdma.o)
+    0x0000365c   0x0000365c   0x000000c0   Code   RO         2757    i.uDMAUSBChannelAllocate  usblib.lib(usbdma.o)
+    0x0000371c   0x0000371c   0x00000058   Code   RO         2758    i.uDMAUSBChannelDisable  usblib.lib(usbdma.o)
+    0x00003774   0x00003774   0x0000006a   Code   RO         2759    i.uDMAUSBChannelEnable  usblib.lib(usbdma.o)
+    0x000037de   0x000037de   0x00000002   Code   RO         2760    i.uDMAUSBChannelIntDisable  usblib.lib(usbdma.o)
+    0x000037e0   0x000037e0   0x00000002   Code   RO         2761    i.uDMAUSBChannelIntEnable  usblib.lib(usbdma.o)
+    0x000037e2   0x000037e2   0x0000005a   Code   RO         2762    i.uDMAUSBChannelRelease  usblib.lib(usbdma.o)
+    0x0000383c   0x0000383c   0x00000026   Code   RO         2763    i.uDMAUSBChannelStatus  usblib.lib(usbdma.o)
+    0x00003862   0x00003862   0x00000034   Code   RO         2764    i.uDMAUSBIntStatus  usblib.lib(usbdma.o)
+    0x00003896   0x00003896   0x000000c8   Code   RO         2765    i.uDMAUSBTransfer   usblib.lib(usbdma.o)
+    0x0000395e   0x0000395e   0x00000054   Code   RO         2766    i.uDMAUSBUnitSizeSet  usblib.lib(usbdma.o)
+    0x000039b2   0x000039b2   0x00000002   PAD
+    0x000039b4   0x000039b4   0x00000028   Data   RO           81    .constdata          uartstdio.o
+    0x000039dc   0x000039dc   0x00000004   Data   RO          292    .constdata          usb_keyb_structs.o
+    0x000039e0   0x000039e0   0x00000024   Data   RO          293    .constdata          usb_keyb_structs.o
+    0x00003a04   0x00003a04   0x00000022   Data   RO          294    .constdata          usb_keyb_structs.o
+    0x00003a26   0x00003a26   0x00000012   Data   RO          295    .constdata          usb_keyb_structs.o
+    0x00003a38   0x00003a38   0x0000002e   Data   RO          296    .constdata          usb_keyb_structs.o
+    0x00003a66   0x00003a66   0x00000036   Data   RO          297    .constdata          usb_keyb_structs.o
+    0x00003a9c   0x00003a9c   0x00000018   Data   RO          298    .constdata          usb_keyb_structs.o
+    0x00003ab4   0x00003ab4   0x00000007   Data   RO          706    .constdata          usblib.lib(usbdhidkeyb.o)
+    0x00003abb   0x00003abb   0x00000007   Data   RO          707    .constdata          usblib.lib(usbdhidkeyb.o)
+    0x00003ac2   0x00003ac2   0x0000003f   Data   RO          708    .constdata          usblib.lib(usbdhidkeyb.o)
+    0x00003b01   0x00003b01   0x00000003   PAD
+    0x00003b04   0x00003b04   0x00000011   Data   RO          709    .constdata          usblib.lib(usbdhidkeyb.o)
+    0x00003b15   0x00003b15   0x00000003   PAD
+    0x00003b18   0x00003b18   0x00000008   Data   RO          710    .constdata          usblib.lib(usbdhidkeyb.o)
+    0x00003b20   0x00003b20   0x00000008   Data   RO          711    .constdata          usblib.lib(usbdhidkeyb.o)
+    0x00003b28   0x00003b28   0x00000008   Data   RO          712    .constdata          usblib.lib(usbdhidkeyb.o)
+    0x00003b30   0x00003b30   0x00000008   Data   RO          713    .constdata          usblib.lib(usbdhidkeyb.o)
+    0x00003b38   0x00003b38   0x0000010c   Data   RO          904    .constdata          driverlib.lib(interrupt.o)
+    0x00003c44   0x00003c44   0x00000034   Data   RO         2003    .constdata          usblib.lib(usbdenum.o)
+    0x00003c78   0x00003c78   0x00000030   Data   RO         2179    .constdata          usblib.lib(usbdhid.o)
+    0x00003ca8   0x00003ca8   0x00000011   Data   RO           82    .conststring        uartstdio.o
+    0x00003cb9   0x00003cb9   0x00000003   PAD
+    0x00003cbc   0x00003cbc   0x00000020   Data   RO         3187    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM (Exec base: 0x20000000, Load base: 0x00003cdc, Size: 0x00000b98, Max: 0x00008000, ABSOLUTE, COMPRESSED[0x00000058])
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   COMPRESSED   0x00000003   Data   RW            3    .data               buttons.o
+    0x20000003   COMPRESSED   0x00000001   PAD
+    0x20000004   COMPRESSED   0x0000001c   Data   RW           83    .data               uartstdio.o
+    0x20000020   COMPRESSED   0x00000008   Data   RW          201    .data               usb_dev_keyboard.o
+    0x20000028   COMPRESSED   0x000000a4   Data   RW          299    .data               usb_keyb_structs.o
+    0x200000cc   COMPRESSED   0x00000009   Data   RW          714    .data               usblib.lib(usbdhidkeyb.o)
+    0x200000d5   COMPRESSED   0x00000009   Data   RW          715    .data               usblib.lib(usbdhidkeyb.o)
+    0x200000de   COMPRESSED   0x00000002   PAD
+    0x200000e0   COMPRESSED   0x00000008   Data   RW          716    .data               usblib.lib(usbdhidkeyb.o)
+    0x200000e8   COMPRESSED   0x00000014   Data   RW          717    .data               usblib.lib(usbdhidkeyb.o)
+    0x200000fc   COMPRESSED   0x00000008   Data   RW          718    .data               usblib.lib(usbdhidkeyb.o)
+    0x20000104   COMPRESSED   0x00000010   Data   RW          794    .data               usblib.lib(usbmode.o)
+    0x20000114   COMPRESSED   0x00000010   Data   RW         2004    .data               usblib.lib(usbdenum.o)
+    0x20000124   COMPRESSED   0x00000012   Data   RW         2180    .data               usblib.lib(usbdhid.o)
+    0x20000136   COMPRESSED   0x00000002   PAD
+    0x20000138   COMPRESSED   0x00000008   Data   RW         2594    .data               usblib.lib(usbtick.o)
+    0x20000140   COMPRESSED   0x00000004   Data   RW         2595    .data               usblib.lib(usbtick.o)
+    0x20000144        -       0x00000480   Zero   RW           80    .bss                uartstdio.o
+    0x200005c4        -       0x00000090   Zero   RW         2002    .bss                usblib.lib(usbdenum.o)
+    0x20000654        -       0x00000030   Zero   RW         2593    .bss                usblib.lib(usbtick.o)
+    0x20000684        -       0x00000110   Zero   RW         2767    .bss                usblib.lib(usbdma.o)
+    0x20000794   COMPRESSED   0x00000004   PAD
+    0x20000798        -       0x00000400   Zero   RW           56    STACK               startup_rvmdk.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       188         32          0          3          0       6768   buttons.o
+       648        622          0          0       1024        308   startup_rvmdk.o
+      1276         70         57         28       1152      11035   uartstdio.o
+       808        224          0          8          0       5925   usb_dev_keyboard.o
+         0          0        216        164          0      28259   usb_keyb_structs.o
+
+    ----------------------------------------------------------------------
+      2924        948        308        204       2176      52295   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         4          0          3          1          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+       296         24        268          0          0       2724   interrupt.o
+       116         12          0          0          0       2962   sysctl.o
+         6          0          0          0          0       3545   uart.o
+       312         32          0          0          0       3961   udma.o
+      1388         10          0          0          0      41171   usb.o
+        58          0          0          0          0          0   __dczerorl.o
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         4          0          0          0          0          0   entry12b.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+       456          0          0          0          0       4863   usbdcdesc.o
+       616         12          0          0          0       3605   usbdconfig.o
+      3368        274         52         16        144      20410   usbdenum.o
+       100          0          0          0          0      12065   usbdesc.o
+        24          4          0          0          0      16159   usbdhandler.o
+      1968         48         48         18          0      15229   usbdhid.o
+       710         32        126         54          0      21401   usbdhidkeyb.o
+      2042        124          0          0        272      16032   usbdma.o
+        28          4          0         16          0       1994   usbmode.o
+       164         28          0         12         48      16276   usbtick.o
+        90          0          0          0          0        592   usbulpi.o
+
+    ----------------------------------------------------------------------
+     11848        620        500        120        468     183057   Library Totals
+        16          0          6          4          4          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+      2118         78        268          0          0      54363   driverlib.lib
+       148         16          0          0          0         68   mc_w.l
+      9566        526        226        116        464     128626   usblib.lib
+
+    ----------------------------------------------------------------------
+     11848        620        500        120        468     183057   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     14772       1568        808        324       2644     219636   Grand Totals
+     14772       1568        808         88       2644     219636   ELF Image Totals (compressed)
+     14772       1568        808         88          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                15580 (  15.21kB)
+    Total RW  Size (RW Data + ZI Data)              2968 (   2.90kB)
+    Total ROM Size (Code + RO Data + RW Data)      15668 (  15.30kB)
+
+==============================================================================
+

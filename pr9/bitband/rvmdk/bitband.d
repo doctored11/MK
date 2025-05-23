@@ -1,0 +1,14 @@
+.\rvmdk\bitband.o: bitband.c
+.\rvmdk\bitband.o: D:\Programs\keil\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdint.h
+.\rvmdk\bitband.o: D:\Programs\keil\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdbool.h
+.\rvmdk\bitband.o: ..\..\..\..\inc/hw_memmap.h
+.\rvmdk\bitband.o: ..\..\..\..\inc/hw_types.h
+.\rvmdk\bitband.o: ..\..\..\..\driverlib/debug.h
+.\rvmdk\bitband.o: ..\..\..\..\driverlib/sysctl.h
+.\rvmdk\bitband.o: ..\..\..\..\driverlib/adc.h
+.\rvmdk\bitband.o: ..\..\..\..\driverlib/rom.h
+.\rvmdk\bitband.o: ..\..\..\..\driverlib/gpio.h
+.\rvmdk\bitband.o: ..\..\..\..\driverlib/uart.h
+.\rvmdk\bitband.o: ..\..\..\..\utils/uartstdio.h
+.\rvmdk\bitband.o: D:\Programs\keil\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdarg.h
+.\rvmdk\bitband.o: ..\..\..\..\driverlib/pin_map.h

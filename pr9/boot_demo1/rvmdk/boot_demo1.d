@@ -1,0 +1,11 @@
+.\rvmdk\boot_demo1.o: boot_demo1.c
+.\rvmdk\boot_demo1.o: D:\Programs\keil\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdint.h
+.\rvmdk\boot_demo1.o: D:\Programs\keil\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdbool.h
+.\rvmdk\boot_demo1.o: ..\..\..\..\inc/hw_types.h
+.\rvmdk\boot_demo1.o: ..\..\..\..\inc/hw_memmap.h
+.\rvmdk\boot_demo1.o: ..\..\..\..\driverlib/sysctl.h
+.\rvmdk\boot_demo1.o: ..\..\..\..\driverlib/pin_map.h
+.\rvmdk\boot_demo1.o: ..\..\..\..\driverlib/debug.h
+.\rvmdk\boot_demo1.o: ..\..\..\..\driverlib/gpio.h
+.\rvmdk\boot_demo1.o: ..\..\..\..\driverlib/flash.h
+.\rvmdk\boot_demo1.o: ..\..\..\..\driverlib/eeprom.h
